@@ -1,0 +1,25 @@
+
+#!/bin/bash
+#BSUB -J trimpoly_3
+#BSUB -q bigmem
+#BSUB -P tct
+#BSUB -n 16
+#BSUB -W 120:00
+#BSUB -R "rusage[mem=15000]"
+#BSUB -o trimmed_output%J.out
+#BSUB -e trimmed_erroroutput%J.err
+#BSUB -B
+#BSUB -u l.isma@miami.edu
+#BSUB -N
+
+cd "/scratch/projects/tct/lys/mote/"
+path="/scratch/projects/tct/lys/mote/"
+
+
+for sample in ${path}/trimmed_3/trimmed_3_poly/*.gz ;
+
+do \
+trim_galore ${sample} \
+--polyA ; \
+
+done
