@@ -1,0 +1,37 @@
+#!/bin/bash
+#BSUB -J trim_3
+#BSUB -q bigmem
+#BSUB -P tct
+#BSUB -n 16
+#BSUB -W 120:00
+#BSUB -R "rusage[mem=15000]"
+#BSUB -o trimmed_output%J.out
+#BSUB -e trimmed_erroroutput%J.err
+#BSUB -B
+#BSUB -u l.isma@miami.edu
+#BSUB -N
+
+
+cd "/scratch/projects/tct/lys/mote/"
+
+
+path="/scratch/projects/tct/lys/mote/"
+
+for sample in ${path}/raw_reads/*.gz ;
+
+do \
+trim_galore ${sample} \
+--gzip \
+--fastqc \
+--fastqc_args "--outdir ${path}/trimmed_3/" \
+--illumina \
+--cores 4 \
+--three_prime_clip_R1 12 \
+--nextseq 30 \
+--length 20 \
+-o ${path}/trimmed_3/ ; \
+
+done
+cd "/scratch/projects/tct/lys/mote/trimmed_3"
+multiqc ${path}/trimmed_3/ \
+--outdir ${path}/trimmed_multi_3/
