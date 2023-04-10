@@ -1,0 +1,21 @@
+#!/bin/bash
+#BSUB -J star_index
+#BSUB -q general
+#BSUB -P tct
+#BSUB -n 4
+#BSUB -W 120:00
+#BSUB -o star_index%J.out
+#BSUB -e star_index%J.err
+#BSUB -u l.isma@miami.edu
+#BSUB -N
+
+todata="/scratch/projects/tct/"
+
+STAR \
+--runThreadN 16 NumberOfThreads \
+--runMode genomeGenerate \
+--genomeDir ${todata}/Genomes/Ofav/Ofav_index \
+--genomeFastaFiles ${todata}/Genomes/Ofav/GCF_002042975.1_ofav_dov_v1_genomic.f$
+--sjdbGTFfile /${todata}/Genomes/Ofav/genomic.gtf \
+--sjdbOverhang 100 \
+--genomeSAindexNbases 13
