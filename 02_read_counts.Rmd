@@ -36,7 +36,7 @@ reads_mapped<- reads_mapped %>%
 
 samples_selected_4M<- reads_mapped %>% filter(million_uniq > 4000000)
 
-samples_selected_5M<- reads_mapped %>% filter(million_uniq > 5000000)
+samples_selected_8M<- samples_selected_4M %>% filter(million_uniq < 8000000)
 ```
 
 ```{r}
@@ -47,7 +47,7 @@ meta_lab<- read.csv("data/Exp_Lab_data_MOTE.csv") %>%
   
            select( "Sample_ID", "RNA_Original_concentration", 
                    
-                  "RNA_Dilution_concentration", "Cq")
+                  "RNA_Dilution_concentration", "Cq", "C_PE_C_EE", "D_PE_D_EE")
 
 sample_metadata<- meta_lab %>% left_join(sample_metadata, by="Sample_ID")
 
@@ -73,7 +73,7 @@ samples_selected_4M<- sample_metadata_reads %>%
 
 n_colonies_4M<- unique(samples_selected_4M$Genotype_Micro) #73
 
-#write.csv(samples_selected_4M, "data/samples_selected_4M.csv")
+write.csv(samples_selected_4M, "data/samples_selected_4M.csv")
 ```
 
 

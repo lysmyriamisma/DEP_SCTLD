@@ -161,7 +161,6 @@ Exp_Lab_data<- Exp_Lab_data %>% group_by(Plate_Number) %>% mutate(qPCR_Uniq_ID =
 
 Exp_Lab_data<- ungroup(Exp_Lab_data) %>% mutate(uniqsample = 1)
 
-#write.csv(Exp_Lab_data, "data/Exp_Lab_data_MOTE.csv")
 ```
 
 #Creating data per experiment
@@ -244,7 +243,7 @@ all_Exp_melt<- bind_rows(Exp_2_melt, Exp_3_melt, Exp_4_melt)
 
 Exp_Lab_data<- left_join(Exp_Lab_data, all_Exp_melt, by="Sample_ID")
 
-#write.csv(Exp_Lab_data, "data/Exp_Lab_data_MOTE.csv")
+write.csv(Exp_Lab_data, "data/Exp_Lab_data_MOTE.csv")
 
 ```
 

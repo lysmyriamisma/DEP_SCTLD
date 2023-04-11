@@ -1,0 +1,278 @@
+---
+title: "04c_gene_expression_analysis- dds3:  ~ R_treat_TP_final"
+author: "Natalia Andrade Rodriguez"
+date: "2023-03-16"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Gene expression analysis for all samples with at least 4M of mapped reads
+
+###Library installing/loading
+```{r}
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("DESeq2")
+library(DESeq2)
+library(ggplot2)
+library(ggrepel)
+library(dplyr)
+library(tidyr)
+library(reshape2)
+library(tidyverse)
+```
+
+```{r}
+samples_selected_4M<- read.csv("data/samples_selected_4M.csv")
+
+sample_data_pe_ee<- samples_selected_4M %>% 
+  
+              mutate(colnames = Sample_ID) %>% 
+  
+              full_join(colnames_countData_4M, by = 'colnames') %>% 
+  
+              mutate(Geno_R_TP = paste(Genotype,R_TP, sep="_" )) %>%
+  
+              mutate(Geno_T = paste(Genotype,Treatment, sep="_" )) %>%
+  
+              mutate(Treat_R_TP = paste(Treatment,R_TP, sep="_" )) %>%
+  
+              mutate(Geno_R_treat = paste(Genotype,R_treat, sep="_" )) %>%
+   
+              mutate(R_treat_R_TP = paste(R_treat,R_TP, sep="_" )) %>%
+
+              mutate(R_treat_TP_final = paste(R_treat,R_TP,R_final_state ,sep="_" )) %>%
+  
+              filter(grepl( "PE|EE" , R_TP)) %>% 
+  
+              filter(!grepl("PEE", R_TP)) %>% 
+  
+              filter(!grepl( "2_432" , Sample_ID)) %>% 
+  
+              #filter(grepl("TRUE", D_PE_D_EE)) %>% 
+  
+              arrange(order)
+
+samples_pe_ee<- sample_data_pe_ee$Sample_ID  
+#96 samples   
+sample_data_pe_ee$Genotype_Micro<- as.factor(sample_data_pe_ee$Genotype_Micro)  
+sample_data_pe_ee$R_TP<- as.factor(sample_data_pe_ee$R_TP)
+
+row.names(sample_data_pe_ee)<- sample_data_pe_ee$Sample_ID
+```
+
+
+```{r}
+countData_4M_pe_ee<- readRDS("data/countData_4M.rds") %>% 
+  
+               select("2_10","2_100","2_125","2_13","2_132","2_137","2_145","2_15","2_151","2_155","2_158","2_168",
+                      "2_170","2_173","2_181","2_19","2_21","2_24","2_248","2_25","2_263","2_276","2_278","2_280","2_289",
+                      "2_295","2_3","2_307","2_317","2_32","2_336","2_34","2_344","2_346","2_348","2_350","2_353","2_354",
+                      "2_356","2_369","2_37","2_370","2_371","2_372","2_374","2_375","2_379","2_381","2_384","2_389","2_39",
+                      "2_390","2_393","2_398","2_4","2_400","2_402","2_405","2_409","2_410","2_411","2_415","2_419","2_420",
+                      "2_423","2_424","2_427","2_429","2_43","2_44","2_46","2_47","2_5","2_50","2_56","2_59","2_62",
+                      "2_65","2_68","2_69","2_7","2_70","2_73","2_77","2_80","2_81","2_83","2_84","2_85","2_86","2_88","2_9",
+                      "2_90","2_91","2_95")
+
+colnames_countData_4M_pe_ee<- as.data.frame(colnames(countData_4M_pe_ee)) %>%
+  
+                               dplyr::rename('colnames'='colnames(countData_4M_pe_ee)') %>% mutate(order = 1:95)
+```
+
+
+```{r}
+keep <-countData_4M_pe_ee %>% mutate(keep = rowSums(countData_4M_pe_ee) >= 200)
+
+countData_4M_pe_ee<- keep %>% filter(keep == TRUE) %>% dplyr::select(-keep)
+
+colnames(countData_4M_pe_ee) == rownames(sample_data_pe_ee)
+```
+## dds3--> model design :  ~ R_treat_TP_final
+```{r}
+dds3 = DESeqDataSetFromMatrix(countData = countData_4M_pe_ee, 
+                            
+                                colData = sample_data_pe_ee, 
+ 
+                                design = ~ R_treat_TP_final)
+
+
+```
+
+#Analysising DEG
+```{r}
+if (file.exists("cache/dds3.rds")) {
+  dds3<- read_rds("cache/dds3.rds")
+} else {
+  dds3<- DESeq(dds3)
+  write_rds(dds3,"cache/dds3.rds")
+}
+```
+
+```{r}
+vsd3 = vst(dds3, blind = FALSE)
+```
+
+
+#Plots for dds3 ~ R_treat_TP_final
+```{r}
+pcaData3 = plotPCA(vsd3, intgroup=c("R_TP", "Genotype","Sample_ID", "R_final_state"), 
+returnData=TRUE)
+percentVar3 = round(100 * attr(pcaData3, "percentVar"))
+
+png("results/PCA_dds3_vst.png", width=7, height=7, units = "in", res = 300)
+ggplot(pcaData3, aes(PC1, PC2, colour = R_TP, shape = R_final_state)) + 
+geom_point(size = 2) + theme_bw() + 
+geom_text_repel(aes(label = Sample_ID), nudge_x = -1, nudge_y = 0.2, size = 3) +
+ggtitle("Principal Component Analysis dds3 vst", subtitle = "~ R_treat_TP_final") +
+xlab(paste0("PC1: ",percentVar3[1],"% variance")) +
+ylab(paste0("PC2: ",percentVar3[2],"% variance"))
+dev.off()
+
+#Dispersion plot
+png("results/qc-dispersions_dds3.png", 1000, 1000, pointsize=20)
+plotDispEsts(dds3, main="Dispersion plot ~ R_treat_TP_final")
+dev.off()
+
+#Cook’s distance
+png("results/cookdistance_dds3.png", width=15, height=10, units = "in", res = 300)
+boxplot_dds3<-boxplot(log10(assays(dds3)[["cooks"]]), range=0, las=0,  main="Cook's distance  ~ R_treat_TP_final")
+dev.off()
+``` 
+
+#transform data with rlogTransformation
+```{r}
+rld3 <- rlogTransformation(dds3)
+```
+
+```{r}
+pcaData3r = plotPCA(rld3, intgroup=c("R_TP", "Genotype","Sample_ID", "R_final_state"), 
+returnData=TRUE)
+percentVar3r = round(100 * attr(pcaData3r, "percentVar"))
+
+png("results/PCA_dds3_rld.png", width=7, height=7, units = "in", res = 300)
+ggplot(pcaData3r, aes(PC1, PC2, colour = R_TP, shape = R_final_state)) + 
+geom_point(size = 2) + theme_bw() + 
+geom_text_repel(aes(label = Sample_ID), nudge_x = -1, nudge_y = 0.2, size = 3) +
+ggtitle("Principal Component Analysis dds3 rld", subtitle = " ~ R_treat_TP_final") +
+xlab(paste0("PC1: ",percentVar3r[1],"% variance")) +
+ylab(paste0("PC2: ",percentVar3r[2],"% variance"))
+dev.off()
+
+```
+
+```{r}
+png("results/hist_rld_dds3.png", 1000, 1000, pointsize=20)
+hist(assay(rld3))
+dev.off()
+```
+
+```{r}
+resultsNames(dds3)
+res_dds3<- results(dds3)
+summary(res_dds3)
+#attr(dds3, "modelMatrix")
+```
+We will use contrast to compare our different time point
+###1: result we will compare 'C_PE_Healthy',"D_PE_Healthy"
+```{r}
+res_dds3_1<- results(dds3,contrast =
+                                        
+                            c("R_treat_TP_final",'C_EE_Healthy',"D_EE_Healthy"))
+
+resOrd_dds3_1<- as.data.frame(res_dds3_1[order(res_dds3_1$padj),])
+                
+resOrd_dds3_1<- resOrd_dds3_1 %>%  
+  
+                 mutate(ofav_gene = rownames(resOrd_dds3_1)) %>%
+  
+                 mutate(contrast = 1) %>% 
+                 
+                 mutate(contrast_gene = paste(contrast, ofav_gene, sep = "_")) %>% 
+   
+                 filter(padj<0.1)
+```
+
+###2: result we will compare 'D_EE_Diseased',"D_EE_Healthy"
+```{r}
+res_dds3_2<- results(dds3,contrast =
+                                        
+                            c("R_treat_TP_final",'D_EE_Diseased',"D_EE_Healthy"))
+
+resOrd_dds3_2<- as.data.frame(res_dds3_2[order(res_dds3_2$padj),])
+                
+resOrd_dds3_2<- resOrd_dds3_2 %>%  
+  
+                 mutate(ofav_gene = rownames(resOrd_dds3_2)) %>%
+  
+                 mutate(contrast = 2) %>% 
+                 
+                 mutate(contrast_gene = paste(contrast, ofav_gene, sep = "_")) %>% 
+   
+                 filter(padj<0.1)
+```
+
+###3: result we will compare 'C_PE_Diseased',"D_EE_Diseased"
+```{r}
+res_dds3_3<- results(dds3,contrast =
+                                        
+                            c("R_treat_TP_final",'C_PE_Diseased',"D_EE_Diseased"))
+
+resOrd_dds3_3<- as.data.frame(res_dds3_3[order(res_dds3_3$padj),])
+                
+resOrd_dds3_3<- resOrd_dds3_3 %>%  
+  
+                 mutate(ofav_gene = rownames(resOrd_dds3_3)) %>%
+ 
+                 mutate(contrast = 3) %>% 
+                 
+                 mutate(contrast_gene = paste(contrast, ofav_gene, sep = "_")) %>% 
+   
+                 filter(padj<0.1)
+```
+
+###4: result we will compare 'C_EE_Healthy',"C_PE_Healthy
+```{r}
+res_dds3_4<- results(dds3,contrast =
+                                        
+                            c("R_treat_TP_final",'C_EE_Healthy',"C_PE_Healthy"))
+
+resOrd_dds3_4<- as.data.frame(res_dds3_4[order(res_dds3_4$padj),])
+                
+resOrd_dds3_4<- resOrd_dds3_4 %>%  
+  
+                 mutate(ofav_gene = rownames(resOrd_dds3_4)) %>%
+  
+                 mutate(contrast = 4) %>% 
+                 
+                 mutate(contrast_gene = paste(contrast, ofav_gene, sep = "_")) %>% 
+   
+                 filter(padj<0.1)
+```
+
+
+###Merging all the list and adding annotations
+```{r}
+#Getting gene descriptions found with g:profiler
+
+gene_anno<- read.csv("data/DEG_gprofiler.csv") %>% 
+
+            mutate(contrast_gene = paste(contrast, ofav_gene, sep = "_")) %>% 
+  
+            select(-contrast, -ofav_gene)
+#Binding results for all contrast
+
+resOrd_dds3_all<- rbind(resOrd_dds3_1,resOrd_dds3_2) %>% 
+  
+                   rbind(resOrd_dds3_3,resOrd_dds3_4)
+
+#Merging expression with annotations
+
+DEG_all_dds3<- resOrd_dds3_all %>% full_join(gene_anno, by="contrast_gene")
+
+write.csv(DEG_all_dds3, "data/DEG_all_anno.csv")
+```
+
