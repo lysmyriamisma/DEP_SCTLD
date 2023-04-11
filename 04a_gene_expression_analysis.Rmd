@@ -1,0 +1,252 @@
+---
+title: "04a_gene_expression_analysis- Testing models only sample Pre-expossure and early -exposure"
+author: "Natalia Andrade Rodriguez"
+date: "2023-03-21"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Gene expression analysis for all samples with at least 4M of mapped reads
+
+###Library installing/loading
+```{r}
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("DESeq2")
+library(DESeq2)
+library(ggplot2)
+library(ggrepel)
+library(dplyr)
+library(tidyr)
+library(reshape2)
+library(tidyverse)
+```
+
+
+```{r}
+samples_selected_4M<- read.csv("data/samples_selected_4M.csv")
+
+sample_data_pe_ee<- samples_selected_4M %>% 
+  
+              mutate(colnames = Sample_ID) %>% 
+  
+              full_join(colnames_countData_4M, by = 'colnames') %>% 
+  
+              mutate(Geno_R_TP = paste(Genotype,R_TP, sep="_" )) %>%
+  
+              mutate(Geno_T = paste(Genotype,Treatment, sep="_" )) %>%
+  
+              mutate(Treat_R_TP = paste(Treatment,R_TP, sep="_" )) %>%
+  
+              mutate(Geno_R_treat = paste(Genotype,R_treat, sep="_" )) %>%
+   
+              mutate(R_treat_R_TP = paste(R_treat,R_TP, sep="_" )) %>%
+
+              mutate(R_treat_TP_final = paste(R_treat,R_TP,R_final_state ,sep="_" )) %>%
+  
+              filter(grepl( "PE|EE" , R_TP)) %>% 
+  
+              filter(!grepl("PEE", R_TP)) %>% 
+  
+              #filter(!grepl( "2_464" , Sample_ID)) %>% 
+  
+              #filter(grepl("TRUE", D_PE_D_EE)) %>% 
+  
+              arrange(order)
+
+samples_pe_ee<- sample_data_pe_ee$Sample_ID  
+#96 samples   
+sample_data_pe_ee$Genotype_Micro<- as.factor(sample_data_pe_ee$Genotype_Micro)  
+sample_data_pe_ee$R_TP<- as.factor(sample_data_pe_ee$R_TP)
+
+row.names(sample_data_pe_ee)<- sample_data_pe_ee$Sample_ID
+```
+
+
+```{r}
+countData_4M_pe_ee<- readRDS("data/countData_4M.rds") %>% 
+  
+               select("2_10","2_100","2_125","2_13","2_132","2_137","2_145","2_15","2_151","2_155","2_158","2_168",
+                      "2_170","2_173","2_181","2_19","2_21","2_24","2_248","2_25","2_263","2_276","2_278","2_280","2_289",
+                      "2_295","2_3","2_307","2_317","2_32","2_336","2_34","2_344","2_346","2_348","2_350","2_353","2_354",
+                      "2_356","2_369","2_37","2_370","2_371","2_372","2_374","2_375","2_379","2_381","2_384","2_389","2_39",
+                      "2_390","2_393","2_398","2_4","2_400","2_402","2_405","2_409","2_410","2_411","2_415","2_419","2_420",
+                      "2_423","2_424","2_427","2_429","2_43","2_432","2_44","2_46","2_47","2_5","2_50","2_56","2_59","2_62",
+                      "2_65","2_68","2_69","2_7","2_70","2_73","2_77","2_80","2_81","2_83","2_84","2_85","2_86","2_88","2_9",
+                      "2_90","2_91","2_95")
+
+colnames_countData_4M_pe_ee<- as.data.frame(colnames(countData_4M_pe_ee)) %>%
+  
+                               dplyr::rename('colnames'='colnames(countData_4M_pe_ee)') %>% mutate(order = 1:96)
+```
+
+
+```{r}
+keep <-countData_4M_pe_ee %>% mutate(keep = rowSums(countData_4M_pe_ee) >= 200)
+
+countData_4M_pe_ee<- keep %>% filter(keep == TRUE) %>% dplyr::select(-keep)
+
+colnames(countData_4M_pe_ee) == rownames(sample_data_pe_ee)
+```
+
+## dds1--> model design : ~ R_treat + R_TP 
+```{r}
+dds1 = DESeqDataSetFromMatrix(countData = countData_4M_pe_ee, 
+                            
+                                colData = sample_data_pe_ee, 
+ 
+                                design = ~ R_treat + R_TP)
+```
+
+## dds2--> model design : ~ Treat_R_TP
+```{r}
+dds2= DESeqDataSetFromMatrix(countData = countData_4M_pe_ee, 
+                            
+                                colData = sample_data_pe_ee, 
+ 
+                                design = ~  Treat_R_TP)
+```
+
+## dds3--> model design :  ~ R_treat_TP_final
+```{r}
+dds3 = DESeqDataSetFromMatrix(countData = countData_4M_pe_ee, 
+                            
+                                colData = sample_data_pe_ee, 
+ 
+                                design = ~ R_treat_TP_final)
+
+
+```
+
+#Analaysing gene DE
+
+```{r}
+dds1<- DESeq(dds1)
+
+dds2<- DESeq(dds2)
+
+dds3<- DESeq(dds3)
+
+```
+
+#PCA to visualised the clustering of the samples and dispersion 
+
+##Transform reads with variance Stabilizing Transformation
+```{r}
+vsd1 = vst(dds1, blind=FALSE)
+vsd2 = vst(dds2, blind = FALSE)
+vsd3 = vst(dds3, blind = FALSE)
+
+```
+
+##Plots to assess model fitting 
+#Plots for dds1 ~ R_treat + R_TP 
+```{r}
+pcaData1 = plotPCA(vsd1, intgroup=c("R_TP", "Genotype","Sample_ID", "Final_State"), 
+returnData=TRUE)
+percentVar1 = round(100 * attr(pcaData1, "percentVar"))
+
+png("results/PCA_dds1_vst.png", width=7, height=7, units = "in", res = 300)
+ggplot(pcaData1, aes(PC1, PC2, colour = R_TP, shape = Final_State)) + 
+geom_point(size = 2) + theme_bw() + 
+geom_text_repel(aes(label = Sample_ID), nudge_x = -1, nudge_y = 0.2, size = 3) +
+ggtitle("Principal Component Analysis dds1 vst", subtitle = "~ R_treat + R_TP") +
+xlab(paste0("PC1: ",percentVar1[1],"% variance")) +
+ylab(paste0("PC2: ",percentVar1[2],"% variance"))
+dev.off()
+
+#Dispersion plot
+png("results/qc-dispersions_dds1.png", 1000, 1000, pointsize=20)
+plotDispEsts(dds1, main="Dispersion plot ~ R_treat + R_TP")
+dev.off()
+
+#Cook’s distance
+png("results/cookdistance_dds1.png", width=15, height=10, units = "in", res = 300)
+boxplot_dds1<- boxplot(log10(assays(dds1)[["cooks"]]), range=0,  las=0,main="Cook's distance ~ R_treat + R_TP")
+dev.off()
+
+```
+
+#Plots for dds2 ~ Treat_R_TP
+```{r}
+pcaData2 = plotPCA(vsd2, intgroup=c("R_TP", "Genotype","Sample_ID", "Final_State"), 
+returnData=TRUE)
+percentVar2 = round(100 * attr(pcaData2, "percentVar"))
+
+png("results/PCA_dds2_vst.png", width=7, height=7, units = "in", res = 300)
+ggplot(pcaData2, aes(PC1, PC2, colour = R_TP, shape = Final_State)) + 
+geom_point(size = 2) + theme_bw() + 
+geom_text_repel(aes(label = Genotype), nudge_x = -1, nudge_y = 0.2, size = 3) +
+ggtitle("Principal Component Analysis dds2 vst", subtitle = "~ Treat_R_TP") +
+xlab(paste0("PC1: ",percentVar2[1],"% variance")) +
+ylab(paste0("PC2: ",percentVar2[2],"% variance"))
+dev.off()
+
+#Dispersion plot
+png("results/qc-dispersions_dds2.png", 1000, 1000, pointsize=20)
+plotDispEsts(dds2, main="Dispersion plot ~ Treat_R_TP")
+dev.off()
+
+#Cook’s distance
+png("results/cookdistance_dds2.png",width=15, height=10, units = "in", res = 300)
+boxplot_dds2<-boxplot(log10(assays(dds2)[["cooks"]]), range=0, las=0, main="Cook's distance ~Treat_R_TP")
+dev.off()
+
+```
+
+#Plots for dds3 ~ R_treat_TP_final
+```{r}
+pcaData3 = plotPCA(vsd3, intgroup=c("R_TP", "Genotype","Sample_ID", "Final_State"), 
+returnData=TRUE)
+percentVar3 = round(100 * attr(pcaData3, "percentVar"))
+
+png("results/PCA_dds3_vst.png", width=7, height=7, units = "in", res = 300)
+ggplot(pcaData3, aes(PC1, PC2, colour = R_TP, shape = Final_State)) + 
+geom_point(size = 2) + theme_bw() + 
+geom_text_repel(aes(label = Sample_ID), nudge_x = -1, nudge_y = 0.2, size = 3) +
+ggtitle("Principal Component Analysis dds3 vst", subtitle = "~ R_treat_TP_final") +
+xlab(paste0("PC1: ",percentVar3[1],"% variance")) +
+ylab(paste0("PC2: ",percentVar3[2],"% variance"))
+dev.off()
+
+#Dispersion plot
+png("results/qc-dispersions_dds3.png", 1000, 1000, pointsize=20)
+plotDispEsts(dds3, main="Dispersion plot ~ R_treat_TP_final")
+dev.off()
+
+#Cook’s distance
+png("results/cookdistance_dds3.png", width=15, height=10, units = "in", res = 300)
+boxplot_dds3<-boxplot(log10(assays(dds3)[["cooks"]]), range=0, las=0,  main="Cook's distance  ~ R_treat_TP_final")
+dev.off()
+``` 
+
+```{r}
+#R_treat_R_TP
+res1<- results(dds1)
+summary(res1)
+
+res_dds1<- results(dds1,contrast =
+                                        
+                            c("R_treat_R_TP",'D_EE',"C_EE"))
+
+resOrd_dds1<- as.data.frame(res_dds1[order(res_dds1$padj),])
+                
+resOrd_dds1<- resOrd_dds1 %>%  
+  
+                 mutate(ofav_gene = rownames(resOrd_dds1)) %>%
+  
+                 mutate(contrast = 1) %>% 
+                 
+                 mutate(contrast_gene = paste(contrast, ofav_gene, sep = "_")) %>% 
+   
+                 filter(padj<0.1)
+```
+
+```{r}
+sessionInfo()
+```
+
