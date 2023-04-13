@@ -323,7 +323,7 @@ summary(res9)
 resultsNames(dds8)
 ```
 
-###1: result we will compare "SCTLD_affected_Low" vs "SCTLD_unaffected_High"
+###1: result we will compare "Treatment" vs "Timepoint"
 ```{r}
 res_dds8<- results(dds8,contrast =
                                         
