@@ -1,5 +1,5 @@
 # # Function_geno_cast returns a cast data frame with Sample_ID as columns plus the columns 
-#discribing if the samples have control pair scrapes (C_PE_C_EE) or diseased pair scrapes(D_PE_D_EE)
+#describing if the samples have control pair scrapes (C_PE_C_EE) or diseased pair scrapes(D_PE_D_EE)
 
 function_geno_cast<- function(Exp) {
   
