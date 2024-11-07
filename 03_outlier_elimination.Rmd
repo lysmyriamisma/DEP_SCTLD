@@ -34,6 +34,7 @@ rawcountdata<-readRDS('/Volumes/mote/data/annotated_PE_EE_4M_45_rawcounts.rds')
 PE_EE_meta<-readRDS("/Volumes/mote/data/PE_EE_4M_45percent.rds")
 
 ```
+##### Step 1: Select samples that will be use for analysis (at least in one TP)
 
 ##Eliminate outliers
 ##### Step 2: Find any low count genes or outliers sample swith WGCNA pipeline
