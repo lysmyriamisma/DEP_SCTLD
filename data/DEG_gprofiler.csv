@@ -1,0 +1,1145 @@
+ofav_gene,name,description,contrast,contrast_id
+LOC110064890,LOC110064890,"1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-1-like",1, C_EE_H_D_EE_H
+LOC110048425,LOC110048425,14-3-3 protein 2-like,1, C_EE_H_D_EE_H
+LOC110057028,LOC110057028,2-oxoglutarate and iron-dependent oxygenase domain-containing protein 2-like,1, C_EE_H_D_EE_H
+LOC110050671,LOC110050671,5-hydroxytryptamine receptor 1-like,1, C_EE_H_D_EE_H
+LOC110052922,LOC110052922,8-oxo-dGDP phosphatase NUDT18-like,1, C_EE_H_D_EE_H
+LOC110055700,LOC110055700,AAC-rich mRNA clone AAC4 protein-like,1, C_EE_H_D_EE_H
+LOC110069424,LOC110069424,AMMECR1-like protein,1, C_EE_H_D_EE_H
+LOC110056074,LOC110056074,"ATP synthase subunit s, mitochondrial-like",1, C_EE_H_D_EE_H
+LOC110040957,LOC110040957,BLOC-1-related complex subunit 5-like,1, C_EE_H_D_EE_H
+LOC110066988,LOC110066988,BTB/POZ domain-containing protein 6-B-like,1, C_EE_H_D_EE_H
+LOC110060001,LOC110060001,BTB/POZ domain-containing protein 6-like,1, C_EE_H_D_EE_H
+LOC110053631,LOC110053631,C2 domain-containing protein 3-like,1, C_EE_H_D_EE_H
+LOC110065252,LOC110065252,"CAP-Gly domain-containing linker protein 1-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110065341,LOC110065341,COMM domain-containing protein 6-like,1, C_EE_H_D_EE_H
+LOC110051433,LOC110051433,CUB and peptidase domain-containing protein 2-like,1, C_EE_H_D_EE_H
+LOC110068550,LOC110068550,D-inositol 3-phosphate glycosyltransferase-like,1, C_EE_H_D_EE_H
+LOC110044004,LOC110044004,"DAZ protein 1-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110069718,LOC110069718,DNA polymerase delta subunit 2-like,1, C_EE_H_D_EE_H
+LOC110046011,LOC110046011,DNA-directed RNA polymerase I subunit RPA43-like,1, C_EE_H_D_EE_H
+LOC110050883,LOC110050883,DNA/RNA-binding protein KIN17-like,1, C_EE_H_D_EE_H
+LOC110044614,LOC110044614,"E3 ubiquitin-protein ligase MIB2-like, transcript variant X4",1, C_EE_H_D_EE_H
+LOC110041899,LOC110041899,E3 ubiquitin-protein ligase TRIM71-like,1, C_EE_H_D_EE_H
+LOC110040598,LOC110040598,"E3 ubiquitin-protein ligase TRIM71-like, transcript variant X3",1, C_EE_H_D_EE_H
+LOC110053069,LOC110053069,E3 ubiquitin-protein ligase rnf213-alpha-like,1, C_EE_H_D_EE_H
+LOC110065762,LOC110065762,EGF-like repeat and discoidin I-like domain-containing protein 3,1, C_EE_H_D_EE_H
+LOC110057963,LOC110057963,ETS-related transcription factor Elf-4-like,1, C_EE_H_D_EE_H
+LOC110049717,LOC110049717,F-box/WD repeat-containing protein 7-like,1, C_EE_H_D_EE_H
+LOC110042054,LOC110042054,FUN14 domain-containing protein 1-like,1, C_EE_H_D_EE_H
+LOC110064761,LOC110064761,"G patch domain and KOW motifs-containing protein-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110052780,LOC110052780,"GPI mannosyltransferase 4-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110050139,LOC110050139,"HEAT repeat-containing protein 4-like, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110047367,LOC110047367,L-rhamnose-binding lectin CSL3-like,1, C_EE_H_D_EE_H
+LOC110052046,LOC110052046,MAM and LDL-receptor class A domain-containing protein 1-like,1, C_EE_H_D_EE_H
+LOC110061135,LOC110061135,Meckel syndrome type 1 protein-like,1, C_EE_H_D_EE_H
+LOC110067369,LOC110067369,N-acetylated-alpha-linked acidic dipeptidase 2-like,1, C_EE_H_D_EE_H
+LOC110059770,LOC110059770,"NACHT, LRR and PYD domains-containing protein 12-like, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110043628,LOC110043628,O-acetyl-ADP-ribose deacetylase 1-like,1, C_EE_H_D_EE_H
+LOC110046180,LOC110046180,"PP2C-like domain-containing protein CG9801, transcript variant X3",1, C_EE_H_D_EE_H
+LOC110066243,LOC110066243,"REST corepressor 3-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110047159,LOC110047159,"RNA polymerase-associated protein LEO1-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110066923,LOC110066923,RNA-binding protein cabeza-like,1, C_EE_H_D_EE_H
+LOC110055559,LOC110055559,RYamide receptor-like,1, C_EE_H_D_EE_H
+LOC110040336,LOC110040336,RYamide receptor-like,1, C_EE_H_D_EE_H
+LOC110045444,LOC110045444,SHC SH2 domain-binding protein 1 homolog B-like,1, C_EE_H_D_EE_H
+LOC110055643,LOC110055643,T-cell acute lymphocytic leukemia protein 1-like,1, C_EE_H_D_EE_H
+LOC110067882,LOC110067882,"TNF receptor-associated factor 4-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110060414,LOC110060414,"TNF receptor-associated factor 6-like, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110051739,LOC110051739,"UDP-GalNAc:beta-1,3-N-acetylgalactosaminyltransferase 2-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110042988,LOC110042988,"UDP-N-acetylglucosamine--peptide N-acetylglucosaminyltransferase 110 kDa subunit-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110059142,LOC110059142,UDP-glucuronosyltransferase 2B19-like,1, C_EE_H_D_EE_H
+LOC110050700,LOC110050700,UDP-glucuronosyltransferase 2B33-like,1, C_EE_H_D_EE_H
+LOC110056301,LOC110056301,UNC93-like protein MFSD11,1, C_EE_H_D_EE_H
+LOC110044341,LOC110044341,UPF0573 protein C2orf70 homolog A-like,1, C_EE_H_D_EE_H
+LOC110065972,LOC110065972,WD repeat-containing protein 13-like,1, C_EE_H_D_EE_H
+LOC110059708,LOC110059708,"WD repeat-containing protein 59-like, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110061801,LOC110061801,XK-related protein 8-like,1, C_EE_H_D_EE_H
+LOC110055994,LOC110055994,ZP domain-containing protein-like,1, C_EE_H_D_EE_H
+LOC110068608,LOC110068608,acetylserotonin O-methyltransferase-like,1, C_EE_H_D_EE_H
+LOC110057599,LOC110057599,acyl-CoA synthetase family member 4-like,1, C_EE_H_D_EE_H
+LOC110062864,LOC110062864,acyl-lipid (8-3)-desaturase-like,1, C_EE_H_D_EE_H
+LOC110050619,LOC110050619,adenosine receptor A2b-like,1, C_EE_H_D_EE_H
+LOC110057383,LOC110057383,adenosine receptor A3-like,1, C_EE_H_D_EE_H
+LOC110049607,LOC110049607,"adenylosuccinate lyase-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110047970,LOC110047970,"alpha-1,6-mannosylglycoprotein 6-beta-N-acetylglucosaminyltransferase A-like",1, C_EE_H_D_EE_H
+LOC110067391,LOC110067391,"alpha-1,6-mannosylglycoprotein 6-beta-N-acetylglucosaminyltransferase A-like",1, C_EE_H_D_EE_H
+LOC110068357,LOC110068357,"alternative oxidase, mitochondrial-like",1, C_EE_H_D_EE_H
+LOC110062317,LOC110062317,angiogenic factor with G patch and FHA domains 1-like,1, C_EE_H_D_EE_H
+LOC110057123,LOC110057123,angiopoietin-1 receptor-like,1, C_EE_H_D_EE_H
+LOC110039872,LOC110039872,anion exchange protein 3-like,1, C_EE_H_D_EE_H
+LOC110045768,LOC110045768,ankyrin repeat and BTB/POZ domain-containing protein BTBD11-like,1, C_EE_H_D_EE_H
+LOC110066112,LOC110066112,"arf-GAP with SH3 domain, ANK repeat and PH domain-containing protein 2-like",1, C_EE_H_D_EE_H
+LOC110050985,LOC110050985,arrestin domain-containing protein 4-like,1, C_EE_H_D_EE_H
+LOC110057336,LOC110057336,atherin-like,1, C_EE_H_D_EE_H
+LOC110051454,LOC110051454,"battenin-like, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110059134,LOC110059134,"beta-1,3-galactosyltransferase 5-like",1, C_EE_H_D_EE_H
+LOC110040722,LOC110040722,"beta-1,4-N-acetylgalactosaminyltransferase 3-like",1, C_EE_H_D_EE_H
+LOC110040700,LOC110040700,"beta-1,4-N-acetylgalactosaminyltransferase 3-like",1, C_EE_H_D_EE_H
+LOC110060233,LOC110060233,beta-2 adrenergic receptor-like,1, C_EE_H_D_EE_H
+LOC110048665,LOC110048665,"beta-hexosaminidase-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110059633,LOC110059633,bifunctional purine biosynthesis protein PURH-like,1, C_EE_H_D_EE_H
+LOC110058152,LOC110058152,"cAMP and cAMP-inhibited cGMP 3',5'-cyclic phosphodiesterase 10A-like",1, C_EE_H_D_EE_H
+LOC110042118,LOC110042118,"cAMP-dependent protein kinase catalytic subunit-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110043216,LOC110043216,"calcium-binding protein P-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110063730,LOC110063730,calmodulin-like,1, C_EE_H_D_EE_H
+LOC110059968,LOC110059968,carbohydrate sulfotransferase 3-like,1, C_EE_H_D_EE_H
+LOC110069580,LOC110069580,carbonic anhydrase 2-like,1, C_EE_H_D_EE_H
+LOC110069042,LOC110069042,carboxy-terminal domain RNA polymerase II polypeptide A small phosphatase 1-like,1, C_EE_H_D_EE_H
+LOC110059474,LOC110059474,carboxypeptidase B-like,1, C_EE_H_D_EE_H
+LOC110069659,LOC110069659,caspase-8-like,1, C_EE_H_D_EE_H
+LOC110057236,LOC110057236,"centrosomal protein POC5-like, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110055756,LOC110055756,coadhesin-like,1, C_EE_H_D_EE_H
+LOC110052323,LOC110052323,"collagen alpha chain-like, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110048050,LOC110048050,collagen alpha-1(XII) chain-like,1, C_EE_H_D_EE_H
+LOC110046035,LOC110046035,"collagen alpha-1(XII) chain-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110047380,LOC110047380,collagen alpha-2(IX) chain-like,1, C_EE_H_D_EE_H
+LOC110047374,LOC110047374,collagen triple helix repeat-containing protein 1-like,1, C_EE_H_D_EE_H
+LOC110053225,LOC110053225,collagen triple helix repeat-containing protein 1-like,1, C_EE_H_D_EE_H
+LOC110069487,LOC110069487,"collagen triple helix repeat-containing protein 1-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110057057,LOC110057057,contactin-associated protein-like 3,1, C_EE_H_D_EE_H
+LOC110054069,LOC110054069,cytidine deaminase-like,1, C_EE_H_D_EE_H
+LOC110053099,LOC110053099,"cytosolic 5'-nucleotidase 3-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110059082,LOC110059082,cytosolic carboxypeptidase 2-like,1, C_EE_H_D_EE_H
+LOC110061052,LOC110061052,cytosolic phospholipase A2-like,1, C_EE_H_D_EE_H
+LOC110055594,LOC110055594,dehydrogenase/reductase SDR family member on chromosome X-like,1, C_EE_H_D_EE_H
+LOC110068067,LOC110068067,deleted in malignant brain tumors 1 protein-like,1, C_EE_H_D_EE_H
+LOC110050547,LOC110050547,deleted in malignant brain tumors 1 protein-like,1, C_EE_H_D_EE_H
+LOC110042692,LOC110042692,dermatan-sulfate epimerase-like protein,1, C_EE_H_D_EE_H
+LOC110052494,LOC110052494,deubiquitinating protein VCIP135-like,1, C_EE_H_D_EE_H
+LOC110069339,LOC110069339,dickkopf-related protein 3-like,1, C_EE_H_D_EE_H
+LOC110065909,LOC110065909,"diencephalon/mesencephalon homeobox protein 1-B-like, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110047798,LOC110047798,dimethylaniline monooxygenase [N-oxide-forming] 2-like,1, C_EE_H_D_EE_H
+LOC110063490,LOC110063490,diphthine--ammonia ligase-like,1, C_EE_H_D_EE_H
+LOC110050267,LOC110050267,dopamine receptor 2-like,1, C_EE_H_D_EE_H
+LOC110063912,LOC110063912,endochitinase A1-like,1, C_EE_H_D_EE_H
+LOC110053846,LOC110053846,endoribonuclease Dicer-like,1, C_EE_H_D_EE_H
+LOC110057766,LOC110057766,"ephrin type-A receptor 2-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110067624,LOC110067624,eukaryotic translation initiation factor 2 subunit 1-like,1, C_EE_H_D_EE_H
+LOC110049123,LOC110049123,exostosin-like 3,1, C_EE_H_D_EE_H
+LOC110058382,LOC110058382,forkhead box protein J3-like,1, C_EE_H_D_EE_H
+LOC110068247,LOC110068247,forkhead box protein Q1-like,1, C_EE_H_D_EE_H
+LOC110062755,LOC110062755,fukutin-related protein-like,1, C_EE_H_D_EE_H
+LOC110064011,LOC110064011,furin-like,1, C_EE_H_D_EE_H
+LOC110055837,LOC110055837,galactosylgalactosylxylosylprotein 3-beta-glucuronosyltransferase 3-like,1, C_EE_H_D_EE_H
+LOC110046058,LOC110046058,galanin receptor type 1-like,1, C_EE_H_D_EE_H
+LOC110068112,LOC110068112,"gamma-2-syntrophin-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110054499,LOC110054499,gamma-butyrobetaine dioxygenase-like,1, C_EE_H_D_EE_H
+LOC110066954,LOC110066954,gamma-glutamyltranspeptidase 1-like,1, C_EE_H_D_EE_H
+LOC110066999,LOC110066999,gamma-glutamyltranspeptidase 1-like,1, C_EE_H_D_EE_H
+LOC110050932,LOC110050932,"gelsolin-like protein 2, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110055691,LOC110055691,"general transcription factor 3C polypeptide 1-like, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110069515,LOC110069515,glutathione-specific gamma-glutamylcyclotransferase 1-like,1, C_EE_H_D_EE_H
+LOC110063756,LOC110063756,"glyceraldehyde-3-phosphate dehydrogenase, cytosolic-like",1, C_EE_H_D_EE_H
+LOC110052731,LOC110052731,glycogen synthase kinase-3 beta-like,1, C_EE_H_D_EE_H
+LOC110055348,LOC110055348,"golgin subfamily A member 6-like protein 6, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110056271,LOC110056271,group XV phospholipase A2-like,1, C_EE_H_D_EE_H
+LOC110047837,LOC110047837,growth/differentiation factor 8-like,1, C_EE_H_D_EE_H
+LOC110043483,LOC110043483,helicase with zinc finger domain 2-like,1, C_EE_H_D_EE_H
+LOC110058803,LOC110058803,"hemicentin-1-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110068152,LOC110068152,hemicentin-2-like,1, C_EE_H_D_EE_H
+LOC110064787,LOC110064787,hepatocyte nuclear factor 1-beta-A-like,1, C_EE_H_D_EE_H
+LOC110040924,LOC110040924,high affinity cationic amino acid transporter 1-like,1, C_EE_H_D_EE_H
+LOC110068534,LOC110068534,histone H2A,1, C_EE_H_D_EE_H
+LOC110049641,LOC110049641,"histone acetyltransferase KAT7-like, transcript variant X3",1, C_EE_H_D_EE_H
+LOC110057786,LOC110057786,homeobox protein ceh-19-like,1, C_EE_H_D_EE_H
+LOC110050129,LOC110050129,"hydroxyacyl-coenzyme A dehydrogenase, mitochondrial-like",1, C_EE_H_D_EE_H
+LOC110068593,LOC110068593,inactive serine protease 35-like,1, C_EE_H_D_EE_H
+LOC110066600,LOC110066600,"inosine-5'-monophosphate dehydrogenase 1b-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110047450,LOC110047450,interstitial collagenase-like,1, C_EE_H_D_EE_H
+LOC110041025,LOC110041025,kelch-like protein 1,1, C_EE_H_D_EE_H
+LOC110066484,LOC110066484,kelch-like protein 2,1, C_EE_H_D_EE_H
+LOC110059740,LOC110059740,kelch-like protein 25,1, C_EE_H_D_EE_H
+LOC110068832,LOC110068832,kelch-like protein 5,1, C_EE_H_D_EE_H
+LOC110049853,LOC110049853,laccase-4-like,1, C_EE_H_D_EE_H
+LOC110051805,LOC110051805,"leukocyte tyrosine kinase receptor-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110065512,LOC110065512,lipase member K-like,1, C_EE_H_D_EE_H
+LOC110045499,LOC110045499,lipopolysaccharide-induced tumor necrosis factor-alpha factor homolog,1, C_EE_H_D_EE_H
+LOC110051192,LOC110051192,major facilitator superfamily domain-containing protein 6-like,1, C_EE_H_D_EE_H
+LOC110053046,LOC110053046,maltase 1-like,1, C_EE_H_D_EE_H
+LOC110061326,LOC110061326,matrix metalloproteinase-16-like,1, C_EE_H_D_EE_H
+LOC110043946,LOC110043946,melanocortin receptor 4-like,1, C_EE_H_D_EE_H
+LOC110063159,LOC110063159,"melanocortin receptor 5-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110048560,LOC110048560,"metalloendopeptidase OMA1, mitochondrial-like",1, C_EE_H_D_EE_H
+LOC110046642,LOC110046642,"metalloproteinase inhibitor 2-like, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110041798,LOC110041798,"mevalonate kinase-like, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110046618,LOC110046618,mitochondrial carnitine/acylcarnitine carrier protein-like,1, C_EE_H_D_EE_H
+LOC110065054,LOC110065054,mitochondrial ribonuclease P protein 3-like,1, C_EE_H_D_EE_H
+LOC110045720,LOC110045720,"myoferlin-like, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110059420,LOC110059420,myosin-2 heavy chain-like,1, C_EE_H_D_EE_H
+LOC110055249,LOC110055249,neo-calmodulin-like,1, C_EE_H_D_EE_H
+LOC110045356,LOC110045356,nephrocystin-1-like,1, C_EE_H_D_EE_H
+LOC110065655,LOC110065655,"nephrocystin-3-like, transcript variant X4",1, C_EE_H_D_EE_H
+LOC110052970,LOC110052970,neural cell adhesion molecule 2-like,1, C_EE_H_D_EE_H
+LOC110067644,LOC110067644,"neurocalcin homolog, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110047676,LOC110047676,neuromedin-U receptor 2-like,1, C_EE_H_D_EE_H
+LOC110053610,LOC110053610,"neuronal acetylcholine receptor subunit alpha-10-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110040065,LOC110040065,neuronal growth regulator 1-like,1, C_EE_H_D_EE_H
+LOC110061367,LOC110061367,nucleolar protein 14-like,1, C_EE_H_D_EE_H
+LOC110066286,LOC110066286,nucleotide pyrophosphatase/phosphodiesterase-like,1, C_EE_H_D_EE_H
+LOC110054683,LOC110054683,nudix hydrolase 8-like,1, C_EE_H_D_EE_H
+LOC110065290,LOC110065290,octopamine receptor-like,1, C_EE_H_D_EE_H
+LOC110065708,LOC110065708,"pancreatic secretory granule membrane major glycoprotein GP2-like, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110059284,LOC110059284,"paramyosin-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110067916,LOC110067916,peptidase M20 domain-containing protein 2-like,1, C_EE_H_D_EE_H
+LOC110058795,LOC110058795,peptide-N(4)-(N-acetyl-beta-glucosaminyl)asparagine amidase-like,1, C_EE_H_D_EE_H
+LOC110069436,LOC110069436,"perlucin-like protein, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110053701,LOC110053701,peroxisome assembly protein 26-like,1, C_EE_H_D_EE_H
+LOC110058416,LOC110058416,"phosphoglycolate phosphatase-like, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110063380,LOC110063380,"pleckstrin homology domain-containing family M member 2-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110067961,LOC110067961,poly [ADP-ribose] polymerase 14-like,1, C_EE_H_D_EE_H
+LOC110065651,LOC110065651,"poly [ADP-ribose] polymerase 14-like, transcript variant X3",1, C_EE_H_D_EE_H
+LOC110042096,LOC110042096,potassium channel subfamily K member 15-like,1, C_EE_H_D_EE_H
+LOC110062420,LOC110062420,"potassium voltage-gated channel subfamily A member 2-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110041370,LOC110041370,"potassium voltage-gated channel subfamily C member 4-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110046269,LOC110046269,potassium voltage-gated channel subfamily D member 3-like,1, C_EE_H_D_EE_H
+LOC110040308,LOC110040308,probable E3 ubiquitin-protein ligase ARI11,1, C_EE_H_D_EE_H
+LOC110040778,LOC110040778,probable E3 ubiquitin-protein ligase DTX2,1, C_EE_H_D_EE_H
+LOC110049075,LOC110049075,probable alpha-ketoglutarate-dependent hypophosphite dioxygenase,1, C_EE_H_D_EE_H
+LOC110066730,LOC110066730,probable proline dehydrogenase 2,1, C_EE_H_D_EE_H
+LOC110044195,LOC110044195,"probable serine/threonine-protein kinase drkD, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110048447,LOC110048447,"proline dehydrogenase 1, mitochondrial-like",1, C_EE_H_D_EE_H
+LOC110043607,LOC110043607,"proprotein convertase subtilisin/kexin type 5-like, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110043445,LOC110043445,prostaglandin D2 receptor-like,1, C_EE_H_D_EE_H
+LOC110047414,LOC110047414,protein CIP2A homolog,1, C_EE_H_D_EE_H
+LOC110050011,LOC110050011,protein DBF4 homolog B-like,1, C_EE_H_D_EE_H
+LOC110039728,LOC110039728,protein DD3-3-like,1, C_EE_H_D_EE_H
+LOC110039960,LOC110039960,protein DENND6A-like,1, C_EE_H_D_EE_H
+LOC110062846,LOC110062846,"protein MAK16 homolog, transcript variant X4",1, C_EE_H_D_EE_H
+LOC110043889,LOC110043889,protein NLRC3-like,1, C_EE_H_D_EE_H
+LOC110063528,LOC110063528,"protein O-linked-mannose beta-1,2-N-acetylglucosaminyltransferase 1-like",1, C_EE_H_D_EE_H
+LOC110051767,LOC110051767,protein PRY1-like,1, C_EE_H_D_EE_H
+LOC110046651,LOC110046651,protein asunder homolog,1, C_EE_H_D_EE_H
+LOC110058730,LOC110058730,protein decapentaplegic-like,1, C_EE_H_D_EE_H
+LOC110042671,LOC110042671,protein lin-41-like,1, C_EE_H_D_EE_H
+LOC110043451,LOC110043451,protein phosphatase 1 regulatory subunit 27-like,1, C_EE_H_D_EE_H
+LOC110068298,LOC110068298,protein phosphatase 1 regulatory subunit 3C-like,1, C_EE_H_D_EE_H
+LOC110054875,LOC110054875,protein piccolo-like,1, C_EE_H_D_EE_H
+LOC110064912,LOC110064912,protein transport protein Sec23A-like,1, C_EE_H_D_EE_H
+LOC110056359,LOC110056359,pterin-4-alpha-carbinolamine dehydratase-like,1, C_EE_H_D_EE_H
+LOC110039915,LOC110039915,"putative adenosylhomocysteinase 3, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110060670,LOC110060670,putative beta-lactamase-like 1,1, C_EE_H_D_EE_H
+LOC110053692,LOC110053692,putative exosome complex component rrp40,1, C_EE_H_D_EE_H
+LOC110048964,LOC110048964,putative helicase MOV-10,1, C_EE_H_D_EE_H
+LOC110053326,LOC110053326,"putative histone-lysine N-methyltransferase PRDM6, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110063864,LOC110063864,pyroglutamylated RFamide peptide receptor-like,1, C_EE_H_D_EE_H
+LOC110067194,LOC110067194,"ral guanine nucleotide dissociation stimulator-like 1, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110052521,LOC110052521,ras-related and estrogen-regulated growth inhibitor-like,1, C_EE_H_D_EE_H
+LOC110068997,LOC110068997,sec14 cytosolic factor-like,1, C_EE_H_D_EE_H
+LOC110048084,LOC110048084,serine protease 23-like,1, C_EE_H_D_EE_H
+LOC110066455,LOC110066455,serine/threonine-protein kinase 33-like,1, C_EE_H_D_EE_H
+LOC110068266,LOC110068266,serine/threonine-protein phosphatase 4 regulatory subunit 1-like,1, C_EE_H_D_EE_H
+LOC110057534,LOC110057534,sodium channel modifier 1-like,1, C_EE_H_D_EE_H
+LOC110062663,LOC110062663,sodium- and chloride-dependent taurine transporter-like,1, C_EE_H_D_EE_H
+LOC110050490,LOC110050490,sodium-coupled monocarboxylate transporter 1-like,1, C_EE_H_D_EE_H
+LOC110045418,LOC110045418,sodium-dependent dopamine transporter-like,1, C_EE_H_D_EE_H
+LOC110039715,LOC110039715,sodium/glucose cotransporter 5-like,1, C_EE_H_D_EE_H
+LOC110069312,LOC110069312,"soluble guanylate cyclase gcy-33-like, transcript variant X4",1, C_EE_H_D_EE_H
+LOC110063979,LOC110063979,somatostatin receptor type 5-like,1, C_EE_H_D_EE_H
+LOC110056474,LOC110056474,sterol regulatory element-binding protein 1-like,1, C_EE_H_D_EE_H
+LOC110065139,LOC110065139,"substance-K receptor-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110062626,LOC110062626,suppressor protein SRP40-like,1, C_EE_H_D_EE_H
+LOC110051046,LOC110051046,"sushi, von Willebrand factor type A, EGF and pentraxin domain-containing protein 1-like",1, C_EE_H_D_EE_H
+LOC110043027,LOC110043027,"sushi, von Willebrand factor type A, EGF and pentraxin domain-containing protein 1-like, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110039709,LOC110039709,"target of rapamycin complex 2 subunit MAPKAP1-like, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110064549,LOC110064549,tctex1 domain-containing protein 2-like,1, C_EE_H_D_EE_H
+LOC110047843,LOC110047843,testis-expressed protein 10-like,1, C_EE_H_D_EE_H
+LOC110062674,LOC110062674,tetratricopeptide repeat protein 28-like,1, C_EE_H_D_EE_H
+LOC110065626,LOC110065626,tetratricopeptide repeat protein 28-like,1, C_EE_H_D_EE_H
+LOC110051143,LOC110051143,"tolloid-like protein 2, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110048955,LOC110048955,trace amine-associated receptor 8b-like,1, C_EE_H_D_EE_H
+LOC110049030,LOC110049030,"transcription factor A, mitochondrial-like",1, C_EE_H_D_EE_H
+LOC110043723,LOC110043723,transcription factor Sox-17-beta.3-like,1, C_EE_H_D_EE_H
+LOC110063950,LOC110063950,transient receptor potential cation channel subfamily A member 1 homolog,1, C_EE_H_D_EE_H
+LOC110064527,LOC110064527,transient receptor potential cation channel subfamily A member 1-like,1, C_EE_H_D_EE_H
+LOC110057527,LOC110057527,transient receptor potential cation channel subfamily M member 6-like,1, C_EE_H_D_EE_H
+LOC110046690,LOC110046690,translation initiation factor eIF-2B subunit gamma-like,1, C_EE_H_D_EE_H
+LOC110059449,LOC110059449,trichohyalin-like,1, C_EE_H_D_EE_H
+LOC110058395,LOC110058395,tryptophanase-like,1, C_EE_H_D_EE_H
+LOC110066055,LOC110066055,tumor necrosis factor receptor superfamily member 1A-like,1, C_EE_H_D_EE_H
+LOC110054377,LOC110054377,twist-related protein-like,1, C_EE_H_D_EE_H
+LOC110052514,LOC110052514,two pore potassium channel protein sup-9-like,1, C_EE_H_D_EE_H
+LOC110068256,LOC110068256,tyramine/octopamine receptor-like,1, C_EE_H_D_EE_H
+LOC110064066,LOC110064066,tyrosine-protein kinase FRK-like,1, C_EE_H_D_EE_H
+LOC110048022,LOC110048022,ubiquitin-protein ligase E3C-like,1, C_EE_H_D_EE_H
+LOC110039662,LOC110039662,uncharacterized LOC110039662,1, C_EE_H_D_EE_H
+LOC110039847,LOC110039847,uncharacterized LOC110039847,1, C_EE_H_D_EE_H
+LOC110039944,LOC110039944,uncharacterized LOC110039944,1, C_EE_H_D_EE_H
+LOC110040087,LOC110040087,uncharacterized LOC110040087,1, C_EE_H_D_EE_H
+LOC110040175,LOC110040175,uncharacterized LOC110040175,1, C_EE_H_D_EE_H
+LOC110040897,LOC110040897,uncharacterized LOC110040897,1, C_EE_H_D_EE_H
+LOC110040899,LOC110040899,uncharacterized LOC110040899,1, C_EE_H_D_EE_H
+LOC110041529,LOC110041529,uncharacterized LOC110041529,1, C_EE_H_D_EE_H
+LOC110041679,LOC110041679,"uncharacterized LOC110041679, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110041920,LOC110041920,"uncharacterized LOC110041920, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110042185,LOC110042185,uncharacterized LOC110042185,1, C_EE_H_D_EE_H
+LOC110042328,LOC110042328,uncharacterized LOC110042328,1, C_EE_H_D_EE_H
+LOC110042472,LOC110042472,uncharacterized LOC110042472,1, C_EE_H_D_EE_H
+LOC110042683,LOC110042683,uncharacterized LOC110042683,1, C_EE_H_D_EE_H
+LOC110043028,LOC110043028,"uncharacterized LOC110043028, transcript variant X3",1, C_EE_H_D_EE_H
+LOC110043387,LOC110043387,uncharacterized LOC110043387,1, C_EE_H_D_EE_H
+LOC110043460,LOC110043460,uncharacterized LOC110043460,1, C_EE_H_D_EE_H
+LOC110043600,LOC110043600,uncharacterized LOC110043600,1, C_EE_H_D_EE_H
+LOC110044200,LOC110044200,"uncharacterized LOC110044200, transcript variant X3",1, C_EE_H_D_EE_H
+LOC110044207,LOC110044207,uncharacterized LOC110044207,1, C_EE_H_D_EE_H
+LOC110044274,LOC110044274,"uncharacterized LOC110044274, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110044491,LOC110044491,uncharacterized LOC110044491,1, C_EE_H_D_EE_H
+LOC110044544,LOC110044544,uncharacterized LOC110044544,1, C_EE_H_D_EE_H
+LOC110044586,LOC110044586,uncharacterized LOC110044586,1, C_EE_H_D_EE_H
+LOC110045182,LOC110045182,uncharacterized LOC110045182,1, C_EE_H_D_EE_H
+LOC110045208,LOC110045208,uncharacterized LOC110045208,1, C_EE_H_D_EE_H
+LOC110045334,LOC110045334,uncharacterized LOC110045334,1, C_EE_H_D_EE_H
+LOC110045559,LOC110045559,uncharacterized LOC110045559,1, C_EE_H_D_EE_H
+LOC110045604,LOC110045604,uncharacterized LOC110045604,1, C_EE_H_D_EE_H
+LOC110045842,LOC110045842,uncharacterized LOC110045842,1, C_EE_H_D_EE_H
+LOC110046089,LOC110046089,"uncharacterized LOC110046089, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110046286,LOC110046286,uncharacterized LOC110046286,1, C_EE_H_D_EE_H
+LOC110046631,LOC110046631,"uncharacterized LOC110046631, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110047027,LOC110047027,uncharacterized LOC110047027,1, C_EE_H_D_EE_H
+LOC110047176,LOC110047176,uncharacterized LOC110047176,1, C_EE_H_D_EE_H
+LOC110047416,LOC110047416,uncharacterized LOC110047416,1, C_EE_H_D_EE_H
+LOC110047864,LOC110047864,"uncharacterized LOC110047864, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110048190,LOC110048190,uncharacterized LOC110048190,1, C_EE_H_D_EE_H
+LOC110048758,LOC110048758,uncharacterized LOC110048758,1, C_EE_H_D_EE_H
+LOC110048821,LOC110048821,uncharacterized LOC110048821,1, C_EE_H_D_EE_H
+LOC110050042,LOC110050042,uncharacterized LOC110050042,1, C_EE_H_D_EE_H
+LOC110050375,LOC110050375,uncharacterized LOC110050375,1, C_EE_H_D_EE_H
+LOC110050412,LOC110050412,"uncharacterized LOC110050412, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110050439,LOC110050439,"uncharacterized LOC110050439, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110050594,LOC110050594,uncharacterized LOC110050594,1, C_EE_H_D_EE_H
+LOC110050596,LOC110050596,uncharacterized LOC110050596,1, C_EE_H_D_EE_H
+LOC110050669,LOC110050669,uncharacterized LOC110050669,1, C_EE_H_D_EE_H
+LOC110050828,LOC110050828,uncharacterized LOC110050828,1, C_EE_H_D_EE_H
+LOC110050834,LOC110050834,"uncharacterized LOC110050834, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110050929,LOC110050929,uncharacterized LOC110050929,1, C_EE_H_D_EE_H
+LOC110051129,LOC110051129,"uncharacterized LOC110051129, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110051255,LOC110051255,"uncharacterized LOC110051255, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110051705,LOC110051705,uncharacterized LOC110051705,1, C_EE_H_D_EE_H
+LOC110052143,LOC110052143,uncharacterized LOC110052143,1, C_EE_H_D_EE_H
+LOC110052232,LOC110052232,uncharacterized LOC110052232,1, C_EE_H_D_EE_H
+LOC110052431,LOC110052431,"uncharacterized LOC110052431, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110052681,LOC110052681,uncharacterized LOC110052681,1, C_EE_H_D_EE_H
+LOC110052694,LOC110052694,uncharacterized LOC110052694,1, C_EE_H_D_EE_H
+LOC110052700,LOC110052700,uncharacterized LOC110052700,1, C_EE_H_D_EE_H
+LOC110052817,LOC110052817,"uncharacterized LOC110052817, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110053083,LOC110053083,uncharacterized LOC110053083,1, C_EE_H_D_EE_H
+LOC110053132,LOC110053132,"uncharacterized LOC110053132, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110053599,LOC110053599,uncharacterized LOC110053599,1, C_EE_H_D_EE_H
+LOC110054205,LOC110054205,uncharacterized LOC110054205,1, C_EE_H_D_EE_H
+LOC110054393,LOC110054393,uncharacterized LOC110054393,1, C_EE_H_D_EE_H
+LOC110054542,LOC110054542,uncharacterized LOC110054542,1, C_EE_H_D_EE_H
+LOC110054576,LOC110054576,uncharacterized LOC110054576,1, C_EE_H_D_EE_H
+LOC110055245,LOC110055245,"uncharacterized LOC110055245, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110055294,LOC110055294,uncharacterized LOC110055294,1, C_EE_H_D_EE_H
+LOC110055386,LOC110055386,uncharacterized LOC110055386,1, C_EE_H_D_EE_H
+LOC110055566,LOC110055566,uncharacterized LOC110055566,1, C_EE_H_D_EE_H
+LOC110055642,LOC110055642,uncharacterized LOC110055642,1, C_EE_H_D_EE_H
+LOC110055732,LOC110055732,uncharacterized LOC110055732,1, C_EE_H_D_EE_H
+LOC110055735,LOC110055735,uncharacterized LOC110055735,1, C_EE_H_D_EE_H
+LOC110055775,LOC110055775,uncharacterized LOC110055775,1, C_EE_H_D_EE_H
+LOC110055825,LOC110055825,uncharacterized LOC110055825,1, C_EE_H_D_EE_H
+LOC110055858,LOC110055858,"uncharacterized LOC110055858, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110055865,LOC110055865,uncharacterized LOC110055865,1, C_EE_H_D_EE_H
+LOC110056049,LOC110056049,uncharacterized LOC110056049,1, C_EE_H_D_EE_H
+LOC110056255,LOC110056255,uncharacterized LOC110056255,1, C_EE_H_D_EE_H
+LOC110056449,LOC110056449,uncharacterized LOC110056449,1, C_EE_H_D_EE_H
+LOC110056593,LOC110056593,uncharacterized LOC110056593,1, C_EE_H_D_EE_H
+LOC110056626,LOC110056626,uncharacterized LOC110056626,1, C_EE_H_D_EE_H
+LOC110056647,LOC110056647,uncharacterized LOC110056647,1, C_EE_H_D_EE_H
+LOC110056831,LOC110056831,uncharacterized LOC110056831,1, C_EE_H_D_EE_H
+LOC110056841,LOC110056841,uncharacterized LOC110056841,1, C_EE_H_D_EE_H
+LOC110057003,LOC110057003,uncharacterized LOC110057003,1, C_EE_H_D_EE_H
+LOC110057466,LOC110057466,"uncharacterized LOC110057466, transcript variant X4",1, C_EE_H_D_EE_H
+LOC110057480,LOC110057480,uncharacterized LOC110057480,1, C_EE_H_D_EE_H
+LOC110057496,LOC110057496,uncharacterized LOC110057496,1, C_EE_H_D_EE_H
+LOC110057904,LOC110057904,uncharacterized LOC110057904,1, C_EE_H_D_EE_H
+LOC110058385,LOC110058385,uncharacterized LOC110058385,1, C_EE_H_D_EE_H
+LOC110058403,LOC110058403,uncharacterized LOC110058403,1, C_EE_H_D_EE_H
+LOC110058479,LOC110058479,uncharacterized LOC110058479,1, C_EE_H_D_EE_H
+LOC110058779,LOC110058779,uncharacterized LOC110058779,1, C_EE_H_D_EE_H
+LOC110058814,LOC110058814,uncharacterized LOC110058814,1, C_EE_H_D_EE_H
+LOC110059684,LOC110059684,uncharacterized LOC110059684,1, C_EE_H_D_EE_H
+LOC110059810,LOC110059810,uncharacterized LOC110059810,1, C_EE_H_D_EE_H
+LOC110059938,LOC110059938,uncharacterized LOC110059938,1, C_EE_H_D_EE_H
+LOC110060023,LOC110060023,"uncharacterized LOC110060023, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110060042,LOC110060042,uncharacterized LOC110060042,1, C_EE_H_D_EE_H
+LOC110060064,LOC110060064,uncharacterized LOC110060064,1, C_EE_H_D_EE_H
+LOC110060083,LOC110060083,uncharacterized LOC110060083,1, C_EE_H_D_EE_H
+LOC110060582,LOC110060582,uncharacterized LOC110060582,1, C_EE_H_D_EE_H
+LOC110060934,LOC110060934,"uncharacterized LOC110060934, transcript variant X4",1, C_EE_H_D_EE_H
+LOC110061154,LOC110061154,uncharacterized LOC110061154,1, C_EE_H_D_EE_H
+LOC110061179,LOC110061179,uncharacterized LOC110061179,1, C_EE_H_D_EE_H
+LOC110061296,LOC110061296,uncharacterized LOC110061296,1, C_EE_H_D_EE_H
+LOC110061555,LOC110061555,"uncharacterized LOC110061555, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110061607,LOC110061607,uncharacterized LOC110061607,1, C_EE_H_D_EE_H
+LOC110062180,LOC110062180,"uncharacterized LOC110062180, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110062257,LOC110062257,uncharacterized LOC110062257,1, C_EE_H_D_EE_H
+LOC110062309,LOC110062309,uncharacterized LOC110062309,1, C_EE_H_D_EE_H
+LOC110062326,LOC110062326,uncharacterized LOC110062326,1, C_EE_H_D_EE_H
+LOC110062379,LOC110062379,uncharacterized LOC110062379,1, C_EE_H_D_EE_H
+LOC110062629,LOC110062629,uncharacterized LOC110062629,1, C_EE_H_D_EE_H
+LOC110062632,LOC110062632,uncharacterized LOC110062632,1, C_EE_H_D_EE_H
+LOC110062713,LOC110062713,uncharacterized LOC110062713,1, C_EE_H_D_EE_H
+LOC110062773,LOC110062773,uncharacterized LOC110062773,1, C_EE_H_D_EE_H
+LOC110062895,LOC110062895,uncharacterized LOC110062895,1, C_EE_H_D_EE_H
+LOC110063037,LOC110063037,"uncharacterized LOC110063037, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110063098,LOC110063098,"uncharacterized LOC110063098, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110063383,LOC110063383,uncharacterized LOC110063383,1, C_EE_H_D_EE_H
+LOC110063495,LOC110063495,uncharacterized LOC110063495,1, C_EE_H_D_EE_H
+LOC110063531,LOC110063531,uncharacterized LOC110063531,1, C_EE_H_D_EE_H
+LOC110063784,LOC110063784,uncharacterized LOC110063784,1, C_EE_H_D_EE_H
+LOC110063807,LOC110063807,uncharacterized LOC110063807,1, C_EE_H_D_EE_H
+LOC110063939,LOC110063939,uncharacterized LOC110063939,1, C_EE_H_D_EE_H
+LOC110064193,LOC110064193,"uncharacterized LOC110064193, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110064269,LOC110064269,uncharacterized LOC110064269,1, C_EE_H_D_EE_H
+LOC110064312,LOC110064312,uncharacterized LOC110064312,1, C_EE_H_D_EE_H
+LOC110064402,LOC110064402,uncharacterized LOC110064402,1, C_EE_H_D_EE_H
+LOC110064465,LOC110064465,uncharacterized LOC110064465,1, C_EE_H_D_EE_H
+LOC110064592,LOC110064592,uncharacterized LOC110064592,1, C_EE_H_D_EE_H
+LOC110064594,LOC110064594,"uncharacterized LOC110064594, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110064622,LOC110064622,"uncharacterized LOC110064622, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110065127,LOC110065127,uncharacterized LOC110065127,1, C_EE_H_D_EE_H
+LOC110065588,LOC110065588,uncharacterized LOC110065588,1, C_EE_H_D_EE_H
+LOC110066265,LOC110066265,uncharacterized LOC110066265,1, C_EE_H_D_EE_H
+LOC110066386,LOC110066386,uncharacterized LOC110066386,1, C_EE_H_D_EE_H
+LOC110066517,LOC110066517,uncharacterized LOC110066517,1, C_EE_H_D_EE_H
+LOC110066624,LOC110066624,uncharacterized LOC110066624,1, C_EE_H_D_EE_H
+LOC110066675,LOC110066675,uncharacterized LOC110066675,1, C_EE_H_D_EE_H
+LOC110066850,LOC110066850,uncharacterized LOC110066850,1, C_EE_H_D_EE_H
+LOC110067067,LOC110067067,uncharacterized LOC110067067,1, C_EE_H_D_EE_H
+LOC110067164,LOC110067164,uncharacterized LOC110067164,1, C_EE_H_D_EE_H
+LOC110067349,LOC110067349,"uncharacterized LOC110067349, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110067588,LOC110067588,uncharacterized LOC110067588,1, C_EE_H_D_EE_H
+LOC110067912,LOC110067912,"uncharacterized LOC110067912, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110068384,LOC110068384,uncharacterized LOC110068384,1, C_EE_H_D_EE_H
+LOC110068397,LOC110068397,"uncharacterized LOC110068397, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110068557,LOC110068557,"uncharacterized LOC110068557, transcript variant X1",1, C_EE_H_D_EE_H
+LOC110068563,LOC110068563,uncharacterized LOC110068563,1, C_EE_H_D_EE_H
+LOC110068705,LOC110068705,uncharacterized LOC110068705,1, C_EE_H_D_EE_H
+LOC110068991,LOC110068991,uncharacterized LOC110068991,1, C_EE_H_D_EE_H
+LOC110069365,LOC110069365,uncharacterized LOC110069365,1, C_EE_H_D_EE_H
+LOC110069374,LOC110069374,uncharacterized LOC110069374,1, C_EE_H_D_EE_H
+LOC110069503,LOC110069503,uncharacterized LOC110069503,1, C_EE_H_D_EE_H
+LOC110069663,LOC110069663,"uncharacterized LOC110069663, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110069527,LOC110069527,"uncharacterized protein C15orf41 homolog, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110052793,LOC110052793,"uncharacterized protein C7orf72 homolog, transcript variant X2",1, C_EE_H_D_EE_H
+LOC110057808,LOC110057808,uncharacterized protein YwnB-like,1, C_EE_H_D_EE_H
+LOC110043862,LOC110043862,uncharacterized protein YxeI-like,1, C_EE_H_D_EE_H
+LOC110045038,LOC110045038,vacuolar protein sorting-associated protein 37A-like,1, C_EE_H_D_EE_H
+LOC110054165,LOC110054165,vacuolar protein sorting-associated protein 72 homolog,1, C_EE_H_D_EE_H
+LOC110055237,LOC110055237,vesicle transport protein GOT1B-like,1, C_EE_H_D_EE_H
+LOC110041256,LOC110041256,von Hippel-Lindau tumor suppressor homolog,1, C_EE_H_D_EE_H
+LOC110057721,LOC110057721,zinc finger protein 345-like,1, C_EE_H_D_EE_H
+LOC110053579,LOC110053579,zinc finger protein 724-like,1, C_EE_H_D_EE_H
+LOC110048542,LOC110048542,zinc phosphodiesterase ELAC protein 2-like,1, C_EE_H_D_EE_H
+LOC110050671,LOC110050671,5-hydroxytryptamine receptor 1-like,2, D_EE_D_D_EE_H
+LOC110055700,LOC110055700,AAC-rich mRNA clone AAC4 protein-like,2, D_EE_D_D_EE_H
+LOC110069424,LOC110069424,AMMECR1-like protein,2, D_EE_D_D_EE_H
+LOC110060002,LOC110060002,"BTB/POZ domain-containing protein 6-like, transcript variant X1",2, D_EE_D_D_EE_H
+LOC110065252,LOC110065252,"CAP-Gly domain-containing linker protein 1-like, transcript variant X2",2, D_EE_D_D_EE_H
+LOC110065341,LOC110065341,COMM domain-containing protein 6-like,2, D_EE_D_D_EE_H
+LOC110065008,LOC110065008,"D(3) dopamine receptor-like, transcript variant X1",2, D_EE_D_D_EE_H
+LOC110044004,LOC110044004,"DAZ protein 1-like, transcript variant X2",2, D_EE_D_D_EE_H
+LOC110056657,LOC110056657,DNA excision repair protein ERCC-6-like,2, D_EE_D_D_EE_H
+LOC110046011,LOC110046011,DNA-directed RNA polymerase I subunit RPA43-like,2, D_EE_D_D_EE_H
+LOC110050883,LOC110050883,DNA/RNA-binding protein KIN17-like,2, D_EE_D_D_EE_H
+LOC110044614,LOC110044614,"E3 ubiquitin-protein ligase MIB2-like, transcript variant X4",2, D_EE_D_D_EE_H
+LOC110040598,LOC110040598,"E3 ubiquitin-protein ligase TRIM71-like, transcript variant X3",2, D_EE_D_D_EE_H
+LOC110053069,LOC110053069,E3 ubiquitin-protein ligase rnf213-alpha-like,2, D_EE_D_D_EE_H
+LOC110057963,LOC110057963,ETS-related transcription factor Elf-4-like,2, D_EE_D_D_EE_H
+LOC110069668,LOC110069668,FH protein interacting protein FIP2-like,2, D_EE_D_D_EE_H
+LOC110064761,LOC110064761,"G patch domain and KOW motifs-containing protein-like, transcript variant X2",2, D_EE_D_D_EE_H
+LOC110052780,LOC110052780,"GPI mannosyltransferase 4-like, transcript variant X2",2, D_EE_D_D_EE_H
+LOC110061589,LOC110061589,L-cysteine desulfhydrase-like,2, D_EE_D_D_EE_H
+LOC110067369,LOC110067369,N-acetylated-alpha-linked acidic dipeptidase 2-like,2, D_EE_D_D_EE_H
+LOC110046180,LOC110046180,"PP2C-like domain-containing protein CG9801, transcript variant X3",2, D_EE_D_D_EE_H
+LOC110066243,LOC110066243,"REST corepressor 3-like, transcript variant X2",2, D_EE_D_D_EE_H
+LOC110066923,LOC110066923,RNA-binding protein cabeza-like,2, D_EE_D_D_EE_H
+LOC110055559,LOC110055559,RYamide receptor-like,2, D_EE_D_D_EE_H
+LOC110067882,LOC110067882,"TNF receptor-associated factor 4-like, transcript variant X2",2, D_EE_D_D_EE_H
+LOC110056301,LOC110056301,UNC93-like protein MFSD11,2, D_EE_D_D_EE_H
+LOC110059708,LOC110059708,"WD repeat-containing protein 59-like, transcript variant X1",2, D_EE_D_D_EE_H
+LOC110056894,LOC110056894,"XK-related protein 6-like, transcript variant X4",2, D_EE_D_D_EE_H
+LOC110043035,LOC110043035,acetylserotonin O-methyltransferase-like,2, D_EE_D_D_EE_H
+LOC110068608,LOC110068608,acetylserotonin O-methyltransferase-like,2, D_EE_D_D_EE_H
+LOC110050660,LOC110050660,"acyl-coenzyme A synthetase ACSM4, mitochondrial-like",2, D_EE_D_D_EE_H
+LOC110062864,LOC110062864,acyl-lipid (8-3)-desaturase-like,2, D_EE_D_D_EE_H
+LOC110067391,LOC110067391,"alpha-1,6-mannosylglycoprotein 6-beta-N-acetylglucosaminyltransferase A-like",2, D_EE_D_D_EE_H
+LOC110047970,LOC110047970,"alpha-1,6-mannosylglycoprotein 6-beta-N-acetylglucosaminyltransferase A-like",2, D_EE_D_D_EE_H
+LOC110057123,LOC110057123,angiopoietin-1 receptor-like,2, D_EE_D_D_EE_H
+LOC110050985,LOC110050985,arrestin domain-containing protein 4-like,2, D_EE_D_D_EE_H
+LOC110040722,LOC110040722,"beta-1,4-N-acetylgalactosaminyltransferase 3-like",2, D_EE_D_D_EE_H
+LOC110043216,LOC110043216,"calcium-binding protein P-like, transcript variant X2",2, D_EE_D_D_EE_H
+LOC110069580,LOC110069580,carbonic anhydrase 2-like,2, D_EE_D_D_EE_H
+LOC110059474,LOC110059474,carboxypeptidase B-like,2, D_EE_D_D_EE_H
+LOC110069659,LOC110069659,caspase-8-like,2, D_EE_D_D_EE_H
+LOC110054364,LOC110054364,coadhesin-like,2, D_EE_D_D_EE_H
+LOC110055756,LOC110055756,coadhesin-like,2, D_EE_D_D_EE_H
+LOC110043323,LOC110043323,coiled-coil domain-containing protein 15-like,2, D_EE_D_D_EE_H
+LOC110052323,LOC110052323,"collagen alpha chain-like, transcript variant X1",2, D_EE_D_D_EE_H
+LOC110065687,LOC110065687,collagen alpha-1(I) chain-like,2, D_EE_D_D_EE_H
+LOC110046035,LOC110046035,"collagen alpha-1(XII) chain-like, transcript variant X2",2, D_EE_D_D_EE_H
+LOC110047380,LOC110047380,collagen alpha-2(IX) chain-like,2, D_EE_D_D_EE_H
+LOC110061126,LOC110061126,complement C1q subcomponent subunit C-like,2, D_EE_D_D_EE_H
+LOC110057057,LOC110057057,contactin-associated protein-like 3,2, D_EE_D_D_EE_H
+LOC110061052,LOC110061052,cytosolic phospholipase A2-like,2, D_EE_D_D_EE_H
+LOC110068067,LOC110068067,deleted in malignant brain tumors 1 protein-like,2, D_EE_D_D_EE_H
+LOC110052494,LOC110052494,deubiquitinating protein VCIP135-like,2, D_EE_D_D_EE_H
+LOC110069339,LOC110069339,dickkopf-related protein 3-like,2, D_EE_D_D_EE_H
+LOC110065909,LOC110065909,"diencephalon/mesencephalon homeobox protein 1-B-like, transcript variant X1",2, D_EE_D_D_EE_H
+LOC110053088,LOC110053088,dipeptidyl peptidase 4-like,2, D_EE_D_D_EE_H
+LOC110050267,LOC110050267,dopamine receptor 2-like,2, D_EE_D_D_EE_H
+LOC110063912,LOC110063912,endochitinase A1-like,2, D_EE_D_D_EE_H
+LOC110053846,LOC110053846,endoribonuclease Dicer-like,2, D_EE_D_D_EE_H
+LOC110057766,LOC110057766,"ephrin type-A receptor 2-like, transcript variant X2",2, D_EE_D_D_EE_H
+LOC110067624,LOC110067624,eukaryotic translation initiation factor 2 subunit 1-like,2, D_EE_D_D_EE_H
+LOC110049123,LOC110049123,exostosin-like 3,2, D_EE_D_D_EE_H
+LOC110061335,LOC110061335,fez family zinc finger protein 1-like,2, D_EE_D_D_EE_H
+LOC110058382,LOC110058382,forkhead box protein J3-like,2, D_EE_D_D_EE_H
+LOC110064011,LOC110064011,furin-like,2, D_EE_D_D_EE_H
+LOC110066954,LOC110066954,gamma-glutamyltranspeptidase 1-like,2, D_EE_D_D_EE_H
+LOC110066999,LOC110066999,gamma-glutamyltranspeptidase 1-like,2, D_EE_D_D_EE_H
+LOC110043637,LOC110043637,gamma-tubulin complex component 2-like,2, D_EE_D_D_EE_H
+LOC110050932,LOC110050932,"gelsolin-like protein 2, transcript variant X2",2, D_EE_D_D_EE_H
+LOC110055348,LOC110055348,"golgin subfamily A member 6-like protein 6, transcript variant X2",2, D_EE_D_D_EE_H
+LOC110056271,LOC110056271,group XV phospholipase A2-like,2, D_EE_D_D_EE_H
+LOC110068152,LOC110068152,hemicentin-2-like,2, D_EE_D_D_EE_H
+LOC110064787,LOC110064787,hepatocyte nuclear factor 1-beta-A-like,2, D_EE_D_D_EE_H
+LOC110040924,LOC110040924,high affinity cationic amino acid transporter 1-like,2, D_EE_D_D_EE_H
+LOC110068593,LOC110068593,inactive serine protease 35-like,2, D_EE_D_D_EE_H
+LOC110059740,LOC110059740,kelch-like protein 25,2, D_EE_D_D_EE_H
+LOC110068832,LOC110068832,kelch-like protein 5,2, D_EE_D_D_EE_H
+LOC110064052,LOC110064052,kelch-like protein diablo,2, D_EE_D_D_EE_H
+LOC110049853,LOC110049853,laccase-4-like,2, D_EE_D_D_EE_H
+LOC110045829,LOC110045829,leucine-rich repeat-containing protein 27-like,2, D_EE_D_D_EE_H
+LOC110051805,LOC110051805,"leukocyte tyrosine kinase receptor-like, transcript variant X2",2, D_EE_D_D_EE_H
+LOC110065512,LOC110065512,lipase member K-like,2, D_EE_D_D_EE_H
+LOC110051193,LOC110051193,major facilitator superfamily domain-containing protein 6-like,2, D_EE_D_D_EE_H
+LOC110043946,LOC110043946,melanocortin receptor 4-like,2, D_EE_D_D_EE_H
+LOC110063159,LOC110063159,"melanocortin receptor 5-like, transcript variant X2",2, D_EE_D_D_EE_H
+LOC110046642,LOC110046642,"metalloproteinase inhibitor 2-like, transcript variant X1",2, D_EE_D_D_EE_H
+LOC110065655,LOC110065655,"nephrocystin-3-like, transcript variant X4",2, D_EE_D_D_EE_H
+LOC110066286,LOC110066286,nucleotide pyrophosphatase/phosphodiesterase-like,2, D_EE_D_D_EE_H
+LOC110065290,LOC110065290,octopamine receptor-like,2, D_EE_D_D_EE_H
+LOC110065708,LOC110065708,"pancreatic secretory granule membrane major glycoprotein GP2-like, transcript variant X1",2, D_EE_D_D_EE_H
+LOC110067916,LOC110067916,peptidase M20 domain-containing protein 2-like,2, D_EE_D_D_EE_H
+LOC110067870,LOC110067870,polycystic kidney disease protein 1-like 3,2, D_EE_D_D_EE_H
+LOC110041370,LOC110041370,"potassium voltage-gated channel subfamily C member 4-like, transcript variant X2",2, D_EE_D_D_EE_H
+LOC110046269,LOC110046269,potassium voltage-gated channel subfamily D member 3-like,2, D_EE_D_D_EE_H
+LOC110059406,LOC110059406,pre-mRNA-splicing factor cwc2-like,2, D_EE_D_D_EE_H
+LOC110049075,LOC110049075,probable alpha-ketoglutarate-dependent hypophosphite dioxygenase,2, D_EE_D_D_EE_H
+LOC110066730,LOC110066730,probable proline dehydrogenase 2,2, D_EE_D_D_EE_H
+LOC110044195,LOC110044195,"probable serine/threonine-protein kinase drkD, transcript variant X1",2, D_EE_D_D_EE_H
+LOC110048447,LOC110048447,"proline dehydrogenase 1, mitochondrial-like",2, D_EE_D_D_EE_H
+LOC110043607,LOC110043607,"proprotein convertase subtilisin/kexin type 5-like, transcript variant X1",2, D_EE_D_D_EE_H
+LOC110039728,LOC110039728,protein DD3-3-like,2, D_EE_D_D_EE_H
+LOC110039960,LOC110039960,protein DENND6A-like,2, D_EE_D_D_EE_H
+LOC110047813,LOC110047813,protein FAM173B-like,2, D_EE_D_D_EE_H
+LOC110062846,LOC110062846,"protein MAK16 homolog, transcript variant X4",2, D_EE_D_D_EE_H
+LOC110043889,LOC110043889,protein NLRC3-like,2, D_EE_D_D_EE_H
+LOC110051767,LOC110051767,protein PRY1-like,2, D_EE_D_D_EE_H
+LOC110062817,LOC110062817,protein angel homolog 2-like,2, D_EE_D_D_EE_H
+LOC110054875,LOC110054875,protein piccolo-like,2, D_EE_D_D_EE_H
+LOC110064912,LOC110064912,protein transport protein Sec23A-like,2, D_EE_D_D_EE_H
+LOC110048964,LOC110048964,putative helicase MOV-10,2, D_EE_D_D_EE_H
+LOC110062593,LOC110062593,receptor-type tyrosine-protein phosphatase R-like,2, D_EE_D_D_EE_H
+LOC110052891,LOC110052891,sacsin-like,2, D_EE_D_D_EE_H
+LOC110054147,LOC110054147,serine/threonine-protein kinase CTR1-like,2, D_EE_D_D_EE_H
+LOC110062662,LOC110062662,"sodium- and chloride-dependent taurine transporter-like, transcript variant X1",2, D_EE_D_D_EE_H
+LOC110069312,LOC110069312,"soluble guanylate cyclase gcy-33-like, transcript variant X4",2, D_EE_D_D_EE_H
+LOC110063979,LOC110063979,somatostatin receptor type 5-like,2, D_EE_D_D_EE_H
+LOC110065139,LOC110065139,"substance-K receptor-like, transcript variant X2",2, D_EE_D_D_EE_H
+LOC110062626,LOC110062626,suppressor protein SRP40-like,2, D_EE_D_D_EE_H
+LOC110051046,LOC110051046,"sushi, von Willebrand factor type A, EGF and pentraxin domain-containing protein 1-like",2, D_EE_D_D_EE_H
+LOC110043027,LOC110043027,"sushi, von Willebrand factor type A, EGF and pentraxin domain-containing protein 1-like, transcript variant X2",2, D_EE_D_D_EE_H
+LOC110052824,LOC110052824,"synaptotagmin-7-like, transcript variant X1",2, D_EE_D_D_EE_H
+LOC110069143,LOC110069143,"tensin-3-like, transcript variant X1",2, D_EE_D_D_EE_H
+LOC110048955,LOC110048955,trace amine-associated receptor 8b-like,2, D_EE_D_D_EE_H
+LOC110057527,LOC110057527,transient receptor potential cation channel subfamily M member 6-like,2, D_EE_D_D_EE_H
+LOC110062556,LOC110062556,"transmembrane cell adhesion receptor mua-3-like, transcript variant X1",2, D_EE_D_D_EE_H
+LOC110059449,LOC110059449,trichohyalin-like,2, D_EE_D_D_EE_H
+LOC110058395,LOC110058395,tryptophanase-like,2, D_EE_D_D_EE_H
+LOC110066055,LOC110066055,tumor necrosis factor receptor superfamily member 1A-like,2, D_EE_D_D_EE_H
+LOC110043480,LOC110043480,tumor necrosis factor receptor superfamily member 27-like,2, D_EE_D_D_EE_H
+LOC110039847,LOC110039847,uncharacterized LOC110039847,2, D_EE_D_D_EE_H
+LOC110039944,LOC110039944,uncharacterized LOC110039944,2, D_EE_D_D_EE_H
+LOC110040087,LOC110040087,uncharacterized LOC110040087,2, D_EE_D_D_EE_H
+LOC110040243,LOC110040243,uncharacterized LOC110040243,2, D_EE_D_D_EE_H
+LOC110040441,LOC110040441,uncharacterized LOC110040441,2, D_EE_D_D_EE_H
+LOC110040899,LOC110040899,uncharacterized LOC110040899,2, D_EE_D_D_EE_H
+LOC110041727,LOC110041727,uncharacterized LOC110041727,2, D_EE_D_D_EE_H
+LOC110041920,LOC110041920,"uncharacterized LOC110041920, transcript variant X2",2, D_EE_D_D_EE_H
+LOC110042185,LOC110042185,uncharacterized LOC110042185,2, D_EE_D_D_EE_H
+LOC110042472,LOC110042472,uncharacterized LOC110042472,2, D_EE_D_D_EE_H
+LOC110042683,LOC110042683,uncharacterized LOC110042683,2, D_EE_D_D_EE_H
+LOC110043387,LOC110043387,uncharacterized LOC110043387,2, D_EE_D_D_EE_H
+LOC110043460,LOC110043460,uncharacterized LOC110043460,2, D_EE_D_D_EE_H
+LOC110043600,LOC110043600,uncharacterized LOC110043600,2, D_EE_D_D_EE_H
+LOC110044207,LOC110044207,uncharacterized LOC110044207,2, D_EE_D_D_EE_H
+LOC110045208,LOC110045208,uncharacterized LOC110045208,2, D_EE_D_D_EE_H
+LOC110045559,LOC110045559,uncharacterized LOC110045559,2, D_EE_D_D_EE_H
+LOC110047176,LOC110047176,uncharacterized LOC110047176,2, D_EE_D_D_EE_H
+LOC110048190,LOC110048190,uncharacterized LOC110048190,2, D_EE_D_D_EE_H
+LOC110048391,LOC110048391,uncharacterized LOC110048391,2, D_EE_D_D_EE_H
+LOC110048539,LOC110048539,uncharacterized LOC110048539,2, D_EE_D_D_EE_H
+LOC110049889,LOC110049889,uncharacterized LOC110049889,2, D_EE_D_D_EE_H
+LOC110050042,LOC110050042,uncharacterized LOC110050042,2, D_EE_D_D_EE_H
+LOC110050342,LOC110050342,uncharacterized LOC110050342,2, D_EE_D_D_EE_H
+LOC110050412,LOC110050412,"uncharacterized LOC110050412, transcript variant X1",2, D_EE_D_D_EE_H
+LOC110050439,LOC110050439,"uncharacterized LOC110050439, transcript variant X1",2, D_EE_D_D_EE_H
+LOC110050594,LOC110050594,uncharacterized LOC110050594,2, D_EE_D_D_EE_H
+LOC110050596,LOC110050596,uncharacterized LOC110050596,2, D_EE_D_D_EE_H
+LOC110050669,LOC110050669,uncharacterized LOC110050669,2, D_EE_D_D_EE_H
+LOC110051255,LOC110051255,"uncharacterized LOC110051255, transcript variant X2",2, D_EE_D_D_EE_H
+LOC110053460,LOC110053460,uncharacterized LOC110053460,2, D_EE_D_D_EE_H
+LOC110053869,LOC110053869,uncharacterized LOC110053869,2, D_EE_D_D_EE_H
+LOC110054371,LOC110054371,uncharacterized LOC110054371,2, D_EE_D_D_EE_H
+LOC110055245,LOC110055245,"uncharacterized LOC110055245, transcript variant X1",2, D_EE_D_D_EE_H
+LOC110055294,LOC110055294,uncharacterized LOC110055294,2, D_EE_D_D_EE_H
+LOC110055386,LOC110055386,uncharacterized LOC110055386,2, D_EE_D_D_EE_H
+LOC110055566,LOC110055566,uncharacterized LOC110055566,2, D_EE_D_D_EE_H
+LOC110055642,LOC110055642,uncharacterized LOC110055642,2, D_EE_D_D_EE_H
+LOC110055732,LOC110055732,uncharacterized LOC110055732,2, D_EE_D_D_EE_H
+LOC110055865,LOC110055865,uncharacterized LOC110055865,2, D_EE_D_D_EE_H
+LOC110056049,LOC110056049,uncharacterized LOC110056049,2, D_EE_D_D_EE_H
+LOC110056255,LOC110056255,uncharacterized LOC110056255,2, D_EE_D_D_EE_H
+LOC110056376,LOC110056376,uncharacterized LOC110056376,2, D_EE_D_D_EE_H
+LOC110056449,LOC110056449,uncharacterized LOC110056449,2, D_EE_D_D_EE_H
+LOC110056626,LOC110056626,uncharacterized LOC110056626,2, D_EE_D_D_EE_H
+LOC110056711,LOC110056711,"uncharacterized LOC110056711, transcript variant X1",2, D_EE_D_D_EE_H
+LOC110056841,LOC110056841,uncharacterized LOC110056841,2, D_EE_D_D_EE_H
+LOC110056850,LOC110056850,uncharacterized LOC110056850,2, D_EE_D_D_EE_H
+LOC110057003,LOC110057003,uncharacterized LOC110057003,2, D_EE_D_D_EE_H
+LOC110057480,LOC110057480,uncharacterized LOC110057480,2, D_EE_D_D_EE_H
+LOC110057547,LOC110057547,uncharacterized LOC110057547,2, D_EE_D_D_EE_H
+LOC110058385,LOC110058385,uncharacterized LOC110058385,2, D_EE_D_D_EE_H
+LOC110058814,LOC110058814,uncharacterized LOC110058814,2, D_EE_D_D_EE_H
+LOC110059810,LOC110059810,uncharacterized LOC110059810,2, D_EE_D_D_EE_H
+LOC110059938,LOC110059938,uncharacterized LOC110059938,2, D_EE_D_D_EE_H
+LOC110060042,LOC110060042,uncharacterized LOC110060042,2, D_EE_D_D_EE_H
+LOC110060064,LOC110060064,uncharacterized LOC110060064,2, D_EE_D_D_EE_H
+LOC110060083,LOC110060083,uncharacterized LOC110060083,2, D_EE_D_D_EE_H
+LOC110060582,LOC110060582,uncharacterized LOC110060582,2, D_EE_D_D_EE_H
+LOC110062180,LOC110062180,"uncharacterized LOC110062180, transcript variant X1",2, D_EE_D_D_EE_H
+LOC110062309,LOC110062309,uncharacterized LOC110062309,2, D_EE_D_D_EE_H
+LOC110062379,LOC110062379,uncharacterized LOC110062379,2, D_EE_D_D_EE_H
+LOC110062632,LOC110062632,uncharacterized LOC110062632,2, D_EE_D_D_EE_H
+LOC110062895,LOC110062895,uncharacterized LOC110062895,2, D_EE_D_D_EE_H
+LOC110063037,LOC110063037,"uncharacterized LOC110063037, transcript variant X1",2, D_EE_D_D_EE_H
+LOC110063784,LOC110063784,uncharacterized LOC110063784,2, D_EE_D_D_EE_H
+LOC110063807,LOC110063807,uncharacterized LOC110063807,2, D_EE_D_D_EE_H
+LOC110063870,LOC110063870,uncharacterized LOC110063870,2, D_EE_D_D_EE_H
+LOC110063939,LOC110063939,uncharacterized LOC110063939,2, D_EE_D_D_EE_H
+LOC110064269,LOC110064269,uncharacterized LOC110064269,2, D_EE_D_D_EE_H
+LOC110064312,LOC110064312,uncharacterized LOC110064312,2, D_EE_D_D_EE_H
+LOC110064465,LOC110064465,uncharacterized LOC110064465,2, D_EE_D_D_EE_H
+LOC110064503,LOC110064503,uncharacterized LOC110064503,2, D_EE_D_D_EE_H
+LOC110064594,LOC110064594,"uncharacterized LOC110064594, transcript variant X1",2, D_EE_D_D_EE_H
+LOC110064941,LOC110064941,uncharacterized LOC110064941,2, D_EE_D_D_EE_H
+LOC110065103,LOC110065103,uncharacterized LOC110065103,2, D_EE_D_D_EE_H
+LOC110065112,LOC110065112,uncharacterized LOC110065112,2, D_EE_D_D_EE_H
+LOC110065127,LOC110065127,uncharacterized LOC110065127,2, D_EE_D_D_EE_H
+LOC110065588,LOC110065588,uncharacterized LOC110065588,2, D_EE_D_D_EE_H
+LOC110066436,LOC110066436,uncharacterized LOC110066436,2, D_EE_D_D_EE_H
+LOC110066675,LOC110066675,uncharacterized LOC110066675,2, D_EE_D_D_EE_H
+LOC110066836,LOC110066836,"uncharacterized LOC110066836, transcript variant X1",2, D_EE_D_D_EE_H
+LOC110067349,LOC110067349,"uncharacterized LOC110067349, transcript variant X1",2, D_EE_D_D_EE_H
+LOC110067499,LOC110067499,uncharacterized LOC110067499,2, D_EE_D_D_EE_H
+LOC110068201,LOC110068201,uncharacterized LOC110068201,2, D_EE_D_D_EE_H
+LOC110068557,LOC110068557,"uncharacterized LOC110068557, transcript variant X1",2, D_EE_D_D_EE_H
+LOC110068705,LOC110068705,uncharacterized LOC110068705,2, D_EE_D_D_EE_H
+LOC110069365,LOC110069365,uncharacterized LOC110069365,2, D_EE_D_D_EE_H
+LOC110052793,LOC110052793,"uncharacterized protein C7orf72 homolog, transcript variant X2",2, D_EE_D_D_EE_H
+LOC110052533,LOC110052533,uncharacterized skeletal organic matrix protein 5-like,2, D_EE_D_D_EE_H
+LOC110065968,LOC110065968,vegetative cell wall protein gp1-like,2, D_EE_D_D_EE_H
+LOC110063175,LOC110063175,voltage-dependent calcium channel subunit alpha-2/delta-2-like,2, D_EE_D_D_EE_H
+LOC110057721,LOC110057721,zinc finger protein 345-like,2, D_EE_D_D_EE_H
+LOC110053579,LOC110053579,zinc finger protein 724-like,2, D_EE_D_D_EE_H
+LOC110062461,LOC110062461,ADP-ribosylation factor 1,3, C_PE_D_D_EE_D
+LOC110069208,LOC110069208,CUB domain-containing protein-like,3, C_PE_D_D_EE_D
+LOC110065008,LOC110065008,"D(3) dopamine receptor-like, transcript variant X1",3, C_PE_D_D_EE_D
+LOC110069668,LOC110069668,FH protein interacting protein FIP2-like,3, C_PE_D_D_EE_D
+LOC110042644,LOC110042644,TNF receptor-associated factor 4-like,3, C_PE_D_D_EE_D
+LOC110062618,LOC110062618,"b(0,+)-type amino acid transporter 1-like",3, C_PE_D_D_EE_D
+LOC110063825,LOC110063825,cytochrome P450 3A19-like,3, C_PE_D_D_EE_D
+LOC110045859,LOC110045859,gamma-aminobutyric acid receptor subunit beta-2-like,3, C_PE_D_D_EE_D
+LOC110062987,LOC110062987,plasma kallikrein-like,3, C_PE_D_D_EE_D
+LOC110046365,LOC110046365,"potassium channel subfamily K member 9-like, transcript variant X2",3, C_PE_D_D_EE_D
+LOC110040963,LOC110040963,uncharacterized LOC110040963,3, C_PE_D_D_EE_D
+LOC110041679,LOC110041679,"uncharacterized LOC110041679, transcript variant X1",3, C_PE_D_D_EE_D
+LOC110042039,LOC110042039,"uncharacterized LOC110042039, transcript variant X2",3, C_PE_D_D_EE_D
+LOC110055441,LOC110055441,uncharacterized LOC110055441,3, C_PE_D_D_EE_D
+LOC110062310,LOC110062310,uncharacterized LOC110062310,3, C_PE_D_D_EE_D
+LOC110062643,LOC110062643,uncharacterized LOC110062643,3, C_PE_D_D_EE_D
+LOC110063428,LOC110063428,uncharacterized LOC110063428,3, C_PE_D_D_EE_D
+LOC110067499,LOC110067499,uncharacterized LOC110067499,3, C_PE_D_D_EE_D
+LOC110069478,LOC110069478,"uncharacterized LOC110069478, transcript variant X1",3, C_PE_D_D_EE_D
+LOC110069565,LOC110069565,"uncharacterized LOC110069565, transcript variant X1",3, C_PE_D_D_EE_D
+LOC110052662,LOC110052662,uncharacterized skeletal organic matrix protein 5-like,3, C_PE_D_D_EE_D
+LOC110056792,LOC110056792,"zinc metalloproteinase nas-15-like, transcript variant X3",3, C_PE_D_D_EE_D
+LOC110064890,LOC110064890,"1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-1-like",4, C_PE_H_C_EE_H
+LOC110048425,LOC110048425,14-3-3 protein 2-like,4, C_PE_H_C_EE_H
+LOC110057028,LOC110057028,2-oxoglutarate and iron-dependent oxygenase domain-containing protein 2-like,4, C_PE_H_C_EE_H
+LOC110052922,LOC110052922,8-oxo-dGDP phosphatase NUDT18-like,4, C_PE_H_C_EE_H
+LOC110055700,LOC110055700,AAC-rich mRNA clone AAC4 protein-like,4, C_PE_H_C_EE_H
+LOC110056074,LOC110056074,"ATP synthase subunit s, mitochondrial-like",4, C_PE_H_C_EE_H
+LOC110046796,LOC110046796,ATP-dependent RNA helicase ded1-like,4, C_PE_H_C_EE_H
+LOC110043526,LOC110043526,ATP-dependent rRNA helicase spb4-like,4, C_PE_H_C_EE_H
+LOC110040957,LOC110040957,BLOC-1-related complex subunit 5-like,4, C_PE_H_C_EE_H
+LOC110066988,LOC110066988,BTB/POZ domain-containing protein 6-B-like,4, C_PE_H_C_EE_H
+LOC110060001,LOC110060001,BTB/POZ domain-containing protein 6-like,4, C_PE_H_C_EE_H
+LOC110066206,LOC110066206,BTB/POZ domain-containing protein 6-like,4, C_PE_H_C_EE_H
+LOC110060002,LOC110060002,"BTB/POZ domain-containing protein 6-like, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110053631,LOC110053631,C2 domain-containing protein 3-like,4, C_PE_H_C_EE_H
+LOC110064317,LOC110064317,"D(2) dopamine receptor A-like, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110065008,LOC110065008,"D(3) dopamine receptor-like, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110068550,LOC110068550,D-inositol 3-phosphate glycosyltransferase-like,4, C_PE_H_C_EE_H
+LOC110053159,LOC110053159,"DBH-like monooxygenase protein 1, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110044960,LOC110044960,DEP domain-containing protein 7-like,4, C_PE_H_C_EE_H
+LOC110069718,LOC110069718,DNA polymerase delta subunit 2-like,4, C_PE_H_C_EE_H
+LOC110050883,LOC110050883,DNA/RNA-binding protein KIN17-like,4, C_PE_H_C_EE_H
+LOC110054739,LOC110054739,"E3 ubiquitin-protein ligase DZIP3-like, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110067285,LOC110067285,E3 ubiquitin-protein ligase TRIM71-like,4, C_PE_H_C_EE_H
+LOC110041899,LOC110041899,E3 ubiquitin-protein ligase TRIM71-like,4, C_PE_H_C_EE_H
+LOC110065762,LOC110065762,EGF-like repeat and discoidin I-like domain-containing protein 3,4, C_PE_H_C_EE_H
+LOC110057963,LOC110057963,ETS-related transcription factor Elf-4-like,4, C_PE_H_C_EE_H
+LOC110049717,LOC110049717,F-box/WD repeat-containing protein 7-like,4, C_PE_H_C_EE_H
+LOC110042054,LOC110042054,FUN14 domain-containing protein 1-like,4, C_PE_H_C_EE_H
+LOC110055228,LOC110055228,"FYVE, RhoGEF and PH domain-containing protein 2-like",4, C_PE_H_C_EE_H
+LOC110059003,LOC110059003,"GRAM domain-containing protein 1B-like, transcript variant X3",4, C_PE_H_C_EE_H
+LOC110040372,LOC110040372,Golgi-associated PDZ and coiled-coil motif-containing protein-like,4, C_PE_H_C_EE_H
+LOC110050139,LOC110050139,"HEAT repeat-containing protein 4-like, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110061589,LOC110061589,L-cysteine desulfhydrase-like,4, C_PE_H_C_EE_H
+LOC110052046,LOC110052046,MAM and LDL-receptor class A domain-containing protein 1-like,4, C_PE_H_C_EE_H
+LOC110061135,LOC110061135,Meckel syndrome type 1 protein-like,4, C_PE_H_C_EE_H
+LOC110059770,LOC110059770,"NACHT, LRR and PYD domains-containing protein 12-like, transcript variant X1",4, C_PE_H_C_EE_H
+KEG21_P09,None,None,4, C_PE_H_C_EE_H
+LOC110043628,LOC110043628,O-acetyl-ADP-ribose deacetylase 1-like,4, C_PE_H_C_EE_H
+LOC110047159,LOC110047159,"RNA polymerase-associated protein LEO1-like, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110045444,LOC110045444,SHC SH2 domain-binding protein 1 homolog B-like,4, C_PE_H_C_EE_H
+LOC110055643,LOC110055643,T-cell acute lymphocytic leukemia protein 1-like,4, C_PE_H_C_EE_H
+LOC110060414,LOC110060414,"TNF receptor-associated factor 6-like, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110051739,LOC110051739,"UDP-GalNAc:beta-1,3-N-acetylgalactosaminyltransferase 2-like, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110042988,LOC110042988,"UDP-N-acetylglucosamine--peptide N-acetylglucosaminyltransferase 110 kDa subunit-like, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110059142,LOC110059142,UDP-glucuronosyltransferase 2B19-like,4, C_PE_H_C_EE_H
+LOC110050700,LOC110050700,UDP-glucuronosyltransferase 2B33-like,4, C_PE_H_C_EE_H
+LOC110056301,LOC110056301,UNC93-like protein MFSD11,4, C_PE_H_C_EE_H
+LOC110044341,LOC110044341,UPF0573 protein C2orf70 homolog A-like,4, C_PE_H_C_EE_H
+LOC110059708,LOC110059708,"WD repeat-containing protein 59-like, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110063905,LOC110063905,WD repeat-containing protein on Y chromosome-like,4, C_PE_H_C_EE_H
+LOC110056894,LOC110056894,"XK-related protein 6-like, transcript variant X4",4, C_PE_H_C_EE_H
+LOC110061801,LOC110061801,XK-related protein 8-like,4, C_PE_H_C_EE_H
+LOC110055994,LOC110055994,ZP domain-containing protein-like,4, C_PE_H_C_EE_H
+LOC110043035,LOC110043035,acetylserotonin O-methyltransferase-like,4, C_PE_H_C_EE_H
+LOC110042711,LOC110042711,acid-sensing ion channel 1C-like,4, C_PE_H_C_EE_H
+LOC110057599,LOC110057599,acyl-CoA synthetase family member 4-like,4, C_PE_H_C_EE_H
+LOC110050660,LOC110050660,"acyl-coenzyme A synthetase ACSM4, mitochondrial-like",4, C_PE_H_C_EE_H
+LOC110067434,LOC110067434,adenosine receptor A2a-like,4, C_PE_H_C_EE_H
+LOC110057383,LOC110057383,adenosine receptor A3-like,4, C_PE_H_C_EE_H
+LOC110049607,LOC110049607,"adenylosuccinate lyase-like, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110066210,LOC110066210,adhesion G-protein coupled receptor D1-like,4, C_PE_H_C_EE_H
+LOC110045257,LOC110045257,alpha-1D adrenergic receptor-like,4, C_PE_H_C_EE_H
+LOC110068357,LOC110068357,"alternative oxidase, mitochondrial-like",4, C_PE_H_C_EE_H
+LOC110043368,LOC110043368,amiloride-sensitive sodium channel subunit alpha-like,4, C_PE_H_C_EE_H
+LOC110062317,LOC110062317,angiogenic factor with G patch and FHA domains 1-like,4, C_PE_H_C_EE_H
+LOC110039872,LOC110039872,anion exchange protein 3-like,4, C_PE_H_C_EE_H
+LOC110045768,LOC110045768,ankyrin repeat and BTB/POZ domain-containing protein BTBD11-like,4, C_PE_H_C_EE_H
+LOC110066112,LOC110066112,"arf-GAP with SH3 domain, ANK repeat and PH domain-containing protein 2-like",4, C_PE_H_C_EE_H
+LOC110057336,LOC110057336,atherin-like,4, C_PE_H_C_EE_H
+LOC110051454,LOC110051454,"battenin-like, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110059134,LOC110059134,"beta-1,3-galactosyltransferase 5-like",4, C_PE_H_C_EE_H
+LOC110040700,LOC110040700,"beta-1,4-N-acetylgalactosaminyltransferase 3-like",4, C_PE_H_C_EE_H
+LOC110060233,LOC110060233,beta-2 adrenergic receptor-like,4, C_PE_H_C_EE_H
+LOC110048665,LOC110048665,"beta-hexosaminidase-like, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110059633,LOC110059633,bifunctional purine biosynthesis protein PURH-like,4, C_PE_H_C_EE_H
+LOC110058152,LOC110058152,"cAMP and cAMP-inhibited cGMP 3',5'-cyclic phosphodiesterase 10A-like",4, C_PE_H_C_EE_H
+LOC110042118,LOC110042118,"cAMP-dependent protein kinase catalytic subunit-like, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110069638,LOC110069638,"cAMP-regulated phosphoprotein 21-like, transcript variant X4",4, C_PE_H_C_EE_H
+LOC110063730,LOC110063730,calmodulin-like,4, C_PE_H_C_EE_H
+LOC110059968,LOC110059968,carbohydrate sulfotransferase 3-like,4, C_PE_H_C_EE_H
+LOC110069042,LOC110069042,carboxy-terminal domain RNA polymerase II polypeptide A small phosphatase 1-like,4, C_PE_H_C_EE_H
+LOC110057236,LOC110057236,"centrosomal protein POC5-like, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110054364,LOC110054364,coadhesin-like,4, C_PE_H_C_EE_H
+LOC110067225,LOC110067225,"coadhesin-like, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110043323,LOC110043323,coiled-coil domain-containing protein 15-like,4, C_PE_H_C_EE_H
+LOC110065687,LOC110065687,collagen alpha-1(I) chain-like,4, C_PE_H_C_EE_H
+LOC110048050,LOC110048050,collagen alpha-1(XII) chain-like,4, C_PE_H_C_EE_H
+LOC110066648,LOC110066648,collagen alpha-2(I) chain-like,4, C_PE_H_C_EE_H
+LOC110047374,LOC110047374,collagen triple helix repeat-containing protein 1-like,4, C_PE_H_C_EE_H
+LOC110053225,LOC110053225,collagen triple helix repeat-containing protein 1-like,4, C_PE_H_C_EE_H
+LOC110069487,LOC110069487,"collagen triple helix repeat-containing protein 1-like, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110056943,LOC110056943,craniofacial development protein 2-like,4, C_PE_H_C_EE_H
+LOC110067343,LOC110067343,crooked neck-like protein 1,4, C_PE_H_C_EE_H
+LOC110054069,LOC110054069,cytidine deaminase-like,4, C_PE_H_C_EE_H
+LOC110063825,LOC110063825,cytochrome P450 3A19-like,4, C_PE_H_C_EE_H
+LOC110053099,LOC110053099,"cytosolic 5'-nucleotidase 3-like, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110059082,LOC110059082,cytosolic carboxypeptidase 2-like,4, C_PE_H_C_EE_H
+LOC110055594,LOC110055594,dehydrogenase/reductase SDR family member on chromosome X-like,4, C_PE_H_C_EE_H
+LOC110050547,LOC110050547,deleted in malignant brain tumors 1 protein-like,4, C_PE_H_C_EE_H
+LOC110069209,LOC110069209,deleted in malignant brain tumors 1 protein-like,4, C_PE_H_C_EE_H
+LOC110043343,LOC110043343,dentin sialophosphoprotein-like,4, C_PE_H_C_EE_H
+LOC110042692,LOC110042692,dermatan-sulfate epimerase-like protein,4, C_PE_H_C_EE_H
+LOC110047798,LOC110047798,dimethylaniline monooxygenase [N-oxide-forming] 2-like,4, C_PE_H_C_EE_H
+LOC110063490,LOC110063490,diphthine--ammonia ligase-like,4, C_PE_H_C_EE_H
+LOC110053805,LOC110053805,"dynein heavy chain 6, axonemal-like",4, C_PE_H_C_EE_H
+LOC110067625,LOC110067625,eukaryotic translation initiation factor 2 subunit 1-like,4, C_PE_H_C_EE_H
+LOC110061335,LOC110061335,fez family zinc finger protein 1-like,4, C_PE_H_C_EE_H
+LOC110068247,LOC110068247,forkhead box protein Q1-like,4, C_PE_H_C_EE_H
+LOC110062755,LOC110062755,fukutin-related protein-like,4, C_PE_H_C_EE_H
+LOC110055837,LOC110055837,galactosylgalactosylxylosylprotein 3-beta-glucuronosyltransferase 3-like,4, C_PE_H_C_EE_H
+LOC110046058,LOC110046058,galanin receptor type 1-like,4, C_PE_H_C_EE_H
+LOC110068112,LOC110068112,"gamma-2-syntrophin-like, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110056708,LOC110056708,gamma-aminobutyric acid receptor subunit beta-1-like,4, C_PE_H_C_EE_H
+LOC110054499,LOC110054499,gamma-butyrobetaine dioxygenase-like,4, C_PE_H_C_EE_H
+LOC110043637,LOC110043637,gamma-tubulin complex component 2-like,4, C_PE_H_C_EE_H
+LOC110055691,LOC110055691,"general transcription factor 3C polypeptide 1-like, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110061427,LOC110061427,glucose-fructose oxidoreductase domain-containing protein 1-like,4, C_PE_H_C_EE_H
+LOC110054551,LOC110054551,"glutamate dehydrogenase, mitochondrial-like",4, C_PE_H_C_EE_H
+LOC110069515,LOC110069515,glutathione-specific gamma-glutamylcyclotransferase 1-like,4, C_PE_H_C_EE_H
+LOC110052731,LOC110052731,glycogen synthase kinase-3 beta-like,4, C_PE_H_C_EE_H
+LOC110055348,LOC110055348,"golgin subfamily A member 6-like protein 6, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110047837,LOC110047837,growth/differentiation factor 8-like,4, C_PE_H_C_EE_H
+LOC110065214,LOC110065214,heat shock 70 kDa protein 12A-like,4, C_PE_H_C_EE_H
+LOC110043483,LOC110043483,helicase with zinc finger domain 2-like,4, C_PE_H_C_EE_H
+LOC110040316,LOC110040316,heme transporter HRG1-like,4, C_PE_H_C_EE_H
+LOC110058803,LOC110058803,"hemicentin-1-like, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110068152,LOC110068152,hemicentin-2-like,4, C_PE_H_C_EE_H
+LOC110064787,LOC110064787,hepatocyte nuclear factor 1-beta-A-like,4, C_PE_H_C_EE_H
+LOC110068534,LOC110068534,histone H2A,4, C_PE_H_C_EE_H
+LOC110049641,LOC110049641,"histone acetyltransferase KAT7-like, transcript variant X3",4, C_PE_H_C_EE_H
+LOC110054247,LOC110054247,"homeobox even-skipped homolog protein 2-like, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110057786,LOC110057786,homeobox protein ceh-19-like,4, C_PE_H_C_EE_H
+LOC110050129,LOC110050129,"hydroxyacyl-coenzyme A dehydrogenase, mitochondrial-like",4, C_PE_H_C_EE_H
+LOC110040078,LOC110040078,igLON family member 5-like,4, C_PE_H_C_EE_H
+LOC110066600,LOC110066600,"inosine-5'-monophosphate dehydrogenase 1b-like, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110051965,LOC110051965,isocitrate lyase-like,4, C_PE_H_C_EE_H
+LOC110041025,LOC110041025,kelch-like protein 1,4, C_PE_H_C_EE_H
+LOC110066484,LOC110066484,kelch-like protein 2,4, C_PE_H_C_EE_H
+LOC110064052,LOC110064052,kelch-like protein diablo,4, C_PE_H_C_EE_H
+LOC110066452,LOC110066452,ketosamine-3-kinase-like,4, C_PE_H_C_EE_H
+LOC110065836,LOC110065836,leucine-rich repeat and coiled-coil domain-containing protein 1-like,4, C_PE_H_C_EE_H
+LOC110045829,LOC110045829,leucine-rich repeat-containing protein 27-like,4, C_PE_H_C_EE_H
+LOC110045499,LOC110045499,lipopolysaccharide-induced tumor necrosis factor-alpha factor homolog,4, C_PE_H_C_EE_H
+LOC110050353,LOC110050353,major facilitator superfamily domain-containing protein 3-like,4, C_PE_H_C_EE_H
+LOC110051192,LOC110051192,major facilitator superfamily domain-containing protein 6-like,4, C_PE_H_C_EE_H
+LOC110051193,LOC110051193,major facilitator superfamily domain-containing protein 6-like,4, C_PE_H_C_EE_H
+LOC110040934,LOC110040934,"malectin-like, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110053046,LOC110053046,maltase 1-like,4, C_PE_H_C_EE_H
+LOC110061326,LOC110061326,matrix metalloproteinase-16-like,4, C_PE_H_C_EE_H
+LOC110052767,LOC110052767,mediator of RNA polymerase II transcription subunit 4-like,4, C_PE_H_C_EE_H
+LOC110043946,LOC110043946,melanocortin receptor 4-like,4, C_PE_H_C_EE_H
+LOC110048560,LOC110048560,"metalloendopeptidase OMA1, mitochondrial-like",4, C_PE_H_C_EE_H
+LOC110053018,LOC110053018,methyltransferase-like protein 9,4, C_PE_H_C_EE_H
+LOC110041798,LOC110041798,"mevalonate kinase-like, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110046618,LOC110046618,mitochondrial carnitine/acylcarnitine carrier protein-like,4, C_PE_H_C_EE_H
+LOC110065054,LOC110065054,mitochondrial ribonuclease P protein 3-like,4, C_PE_H_C_EE_H
+LOC110059581,LOC110059581,muscle LIM protein 1-like,4, C_PE_H_C_EE_H
+LOC110060844,LOC110060844,"muscle, skeletal receptor tyrosine-protein kinase-like, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110045720,LOC110045720,"myoferlin-like, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110059420,LOC110059420,myosin-2 heavy chain-like,4, C_PE_H_C_EE_H
+LOC110055249,LOC110055249,neo-calmodulin-like,4, C_PE_H_C_EE_H
+LOC110045356,LOC110045356,nephrocystin-1-like,4, C_PE_H_C_EE_H
+LOC110052970,LOC110052970,neural cell adhesion molecule 2-like,4, C_PE_H_C_EE_H
+LOC110067644,LOC110067644,"neurocalcin homolog, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110049764,LOC110049764,"neurogenic locus notch homolog protein 1-like, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110056436,LOC110056436,neuromedin-K receptor-like,4, C_PE_H_C_EE_H
+LOC110065785,LOC110065785,neuromedin-U receptor 1-like,4, C_PE_H_C_EE_H
+LOC110047676,LOC110047676,neuromedin-U receptor 2-like,4, C_PE_H_C_EE_H
+LOC110040065,LOC110040065,neuronal growth regulator 1-like,4, C_PE_H_C_EE_H
+LOC110061367,LOC110061367,nucleolar protein 14-like,4, C_PE_H_C_EE_H
+LOC110054683,LOC110054683,nudix hydrolase 8-like,4, C_PE_H_C_EE_H
+LOC110055945,LOC110055945,orexin receptor type 2-like,4, C_PE_H_C_EE_H
+LOC110056167,LOC110056167,otolin-1-like,4, C_PE_H_C_EE_H
+LOC110065901,LOC110065901,"paired mesoderm homeobox protein 2-like, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110065708,LOC110065708,"pancreatic secretory granule membrane major glycoprotein GP2-like, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110059284,LOC110059284,"paramyosin-like, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110058795,LOC110058795,peptide-N(4)-(N-acetyl-beta-glucosaminyl)asparagine amidase-like,4, C_PE_H_C_EE_H
+LOC110039813,LOC110039813,peptide-N(4)-(N-acetyl-beta-glucosaminyl)asparagine amidase-like,4, C_PE_H_C_EE_H
+LOC110039873,LOC110039873,"peptide-N(4)-(N-acetyl-beta-glucosaminyl)asparagine amidase-like, transcript variant X3",4, C_PE_H_C_EE_H
+LOC110069436,LOC110069436,"perlucin-like protein, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110053701,LOC110053701,peroxisome assembly protein 26-like,4, C_PE_H_C_EE_H
+LOC110060507,LOC110060507,phenazine biosynthesis-like domain-containing protein,4, C_PE_H_C_EE_H
+LOC110050942,LOC110050942,"phosphatidylinositol 3,4,5-trisphosphate 3-phosphatase and dual-specificity protein phosphatase PTEN-like, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110057227,LOC110057227,"phosphatidylinositol 4-phosphate 5-kinase type-1 alpha-like, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110058416,LOC110058416,"phosphoglycolate phosphatase-like, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110065651,LOC110065651,"poly [ADP-ribose] polymerase 14-like, transcript variant X3",4, C_PE_H_C_EE_H
+LOC110049938,LOC110049938,polypeptide N-acetylgalactosaminyltransferase 1-like,4, C_PE_H_C_EE_H
+LOC110042096,LOC110042096,potassium channel subfamily K member 15-like,4, C_PE_H_C_EE_H
+LOC110062420,LOC110062420,"potassium voltage-gated channel subfamily A member 2-like, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110046269,LOC110046269,potassium voltage-gated channel subfamily D member 3-like,4, C_PE_H_C_EE_H
+LOC110059406,LOC110059406,pre-mRNA-splicing factor cwc2-like,4, C_PE_H_C_EE_H
+LOC110040308,LOC110040308,probable E3 ubiquitin-protein ligase ARI11,4, C_PE_H_C_EE_H
+LOC110040778,LOC110040778,probable E3 ubiquitin-protein ligase DTX2,4, C_PE_H_C_EE_H
+LOC110041239,LOC110041239,progestin and adipoQ receptor family member 3-like,4, C_PE_H_C_EE_H
+LOC110060588,LOC110060588,"prolactin-releasing peptide receptor-like, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110051644,LOC110051644,proline-rich transmembrane protein 4-like,4, C_PE_H_C_EE_H
+LOC110043445,LOC110043445,prostaglandin D2 receptor-like,4, C_PE_H_C_EE_H
+LOC110047414,LOC110047414,protein CIP2A homolog,4, C_PE_H_C_EE_H
+LOC110050011,LOC110050011,protein DBF4 homolog B-like,4, C_PE_H_C_EE_H
+LOC110039728,LOC110039728,protein DD3-3-like,4, C_PE_H_C_EE_H
+LOC110063528,LOC110063528,"protein O-linked-mannose beta-1,2-N-acetylglucosaminyltransferase 1-like",4, C_PE_H_C_EE_H
+LOC110049138,LOC110049138,"protein Wnt-1-like, transcript variant X4",4, C_PE_H_C_EE_H
+LOC110046651,LOC110046651,protein asunder homolog,4, C_PE_H_C_EE_H
+LOC110059166,LOC110059166,"protein capicua homolog, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110058730,LOC110058730,protein decapentaplegic-like,4, C_PE_H_C_EE_H
+LOC110049219,LOC110049219,protein fem-1 homolog B-like,4, C_PE_H_C_EE_H
+LOC110042671,LOC110042671,protein lin-41-like,4, C_PE_H_C_EE_H
+LOC110043451,LOC110043451,protein phosphatase 1 regulatory subunit 27-like,4, C_PE_H_C_EE_H
+LOC110068298,LOC110068298,protein phosphatase 1 regulatory subunit 3C-like,4, C_PE_H_C_EE_H
+LOC110056359,LOC110056359,pterin-4-alpha-carbinolamine dehydratase-like,4, C_PE_H_C_EE_H
+LOC110039915,LOC110039915,"putative adenosylhomocysteinase 3, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110060670,LOC110060670,putative beta-lactamase-like 1,4, C_PE_H_C_EE_H
+LOC110068594,LOC110068594,putative beta-lactamase-like 1,4, C_PE_H_C_EE_H
+LOC110053692,LOC110053692,putative exosome complex component rrp40,4, C_PE_H_C_EE_H
+LOC110053326,LOC110053326,"putative histone-lysine N-methyltransferase PRDM6, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110048192,LOC110048192,putative nuclease HARBI1,4, C_PE_H_C_EE_H
+LOC110046428,LOC110046428,rab-like protein 3,4, C_PE_H_C_EE_H
+LOC110067194,LOC110067194,"ral guanine nucleotide dissociation stimulator-like 1, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110052521,LOC110052521,ras-related and estrogen-regulated growth inhibitor-like,4, C_PE_H_C_EE_H
+LOC110067294,LOC110067294,"receptor-type tyrosine-protein phosphatase F-like, transcript variant X3",4, C_PE_H_C_EE_H
+LOC110062593,LOC110062593,receptor-type tyrosine-protein phosphatase R-like,4, C_PE_H_C_EE_H
+LOC110065144,LOC110065144,ribonuclease H2 subunit A-like,4, C_PE_H_C_EE_H
+LOC110052891,LOC110052891,sacsin-like,4, C_PE_H_C_EE_H
+LOC110068997,LOC110068997,sec14 cytosolic factor-like,4, C_PE_H_C_EE_H
+LOC110048084,LOC110048084,serine protease 23-like,4, C_PE_H_C_EE_H
+LOC110066455,LOC110066455,serine/threonine-protein kinase 33-like,4, C_PE_H_C_EE_H
+LOC110054147,LOC110054147,serine/threonine-protein kinase CTR1-like,4, C_PE_H_C_EE_H
+LOC110068266,LOC110068266,serine/threonine-protein phosphatase 4 regulatory subunit 1-like,4, C_PE_H_C_EE_H
+LOC110039763,LOC110039763,short-chain dehydrogenase/reductase family 9C member 7-like,4, C_PE_H_C_EE_H
+LOC110057534,LOC110057534,sodium channel modifier 1-like,4, C_PE_H_C_EE_H
+LOC110062663,LOC110062663,sodium- and chloride-dependent taurine transporter-like,4, C_PE_H_C_EE_H
+LOC110050490,LOC110050490,sodium-coupled monocarboxylate transporter 1-like,4, C_PE_H_C_EE_H
+LOC110045418,LOC110045418,sodium-dependent dopamine transporter-like,4, C_PE_H_C_EE_H
+LOC110039715,LOC110039715,sodium/glucose cotransporter 5-like,4, C_PE_H_C_EE_H
+LOC110063956,LOC110063956,"sorting nexin-14-like, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110056474,LOC110056474,sterol regulatory element-binding protein 1-like,4, C_PE_H_C_EE_H
+LOC110066663,LOC110066663,substance-P receptor-like,4, C_PE_H_C_EE_H
+LOC110061129,LOC110061129,"substance-P receptor-like, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110052824,LOC110052824,"synaptotagmin-7-like, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110064832,LOC110064832,tankyrase-1-like,4, C_PE_H_C_EE_H
+LOC110039709,LOC110039709,"target of rapamycin complex 2 subunit MAPKAP1-like, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110064549,LOC110064549,tctex1 domain-containing protein 2-like,4, C_PE_H_C_EE_H
+LOC110069143,LOC110069143,"tensin-3-like, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110047843,LOC110047843,testis-expressed protein 10-like,4, C_PE_H_C_EE_H
+LOC110062674,LOC110062674,tetratricopeptide repeat protein 28-like,4, C_PE_H_C_EE_H
+LOC110065626,LOC110065626,tetratricopeptide repeat protein 28-like,4, C_PE_H_C_EE_H
+LOC110057749,LOC110057749,"tetratricopeptide repeat protein 28-like, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110061085,LOC110061085,titin homolog,4, C_PE_H_C_EE_H
+LOC110051143,LOC110051143,"tolloid-like protein 2, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110056455,LOC110056455,trace amine-associated receptor 6-like,4, C_PE_H_C_EE_H
+LOC110055325,LOC110055325,transcription factor 24-like,4, C_PE_H_C_EE_H
+LOC110049030,LOC110049030,"transcription factor A, mitochondrial-like",4, C_PE_H_C_EE_H
+LOC110054902,LOC110054902,transcription factor MafK-like,4, C_PE_H_C_EE_H
+LOC110043723,LOC110043723,transcription factor Sox-17-beta.3-like,4, C_PE_H_C_EE_H
+LOC110056412,LOC110056412,"transcriptional activator Myb-like, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110063950,LOC110063950,transient receptor potential cation channel subfamily A member 1 homolog,4, C_PE_H_C_EE_H
+LOC110064527,LOC110064527,transient receptor potential cation channel subfamily A member 1-like,4, C_PE_H_C_EE_H
+LOC110046690,LOC110046690,translation initiation factor eIF-2B subunit gamma-like,4, C_PE_H_C_EE_H
+LOC110067618,LOC110067618,"trifunctional enzyme subunit alpha, mitochondrial-like",4, C_PE_H_C_EE_H
+LOC110067976,LOC110067976,"troponin T, cardiac muscle-like",4, C_PE_H_C_EE_H
+LOC110059617,LOC110059617,tubulin polyglutamylase ttll6-like,4, C_PE_H_C_EE_H
+LOC110047908,LOC110047908,tuftelin-interacting protein 11-like,4, C_PE_H_C_EE_H
+LOC110043480,LOC110043480,tumor necrosis factor receptor superfamily member 27-like,4, C_PE_H_C_EE_H
+LOC110054377,LOC110054377,twist-related protein-like,4, C_PE_H_C_EE_H
+LOC110052514,LOC110052514,two pore potassium channel protein sup-9-like,4, C_PE_H_C_EE_H
+LOC110068256,LOC110068256,tyramine/octopamine receptor-like,4, C_PE_H_C_EE_H
+LOC110064066,LOC110064066,tyrosine-protein kinase FRK-like,4, C_PE_H_C_EE_H
+LOC110048022,LOC110048022,ubiquitin-protein ligase E3C-like,4, C_PE_H_C_EE_H
+LOC110039846,LOC110039846,"uncharacterized LOC110039846, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110039848,LOC110039848,uncharacterized LOC110039848,4, C_PE_H_C_EE_H
+LOC110040175,LOC110040175,uncharacterized LOC110040175,4, C_PE_H_C_EE_H
+LOC110040243,LOC110040243,uncharacterized LOC110040243,4, C_PE_H_C_EE_H
+LOC110040356,LOC110040356,uncharacterized LOC110040356,4, C_PE_H_C_EE_H
+LOC110040441,LOC110040441,uncharacterized LOC110040441,4, C_PE_H_C_EE_H
+LOC110040575,LOC110040575,uncharacterized LOC110040575,4, C_PE_H_C_EE_H
+LOC110040897,LOC110040897,uncharacterized LOC110040897,4, C_PE_H_C_EE_H
+LOC110041059,LOC110041059,uncharacterized LOC110041059,4, C_PE_H_C_EE_H
+LOC110041158,LOC110041158,uncharacterized LOC110041158,4, C_PE_H_C_EE_H
+LOC110041529,LOC110041529,uncharacterized LOC110041529,4, C_PE_H_C_EE_H
+LOC110041551,LOC110041551,"uncharacterized LOC110041551, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110041560,LOC110041560,uncharacterized LOC110041560,4, C_PE_H_C_EE_H
+LOC110041693,LOC110041693,uncharacterized LOC110041693,4, C_PE_H_C_EE_H
+LOC110041727,LOC110041727,uncharacterized LOC110041727,4, C_PE_H_C_EE_H
+LOC110041753,LOC110041753,"uncharacterized LOC110041753, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110041897,LOC110041897,uncharacterized LOC110041897,4, C_PE_H_C_EE_H
+LOC110042143,LOC110042143,uncharacterized LOC110042143,4, C_PE_H_C_EE_H
+LOC110042328,LOC110042328,uncharacterized LOC110042328,4, C_PE_H_C_EE_H
+LOC110042365,LOC110042365,uncharacterized LOC110042365,4, C_PE_H_C_EE_H
+LOC110042398,LOC110042398,uncharacterized LOC110042398,4, C_PE_H_C_EE_H
+LOC110042472,LOC110042472,uncharacterized LOC110042472,4, C_PE_H_C_EE_H
+LOC110043028,LOC110043028,"uncharacterized LOC110043028, transcript variant X3",4, C_PE_H_C_EE_H
+LOC110043365,LOC110043365,uncharacterized LOC110043365,4, C_PE_H_C_EE_H
+LOC110043844,LOC110043844,uncharacterized LOC110043844,4, C_PE_H_C_EE_H
+LOC110043922,LOC110043922,uncharacterized LOC110043922,4, C_PE_H_C_EE_H
+LOC110044082,LOC110044082,uncharacterized LOC110044082,4, C_PE_H_C_EE_H
+LOC110044200,LOC110044200,"uncharacterized LOC110044200, transcript variant X3",4, C_PE_H_C_EE_H
+LOC110044274,LOC110044274,"uncharacterized LOC110044274, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110044290,LOC110044290,uncharacterized LOC110044290,4, C_PE_H_C_EE_H
+LOC110044491,LOC110044491,uncharacterized LOC110044491,4, C_PE_H_C_EE_H
+LOC110044544,LOC110044544,uncharacterized LOC110044544,4, C_PE_H_C_EE_H
+LOC110044586,LOC110044586,uncharacterized LOC110044586,4, C_PE_H_C_EE_H
+LOC110044929,LOC110044929,"uncharacterized LOC110044929, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110044974,LOC110044974,"uncharacterized LOC110044974, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110045182,LOC110045182,uncharacterized LOC110045182,4, C_PE_H_C_EE_H
+LOC110045334,LOC110045334,uncharacterized LOC110045334,4, C_PE_H_C_EE_H
+LOC110045603,LOC110045603,uncharacterized LOC110045603,4, C_PE_H_C_EE_H
+LOC110045604,LOC110045604,uncharacterized LOC110045604,4, C_PE_H_C_EE_H
+LOC110045769,LOC110045769,uncharacterized LOC110045769,4, C_PE_H_C_EE_H
+LOC110045842,LOC110045842,uncharacterized LOC110045842,4, C_PE_H_C_EE_H
+LOC110046089,LOC110046089,"uncharacterized LOC110046089, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110046286,LOC110046286,uncharacterized LOC110046286,4, C_PE_H_C_EE_H
+LOC110046335,LOC110046335,uncharacterized LOC110046335,4, C_PE_H_C_EE_H
+LOC110046631,LOC110046631,"uncharacterized LOC110046631, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110046774,LOC110046774,uncharacterized LOC110046774,4, C_PE_H_C_EE_H
+LOC110047027,LOC110047027,uncharacterized LOC110047027,4, C_PE_H_C_EE_H
+LOC110047416,LOC110047416,uncharacterized LOC110047416,4, C_PE_H_C_EE_H
+LOC110047864,LOC110047864,"uncharacterized LOC110047864, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110048046,LOC110048046,uncharacterized LOC110048046,4, C_PE_H_C_EE_H
+LOC110048391,LOC110048391,uncharacterized LOC110048391,4, C_PE_H_C_EE_H
+LOC110048539,LOC110048539,uncharacterized LOC110048539,4, C_PE_H_C_EE_H
+LOC110048758,LOC110048758,uncharacterized LOC110048758,4, C_PE_H_C_EE_H
+LOC110048821,LOC110048821,uncharacterized LOC110048821,4, C_PE_H_C_EE_H
+LOC110049037,LOC110049037,uncharacterized LOC110049037,4, C_PE_H_C_EE_H
+LOC110049889,LOC110049889,uncharacterized LOC110049889,4, C_PE_H_C_EE_H
+LOC110050242,LOC110050242,uncharacterized LOC110050242,4, C_PE_H_C_EE_H
+LOC110050342,LOC110050342,uncharacterized LOC110050342,4, C_PE_H_C_EE_H
+LOC110050375,LOC110050375,uncharacterized LOC110050375,4, C_PE_H_C_EE_H
+LOC110050828,LOC110050828,uncharacterized LOC110050828,4, C_PE_H_C_EE_H
+LOC110050834,LOC110050834,"uncharacterized LOC110050834, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110050929,LOC110050929,uncharacterized LOC110050929,4, C_PE_H_C_EE_H
+LOC110051129,LOC110051129,"uncharacterized LOC110051129, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110051265,LOC110051265,"uncharacterized LOC110051265, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110051705,LOC110051705,uncharacterized LOC110051705,4, C_PE_H_C_EE_H
+LOC110052143,LOC110052143,uncharacterized LOC110052143,4, C_PE_H_C_EE_H
+LOC110052232,LOC110052232,uncharacterized LOC110052232,4, C_PE_H_C_EE_H
+LOC110052431,LOC110052431,"uncharacterized LOC110052431, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110052681,LOC110052681,uncharacterized LOC110052681,4, C_PE_H_C_EE_H
+LOC110052700,LOC110052700,uncharacterized LOC110052700,4, C_PE_H_C_EE_H
+LOC110052817,LOC110052817,"uncharacterized LOC110052817, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110053083,LOC110053083,uncharacterized LOC110053083,4, C_PE_H_C_EE_H
+LOC110053132,LOC110053132,"uncharacterized LOC110053132, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110053460,LOC110053460,uncharacterized LOC110053460,4, C_PE_H_C_EE_H
+LOC110053599,LOC110053599,uncharacterized LOC110053599,4, C_PE_H_C_EE_H
+LOC110053869,LOC110053869,uncharacterized LOC110053869,4, C_PE_H_C_EE_H
+LOC110054205,LOC110054205,uncharacterized LOC110054205,4, C_PE_H_C_EE_H
+LOC110054371,LOC110054371,uncharacterized LOC110054371,4, C_PE_H_C_EE_H
+LOC110054393,LOC110054393,uncharacterized LOC110054393,4, C_PE_H_C_EE_H
+LOC110054542,LOC110054542,uncharacterized LOC110054542,4, C_PE_H_C_EE_H
+LOC110054576,LOC110054576,uncharacterized LOC110054576,4, C_PE_H_C_EE_H
+LOC110054839,LOC110054839,"uncharacterized LOC110054839, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110054934,LOC110054934,uncharacterized LOC110054934,4, C_PE_H_C_EE_H
+LOC110055394,LOC110055394,uncharacterized LOC110055394,4, C_PE_H_C_EE_H
+LOC110055402,LOC110055402,uncharacterized LOC110055402,4, C_PE_H_C_EE_H
+LOC110055572,LOC110055572,"uncharacterized LOC110055572, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110055735,LOC110055735,uncharacterized LOC110055735,4, C_PE_H_C_EE_H
+LOC110055775,LOC110055775,uncharacterized LOC110055775,4, C_PE_H_C_EE_H
+LOC110055825,LOC110055825,uncharacterized LOC110055825,4, C_PE_H_C_EE_H
+LOC110055858,LOC110055858,"uncharacterized LOC110055858, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110055875,LOC110055875,"uncharacterized LOC110055875, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110056376,LOC110056376,uncharacterized LOC110056376,4, C_PE_H_C_EE_H
+LOC110056551,LOC110056551,uncharacterized LOC110056551,4, C_PE_H_C_EE_H
+LOC110056593,LOC110056593,uncharacterized LOC110056593,4, C_PE_H_C_EE_H
+LOC110056647,LOC110056647,uncharacterized LOC110056647,4, C_PE_H_C_EE_H
+LOC110056711,LOC110056711,"uncharacterized LOC110056711, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110056831,LOC110056831,uncharacterized LOC110056831,4, C_PE_H_C_EE_H
+LOC110056850,LOC110056850,uncharacterized LOC110056850,4, C_PE_H_C_EE_H
+LOC110057150,LOC110057150,"uncharacterized LOC110057150, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110057230,LOC110057230,"uncharacterized LOC110057230, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110057466,LOC110057466,"uncharacterized LOC110057466, transcript variant X4",4, C_PE_H_C_EE_H
+LOC110057496,LOC110057496,uncharacterized LOC110057496,4, C_PE_H_C_EE_H
+LOC110057547,LOC110057547,uncharacterized LOC110057547,4, C_PE_H_C_EE_H
+LOC110057549,LOC110057549,uncharacterized LOC110057549,4, C_PE_H_C_EE_H
+LOC110057776,LOC110057776,"uncharacterized LOC110057776, transcript variant X4",4, C_PE_H_C_EE_H
+LOC110057889,LOC110057889,uncharacterized LOC110057889,4, C_PE_H_C_EE_H
+LOC110057904,LOC110057904,uncharacterized LOC110057904,4, C_PE_H_C_EE_H
+LOC110058106,LOC110058106,uncharacterized LOC110058106,4, C_PE_H_C_EE_H
+LOC110058385,LOC110058385,uncharacterized LOC110058385,4, C_PE_H_C_EE_H
+LOC110058403,LOC110058403,uncharacterized LOC110058403,4, C_PE_H_C_EE_H
+LOC110058479,LOC110058479,uncharacterized LOC110058479,4, C_PE_H_C_EE_H
+LOC110058779,LOC110058779,uncharacterized LOC110058779,4, C_PE_H_C_EE_H
+LOC110058955,LOC110058955,uncharacterized LOC110058955,4, C_PE_H_C_EE_H
+LOC110058967,LOC110058967,uncharacterized LOC110058967,4, C_PE_H_C_EE_H
+LOC110059684,LOC110059684,uncharacterized LOC110059684,4, C_PE_H_C_EE_H
+LOC110060120,LOC110060120,"uncharacterized LOC110060120, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110060533,LOC110060533,uncharacterized LOC110060533,4, C_PE_H_C_EE_H
+LOC110060934,LOC110060934,"uncharacterized LOC110060934, transcript variant X4",4, C_PE_H_C_EE_H
+LOC110060995,LOC110060995,uncharacterized LOC110060995,4, C_PE_H_C_EE_H
+LOC110061154,LOC110061154,uncharacterized LOC110061154,4, C_PE_H_C_EE_H
+LOC110061179,LOC110061179,uncharacterized LOC110061179,4, C_PE_H_C_EE_H
+LOC110061296,LOC110061296,uncharacterized LOC110061296,4, C_PE_H_C_EE_H
+LOC110061555,LOC110061555,"uncharacterized LOC110061555, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110061607,LOC110061607,uncharacterized LOC110061607,4, C_PE_H_C_EE_H
+LOC110062256,LOC110062256,uncharacterized LOC110062256,4, C_PE_H_C_EE_H
+LOC110062257,LOC110062257,uncharacterized LOC110062257,4, C_PE_H_C_EE_H
+LOC110062326,LOC110062326,uncharacterized LOC110062326,4, C_PE_H_C_EE_H
+LOC110062476,LOC110062476,uncharacterized LOC110062476,4, C_PE_H_C_EE_H
+LOC110062629,LOC110062629,uncharacterized LOC110062629,4, C_PE_H_C_EE_H
+LOC110062713,LOC110062713,uncharacterized LOC110062713,4, C_PE_H_C_EE_H
+LOC110062773,LOC110062773,uncharacterized LOC110062773,4, C_PE_H_C_EE_H
+LOC110062869,LOC110062869,"uncharacterized LOC110062869, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110063037,LOC110063037,"uncharacterized LOC110063037, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110063098,LOC110063098,"uncharacterized LOC110063098, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110063383,LOC110063383,uncharacterized LOC110063383,4, C_PE_H_C_EE_H
+LOC110063428,LOC110063428,uncharacterized LOC110063428,4, C_PE_H_C_EE_H
+LOC110063495,LOC110063495,uncharacterized LOC110063495,4, C_PE_H_C_EE_H
+LOC110063531,LOC110063531,uncharacterized LOC110063531,4, C_PE_H_C_EE_H
+LOC110063755,LOC110063755,"uncharacterized LOC110063755, transcript variant X4",4, C_PE_H_C_EE_H
+LOC110063870,LOC110063870,uncharacterized LOC110063870,4, C_PE_H_C_EE_H
+LOC110064193,LOC110064193,"uncharacterized LOC110064193, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110064402,LOC110064402,uncharacterized LOC110064402,4, C_PE_H_C_EE_H
+LOC110064503,LOC110064503,uncharacterized LOC110064503,4, C_PE_H_C_EE_H
+LOC110064622,LOC110064622,"uncharacterized LOC110064622, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110064737,LOC110064737,uncharacterized LOC110064737,4, C_PE_H_C_EE_H
+LOC110064862,LOC110064862,"uncharacterized LOC110064862, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110064897,LOC110064897,uncharacterized LOC110064897,4, C_PE_H_C_EE_H
+LOC110064941,LOC110064941,uncharacterized LOC110064941,4, C_PE_H_C_EE_H
+LOC110065103,LOC110065103,uncharacterized LOC110065103,4, C_PE_H_C_EE_H
+LOC110065112,LOC110065112,uncharacterized LOC110065112,4, C_PE_H_C_EE_H
+LOC110065162,LOC110065162,uncharacterized LOC110065162,4, C_PE_H_C_EE_H
+LOC110065467,LOC110065467,"uncharacterized LOC110065467, transcript variant X4",4, C_PE_H_C_EE_H
+LOC110065621,LOC110065621,uncharacterized LOC110065621,4, C_PE_H_C_EE_H
+LOC110066194,LOC110066194,"uncharacterized LOC110066194, transcript variant X6",4, C_PE_H_C_EE_H
+LOC110066265,LOC110066265,uncharacterized LOC110066265,4, C_PE_H_C_EE_H
+LOC110066386,LOC110066386,uncharacterized LOC110066386,4, C_PE_H_C_EE_H
+LOC110066436,LOC110066436,uncharacterized LOC110066436,4, C_PE_H_C_EE_H
+LOC110066517,LOC110066517,uncharacterized LOC110066517,4, C_PE_H_C_EE_H
+LOC110066624,LOC110066624,uncharacterized LOC110066624,4, C_PE_H_C_EE_H
+LOC110066836,LOC110066836,"uncharacterized LOC110066836, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110066850,LOC110066850,uncharacterized LOC110066850,4, C_PE_H_C_EE_H
+LOC110067067,LOC110067067,uncharacterized LOC110067067,4, C_PE_H_C_EE_H
+LOC110067145,LOC110067145,"uncharacterized LOC110067145, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110067164,LOC110067164,uncharacterized LOC110067164,4, C_PE_H_C_EE_H
+LOC110067588,LOC110067588,uncharacterized LOC110067588,4, C_PE_H_C_EE_H
+LOC110067912,LOC110067912,"uncharacterized LOC110067912, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110068145,LOC110068145,uncharacterized LOC110068145,4, C_PE_H_C_EE_H
+LOC110068201,LOC110068201,uncharacterized LOC110068201,4, C_PE_H_C_EE_H
+LOC110068384,LOC110068384,uncharacterized LOC110068384,4, C_PE_H_C_EE_H
+LOC110068397,LOC110068397,"uncharacterized LOC110068397, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110068563,LOC110068563,uncharacterized LOC110068563,4, C_PE_H_C_EE_H
+LOC110068603,LOC110068603,uncharacterized LOC110068603,4, C_PE_H_C_EE_H
+LOC110068987,LOC110068987,uncharacterized LOC110068987,4, C_PE_H_C_EE_H
+LOC110069315,LOC110069315,uncharacterized LOC110069315,4, C_PE_H_C_EE_H
+LOC110069374,LOC110069374,uncharacterized LOC110069374,4, C_PE_H_C_EE_H
+LOC110069478,LOC110069478,"uncharacterized LOC110069478, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110069479,LOC110069479,uncharacterized LOC110069479,4, C_PE_H_C_EE_H
+LOC110069503,LOC110069503,uncharacterized LOC110069503,4, C_PE_H_C_EE_H
+LOC110069663,LOC110069663,"uncharacterized LOC110069663, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110069676,LOC110069676,uncharacterized LOC110069676,4, C_PE_H_C_EE_H
+LOC110043870,LOC110043870,uncharacterized N-acetyltransferase YitH-like,4, C_PE_H_C_EE_H
+LOC110062882,LOC110062882,uncharacterized WD repeat-containing protein alr3466-like,4, C_PE_H_C_EE_H
+LOC110069527,LOC110069527,"uncharacterized protein C15orf41 homolog, transcript variant X2",4, C_PE_H_C_EE_H
+LOC110054048,LOC110054048,"uncharacterized protein YJR142W-like, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110057808,LOC110057808,uncharacterized protein YwnB-like,4, C_PE_H_C_EE_H
+LOC110043862,LOC110043862,uncharacterized protein YxeI-like,4, C_PE_H_C_EE_H
+LOC110052533,LOC110052533,uncharacterized skeletal organic matrix protein 5-like,4, C_PE_H_C_EE_H
+LOC110045038,LOC110045038,vacuolar protein sorting-associated protein 37A-like,4, C_PE_H_C_EE_H
+LOC110054165,LOC110054165,vacuolar protein sorting-associated protein 72 homolog,4, C_PE_H_C_EE_H
+LOC110055237,LOC110055237,vesicle transport protein GOT1B-like,4, C_PE_H_C_EE_H
+LOC110057145,LOC110057145,vicilin-like seed storage protein At2g18540,4, C_PE_H_C_EE_H
+LOC110063175,LOC110063175,voltage-dependent calcium channel subunit alpha-2/delta-2-like,4, C_PE_H_C_EE_H
+LOC110041256,LOC110041256,von Hippel-Lindau tumor suppressor homolog,4, C_PE_H_C_EE_H
+LOC110039926,LOC110039926,"zinc finger CCCH domain-containing protein 3-like, transcript variant X3",4, C_PE_H_C_EE_H
+LOC110040354,LOC110040354,"zinc finger protein 709-like, transcript variant X1",4, C_PE_H_C_EE_H
+LOC110047766,LOC110047766,zinc finger protein 765-like,4, C_PE_H_C_EE_H
+LOC110064015,LOC110064015,zinc metalloproteinase nas-4-like,4, C_PE_H_C_EE_H
+LOC110048542,LOC110048542,zinc phosphodiesterase ELAC protein 2-like,4, C_PE_H_C_EE_H

@@ -1,0 +1,182 @@
+---
+title: "02_read_counts"
+author: "Natalia Andrade Rodriguez"
+date: "2023-04-07"
+output: html_document
+---
+
+#Mergin read count per sample obtained with STAR 
+
+##Loading/installing libraries
+```{r}
+library(data.table)
+library(ggplot2)
+library(ggrepel)
+library(dplyr)
+library(tidyr)
+library(reshape2)
+library(tidyverse)
+
+```
+
+#Sorting samples with less than 4M and 5M reads mapped
+```{r}
+reads_mapped<- read.delim("data/multiqc_general_stats.txt", sep = "\t")
+head(reads_mapped)
+```
+
+```{r}
+reads_mapped<- reads_mapped %>% 
+           
+               rename(percent_uniq = 'STAR_mqc.generalstats.star.uniquely_mapped_percent') %>%
+  
+               rename(million_uniq = 'STAR_mqc.generalstats.star.uniquely_mapped') %>% 
+  
+               rename(Sample_ID = Sample)
+
+samples_selected_4M<- reads_mapped %>% filter(million_uniq > 4000000)
+
+samples_selected_8M<- samples_selected_4M %>% filter(million_uniq < 8000000)
+```
+
+```{r}
+sample_metadata<- read.csv("raw_data/Exp_metadata_all_MOTE22.csv") %>% 
+  
+                  mutate(Sample_ID = paste(Experiment, tube_number, sep = "_") )
+meta_lab<- read.csv("data/Exp_Lab_data_MOTE.csv") %>% 
+  
+           select( "Sample_ID", "RNA_Original_concentration", 
+                   
+                  "RNA_Dilution_concentration", "Cq", "C_PE_C_EE", "D_PE_D_EE")
+
+sample_metadata<- meta_lab %>% left_join(sample_metadata, by="Sample_ID")
+
+names(sample_metadata)
+```
+
+```{r}
+sample_metadata_reads<- sample_metadata %>% left_join(samples_selected_4M, by="Sample_ID")
+
+```
+
+```{r}
+
+samples_selected_4M<- sample_metadata_reads %>% 
+  
+                      filter(!is.na(million_uniq))  %>% 
+
+                      mutate(uniqsample = 1)
+  
+#samples_selected_4M$Sample_Period<- as.character(samples_selected_4M$Sample_Period)
+#samples_selected_4M$RNA_Dilution_concentration<- as.character(samples_selected_4M$RNA_Dilution_concentration)
+  
+
+n_colonies_4M<- unique(samples_selected_4M$Genotype_Micro) #73
+
+write.csv(samples_selected_4M, "data/samples_selected_4M.csv")
+```
+
+
+#List will be use to select files for the countData_4M and countData_sp2_3
+```{r}
+#for the countData_4M
+for_list_samples_4M<- samples_selected_4M  %>% select(Sample_ID) %>% arrange(Sample_ID)
+#write_delim(for_list_samples_4M, 'hpc/data/sample_list_4M.txt')
+# With this list run the script of "select_files_4M.sh" in the folder were all the "*ReadsPerGene" are in order to creat the count file
+```
+
+#Creating a list of all files from samples that have atleast 4M reads mapped
+```{r}
+dir<- "/Volumes/LaCie_NAR/Cnidarian_Immunity_lab/MOTE_SCTLD/readcounts/"
+```
+
+
+```{r}
+file_4M<- list.files(paste0(dir,"samples_4M_reads" ),
+                  "*.gzReadsPerGene.out.tab$", full.names = T)
+
+```
+
+```{r}
+countData_4M = data.frame(fread(file_4M[1]))[c(1,3)]
+
+for(i in 2:length(file_4M)) {
+        countData_4M = cbind(countData_4M, data.frame(fread(file_4M[i]))[3])
+}
+```
+
+```{r}
+# Skip first 4 lines, count data starts on the 5th line
+countData_4M = countData_4M[c(5:nrow(countData_4M)),]
+colnames(countData_4M) = c("GeneID", gsub(paste0(dir,"samples_4M_reads/"), "", file_4M))
+colnames(countData_4M) = gsub("_trimmed_trimmed.fq.gzReadsPerGene.out.tab", "", colnames(countData_4M))
+rownames(countData_4M) = countData_4M$GeneID
+
+countData_4M = countData_4M[,c(2:ncol(countData_4M))]
+
+#write_rds(countData_4M, "data/countData_4M.rds")
+```
+
+
+#Plotting read counts 
+```{r}
+ggplot(samples_selected_4M, aes(million_uniq)) + geom_histogram()
+```
+
+```{r}
+samples_selected_4M$Cq<- as.numeric(samples_selected_4M$Cq)
+ggplot(samples_selected_4M, aes(Cq)) + geom_histogram()
+
+```
+
+```{r}
+ggplot(samples_selected_4M, aes(Real_timepoint)) + geom_bar() + facet_grid(  ~ Treatment)
+```
+
+
+```{r}
+ggplot(samples_selected_4M, aes(Real_timepoint)) + geom_bar() + facet_grid(  ~ Disease_Outcome)
+```
+
+
+```{r}
+ggplot(samples_selected_4M, aes(Resistance2_April2021)) + geom_bar(aes(fill=Sample_Period), position = "dodge") + facet_wrap(~ ID )
+
+forplot<- samples_selected_4M %>% group_by(Sample_Period, Resistance2_April2021)
+
+ggplot(samples_selected_4M, aes(Resistance2_April2021)) + geom_bar(aes(fill=Sample_Period), position = "dodge") + facet_wrap(~ ID )
+
+ggplot(samples_selected_4M, aes(Sample_Period)) + geom_bar(aes(fill=Resistance2_April2021), position = "dodge") + facet_wrap(ID ~ . )
+                                               
+```
+
+#Visualising samples that can be analysed together based on sample periode
+```{r}
+sample_period_plot<- sample_period_data %>% mutate(SP_data = case_when(
+   
+                                            SP1_SP2 == 1 ~ 'SP1_SP2' ,
+                                            SP1_SP3 == 1 ~ 'SP1_SP3' ,
+                                            SP2_SP3 == 1 ~ "SP2_SP3" ,
+                                            SP1_SP2_SP3 == 1 ~ "SP1_SP2_SP3",
+                                            is.na(SP1_SP2) ~"SP"))
+
+sample_period_plot_cast<- sample_period_data_cast %>% mutate(SP_data = case_when(
+   
+                                            SP1_SP2 == 1 ~ 'SP1_SP2' ,
+                                            SP1_SP3 == 1 ~ 'SP1_SP3' ,
+                                            SP2_SP3 == 1 ~ "SP2_SP3" ,
+                                            SP1_SP2_SP3 == 1 ~ "SP1_SP2_SP3",
+                                            is.na(SP1_SP2) ~"SP"))
+
+
+ggplot(sample_period_plot, aes(SP_data)) +
+   
+      geom_bar()
+
+ggplot(sample_period_plot_cast, aes(SP_data)) +
+   
+      geom_bar(aes(color=Resistance_April2021)) 
+      
+ #    + geom_text(aes(label = after_stat()), vjust = 0)
+
+```

@@ -1,0 +1,564 @@
+---
+title: 'Data combination : Experiment metada and lab results'
+author: "Natalia Andrade Rodriguez and Lys Isma"
+date: "2022-11-21"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(ggplot2)
+library(tidyr)
+library(dplyr)
+library(reshape2)
+library(reshape)
+library(MASS)
+library(stringr)
+library(tidyverse)
+```
+#Creating column "Real_timepoint" bases on the date the samples were taken. This step was done in excel with filters. Try to make it in R when there is time.
+->Pre_exp == Exp1 (1/9/22 & 1/11/22) | Exp2 (2/8/22) | Exp3 (3/4/22) | Exp4 (3/28/22) 
+
+-> Pre_Early_exp == Exp1 (1/9/22 & 1/11/22 < (1/17/22)) | Exp2 (2/8/22) < (2/14/22)| Exp3 (3/4/22) < (3/13/22) | Exp4 (3/28/22) < (4/2/22) 
+
+->Early_exp == Exp1 (1/17/22) | Exp2 (2/14/22) | Exp3 (3/13/22) | Exp4 (4/2/22) 
+
+-> Initial_disease == [Exp1 (any) > (1/17/22) | Exp2 (any) >(2/14/22) | Exp3 (any) > (3/13/22) | Exp4 (any) >(4/2/22) ] & != Final_date
+
+-> Final == [Exp1 (any) > (1/17/22) | Exp2 (any) >(2/14/22) | Exp3 (any) > (3/13/22) | Exp4 (any) >(4/2/22) ] & != Initial_disease or Early_exp or Pre_Early_exp
+
+#Data use here is based on Nick's data base minus all the genotypes used as diseased transmitors
+```{r}
+
+#Read experimental data
+Exp_data<- read.csv('raw_data/Exp_metadata_all_MOTE22.csv') 
+#Exp_data<- Exp_data %>% mutate(Tube_uniq = paste("T", tube_number, sep = "_"))
+Exp_data$Sample_ID<- paste(Exp_data$Experiment, Exp_data$tube_number, sep = "_")
+
+names(Exp_data)
+
+# For RNAseq we only use sample from experiment 2, 3 and 4
+
+Experiment_RNA<- Exp_data %>% filter(Experiment != 1)
+
+```
+
+#Data for lab work comes from xlx file per plate, sheet called "Data_combine"
+```{r}
+Plate1<- read.csv('raw_data/Plate_data/Plate1_map.csv')
+Plate2<- read.csv('raw_data/Plate_data/Plate2_map.csv')
+Plate3<- read.csv('raw_data/Plate_data/Plate3_map.csv') #remove NTC from q PCR plate it doesn't need to be there
+Plate4<- read.csv('raw_data/Plate_data/Plate4_map.csv')
+Plate5<- read.csv('raw_data/Plate_data/Plate5_map.csv')
+Plate6<- read.csv('raw_data/Plate_data/Plate6_map.csv')
+Plate7<- read.csv('raw_data/Plate_data/Plate7_map.csv') #Plate 7 had to be edit, first Sample_IDs with spaces and then eliminating samples that are not from this experiment
+
+#Check if redos ar also in Plate 8. This plate also has NOVA samples (in the plate itself) so we will eliminate them
+#We need to eliminate samples D2 (3_425), E2(3_372) and C6(3_274) from Plate 8 to fuse them with rest of the plates because those samples
+# were already extracted. The only sample that need o be redo is E2(3_372)
+# samples that need to be extracted from MOTE experiment and were not in our first set of sampples.
+# They correspond to controls from genotypes present across the 3 exp (2,3 and 4) from timepoint PE and EE
+#and PE or EE that were needed to paired the samples already extracted
+
+Plate8<- read.csv("raw_data/Plate_data/Plate8_map_all.csv") %>% 
+  
+              
+              mutate(qPCR_Coordinate = paste(Row, Col, sep = "_")) %>% 
+  
+              filter(Project == "MOTE") %>% 
+  
+              dplyr::select("RNA_Ext_Coordinate","Sample_ID","order","RNA_Original_concentration",
+                            "RNA_Dilution_concentration","qPCR_Coordinate","Cq","Plate_Number")
+names(Plate8)
+
+
+
+names(Plate1)
+names(Plate2)
+names(Plate3)
+names(Plate4)
+names(Plate5)
+names(Plate6)
+names(Plate7)
+names(Plate8)
+
+#Combine tables
+
+Lab_data_1_2<- bind_rows(Plate1,Plate2) 
+
+Plate3$Cq<- as.character(Plate3$Cq)
+
+Lab_data_3_4<- bind_rows(Plate3,Plate4)
+
+Lab_data_5_6<- bind_rows(Plate5, Plate6)
+
+Lab_data_7_8<- bind_rows(Plate7, Plate8)
+
+Lab_data_1_2_3_4<- bind_rows(Lab_data_1_2,Lab_data_3_4)
+
+Lab_data_5_6_7_8<- bind_rows(Lab_data_5_6,Lab_data_7_8)
+
+Lab_data_1_2_3_4$Cq<- as.character(Lab_data_1_2_3_4$Cq)
+Lab_data_5_6_7_8$Cq<- as.character(Lab_data_5_6_7_8$Cq)
+Lab_all<- bind_rows(Lab_data_1_2_3_4, Lab_data_5_6_7_8)
+
+
+Lab_all<- Lab_all %>% filter(!is.na(Sample_ID)) #total extracted samples 
+
+#write.csv(Lab_all, "data/Lab_data_allPlates_MOTE.csv")
+
+Uniq_samples<- Lab_all %>% dplyr::select('Sample_ID') %>% distinct(Sample_ID)  #638
+
+#One samples is duplicated, to find it
+
+#Sample_ID_freq <- data.frame(table(Lab_all$Sample_ID))
+#Sample_ID_dup <- Sample_ID_freq %>% group_by(Freq) %>% summarize(Total = sum(Freq))
+#Sample_ID_freq[Sample_ID_freq$Freq > 1,] # sample_ID that is duplicated 3_19 
+
+#Sample 3_19 was extracted twice once in Plate 1 and another time in Plate 7. We modify the sample name to keep the data but will not appear in the Experimental data
+
+# Filtering all rows that don't have a Sample_ID
+
+```
+
+Merging Experimental data with Lab data
+```{r}
+
+Exp_Lab_data<- left_join(Lab_all, Exp_data, by="Sample_ID") 
+## From original data 604 because '2_609' duplicated in experiment metadata|This sample has been eliminated
+
+Review_nomatch<- Exp_Lab_data %>% filter(is.na(Genotype_Micro)) #6
+
+#Some RNA samples didn't match the metadata 
+#Samples_IDs to be reviewed"3_144" "2_176" "3_138" "2_146" "3_137", all from plate 1, corresponded to controls
+# RNA extraction repeat from 3_19
+#Eliminating all the ones that don't have a Genotype ID
+
+Exp_Lab_data<- Exp_Lab_data %>% filter(!is.na(Genotype_Micro)) 
+
+
+Uniq_samples<- Exp_Lab_data %>% dplyr::select('Sample_ID') %>% distinct(Sample_ID)  #632
+
+```
+
+
+
+#Find samples that RNA worked
+```{r}
+Exp_Lab_data<- Exp_Lab_data %>% 
+  
+                  filter(grepl("\\d",RNA_Original_concentration ))#538
+```
+
+#Creating a Uniq_RNA_ID and Uniq_qPCR_ID
+```{r}
+Exp_Lab_data<- Exp_Lab_data %>% group_by(Plate_Number) %>% mutate(RNA_Uniq_ID = paste(RNA_Ext_Coordinate, Plate_Number, sep = "_P"))
+
+Exp_Lab_data<- Exp_Lab_data %>% group_by(Plate_Number) %>% mutate(qPCR_Uniq_ID = paste(qPCR_Coordinate, Plate_Number, sep = "_Pq"))
+
+Exp_Lab_data<- ungroup(Exp_Lab_data) %>% mutate(uniqsample = 1)
+
+```
+
+#Creating data per experiment
+```{r}
+Exp_2 <- Exp_Lab_data %>% filter(Experiment == 2)#210
+Exp_3 <- Exp_Lab_data %>% filter(Experiment == 3)#197
+Exp_4 <- Exp_Lab_data %>% filter(Experiment == 4)#131
+```
+
+
+```{r}
+# Unique genotypes across the four experiments and per experiment
+
+Numb_genotypes<- n_distinct(Exp_Lab_data$Genotype) # 131
+
+Exp_2_genotypes<- n_distinct(Exp_2$Genotype) #89
+Exp_2_genotypes <- Exp_2 %>% dplyr::select('Genotype') %>% distinct(Genotype)
+
+Exp_3_genotypes<- n_distinct(Exp_3$Genotype) #87
+Exp_3_genotypes <- Exp_3 %>% dplyr::select('Genotype') %>% distinct(Genotype)
+
+Exp_4_genotypes<- n_distinct(Exp_4$Genotype) #55
+Exp_4_genotypes <- Exp_4 %>% dplyr::select('Genotype') %>% distinct(Genotype)
+
+Share_geno_Exp2_Exp3<- inner_join(Exp_2_genotypes, Exp_3_genotypes, by = "Genotype") #48
+
+Share_geno_all<- inner_join(Share_geno_Exp2_Exp3, Exp_4_genotypes, by ="Genotype") #17
+
+Share_geno_Exp2_Exp4<- inner_join(Exp_2_genotypes, Exp_4_genotypes, by="Genotype") # 23
+
+Share_geno_Exp3_Exp4<- inner_join(Exp_3_genotypes, Exp_4_genotypes, by="Genotype") #44
+
+```
+
+# Find which samples correspond to D_EE y D_PE of the same genotype
+```{r}
+# Step 1 get info of samples that have pairs per experiment per genotype
+function_geno_cast<- readRDS('function_geno_cast.rds')
+
+Exp_2_cast<- function_geno_cast(Exp_2)
+
+Exp_3_cast<- function_geno_cast(Exp_3)
+
+Exp_4_cast<- function_geno_cast(Exp_4)
+```
+
+```{r}
+# Step 2 put data in long format to add it to general data base
+
+Exp_2_melt<- melt(Exp_2_cast, id=c("Experiment", "Genotype", "C_PE_C_EE", "D_PE_D_EE")) %>% 
+ 
+                  filter(!is.na(value)) %>% 
+  
+                  dplyr::rename(Sample_ID = variable) %>% 
+  
+                  dplyr::select(Sample_ID, C_PE_C_EE, D_PE_D_EE)
+
+Exp_3_melt<- melt(Exp_3_cast, id=c("Experiment", "Genotype", "C_PE_C_EE", "D_PE_D_EE")) %>% 
+                    
+                  filter(!is.na(value)) %>% 
+                    
+                  dplyr::rename(Sample_ID = variable) %>% 
+  
+                  dplyr::select(Sample_ID, C_PE_C_EE, D_PE_D_EE)
+
+
+Exp_4_melt<- melt(Exp_4_cast, id=c("Experiment", "Genotype", "C_PE_C_EE", "D_PE_D_EE")) %>% 
+ 
+                  filter(!is.na(value)) %>% 
+  
+                  dplyr::rename(Sample_ID = variable) %>% 
+  
+                  dplyr::select(Sample_ID, C_PE_C_EE, D_PE_D_EE)
+
+all_Exp_melt<- bind_rows(Exp_2_melt, Exp_3_melt, Exp_4_melt)
+```
+
+#Adding info to general data base 
+```{r}
+
+Exp_Lab_data<- left_join(Exp_Lab_data, all_Exp_melt, by="Sample_ID")
+
+write.csv(Exp_Lab_data, "data/Exp_Lab_data_MOTE.csv")
+
+```
+
+#Amount of samples we have paired treatment and controls
+
+```{r}
+Paired_Treat_and_Controls<- Exp_Lab_data %>% 
+  
+         filter(D_PE_D_EE == TRUE & C_PE_C_EE == TRUE )
+
+```
+#Ploting Paired Treatment_and_Controls
+```{r}
+data_plot_Paired_and_Controls <- Paired_Treat_and_Controls
+names(Paired_Treat_and_Controls)
+
+plot_Paired_and_Controls <- ggplot(data_plot_Paired_and_Controls, aes(R_TP)) + 
+  geom_bar(aes(fill = Treatment), position = "dodge") + 
+  facet_grid(Genotype ~ Experiment) 
+
+print(plot_Paired_and_Controls)
+
+# Total of 6 genotypes accross exp
+```
+
+#Amount of samples we have paired treatment (not necessarly controls)
+
+```{r}
+Paired_Treat<- Exp_Lab_data %>% 
+  
+         filter(D_PE_D_EE == TRUE)
+
+# which of this samples we already have cDNA library for
+
+cDNA_amp<- Paired_Treat %>% 
+  
+          filter(grepl("\\d",Cq ))
+  
+            
+```
+
+#######################Ploting Paired Treatment per experiment###################
+#Exp 2
+```{r}
+data_plot_Paired_T_Exp2 <- Paired_Treat %>%
+  
+                          filter(Experiment == 2)
+#names(data_plot_Paired_T_Exp2)
+
+plot_Paired_T_Exp2<- ggplot(data_plot_Paired_T_Exp2, aes(R_TP)) + 
+  geom_bar(aes(fill = Treatment), position = "dodge") + 
+  facet_wrap(Genotype ~. ) 
+
+print(plot_Paired_T_Exp2)
+
+
+data_plot_cDNA_amp_Exp2 <- cDNA_amp %>%
+  
+                          filter(Experiment == 2)
+#names(data_plot_Paired_T_Exp2)
+
+plot_cDNA_amp_Exp2<- ggplot(data_plot_cDNA_amp_Exp2, aes(R_TP)) + 
+  geom_bar(aes(fill = Treatment), position = "dodge") + 
+  facet_wrap(Genotype ~. ) 
+
+print(plot_cDNA_amp_Exp2) #42 geno
+
+
+
+
+# Total of 57 genotypes accross exp
+```
+#Exp 3
+```{r}
+data_plot_Paired_T_Exp3 <- Paired_Treat %>%
+  
+                          filter(Experiment == 3)
+#names(data_plot_Paired_T_Exp2)
+
+plot_Paired_T_Exp3<- ggplot(data_plot_Paired_T_Exp3, aes(R_TP)) + 
+  geom_bar(aes(fill = Treatment), position = "dodge") + 
+  facet_wrap(Genotype ~. ) 
+
+print(plot_Paired_T_Exp3)
+
+# Total of 57 genotypes accross exp
+
+
+
+data_plot_cDNA_amp_Exp3 <- cDNA_amp %>%
+  
+                          filter(Experiment == 3)
+#names(data_plot_Paired_T_Exp3)
+
+plot_cDNA_amp_Exp3<- ggplot(data_plot_cDNA_amp_Exp3, aes(R_TP)) + 
+  geom_bar(aes(fill = Treatment), position = "dodge") + 
+  facet_wrap(Genotype ~. ) 
+
+print(plot_cDNA_amp_Exp3) #27 geno
+
+
+```
+
+#Exp 4
+```{r}
+data_plot_Paired_T_Exp4 <- Paired_Treat %>%
+  
+                          filter(Experiment == 4)
+#names(data_plot_Paired_T_Exp4)
+
+plot_Paired_T_Exp4<- ggplot(data_plot_Paired_T_Exp4, aes(R_TP)) + 
+  geom_bar(aes(fill = Treatment), position = "dodge") + 
+  facet_wrap(Genotype ~. ) 
+
+print(plot_Paired_T_Exp4)
+
+# Total of 57 genotypes accross exp
+
+data_plot_cDNA_amp_Exp4 <- cDNA_amp %>%
+  
+                          filter(Experiment == 4)
+#names(data_plot_Paired_T_Exp3)
+
+plot_cDNA_amp_Exp4<- ggplot(data_plot_cDNA_amp_Exp4, aes(R_TP)) + 
+  geom_bar(aes(fill = Treatment), position = "dodge") + 
+  facet_wrap(Genotype ~. ) 
+
+print(plot_cDNA_amp_Exp4) #11 geno
+
+
+```
+
+
+
+#Ploting
+## this part need more cleaning
+
+```{r}
+plot_data_geno_shared_RNA <- inner_join(Exp_Lab_data, Share_geno_all, by="Genotype") %>%  
+  mutate(RNA_extracted = !is.na(RNA_Original_concentration)) %>% 
+  mutate(Pre_Early_Exposure = (Real_timepoint == 'Pre_Early_Exposure' )) %>%
+  filter(Treatment !=('C')) %>% 
+  filter(Pre_Early_Exposure !=(TRUE)) %>% 
+  group_by(Real_timepoint)
+
+plot_geno_shared_RNA <- ggplot(plot_data_geno_shared_RNA, aes(R_TP)) + 
+  geom_bar(aes(fill = RNA_extracted), position = "dodge") + 
+  facet_grid(Genotype ~ Experiment) 
+
+print(plot_geno_shared_RNA)
+
+
+plot_data_geno_shared_qPCR <- inner_join(Exp_Lab_data, Share_geno_all, by="Genotype") %>%  
+  mutate(qPCR_worked = (Cq !='Undetermined')) %>% 
+  mutate(Pre_Early_Exposure = (Real_timepoint == 'Pre_Early_Exposure' )) %>%
+  filter(Treatment !=('C')) %>% 
+  filter(Pre_Early_Exposure !=(TRUE)) 
+
+plot_geno_shared_qPCR <- ggplot(plot_data_geno_shared_qPCR, aes(R_TP)) + 
+  geom_bar(aes(fill = qPCR_worked), position = "dodge") + 
+  facet_grid(Genotype  ~ Plate_Number + Experiment)
+
+
+plot_data_geno_shared_RNA_qPCR <- inner_join(Exp_Lab_data, Share_geno_all, by="Genotype") %>%  
+   mutate(RNA_extracted = !is.na(RNA_Original_concentration)) %>% 
+  mutate(qPCR_worked = (Cq !='Undetermined')) %>% 
+  mutate(Pre_Early_Exposure = (Real_timepoint == 'Pre_Early_Exposure' )) %>%
+  filter(Treatment !=('C')) %>% 
+  filter(Pre_Early_Exposure !=(TRUE)) 
+
+plot_geno_shared_RNA_qPCR <- ggplot(plot_data_geno_shared_RNA_qPCR, aes(R_TP)) + 
+  geom_bar(aes(fill = qPCR_worked, colour = RNA_extracted), position = "dodge") + scale_y_continuous(breaks = 0 : 1, guide = guide_axis(check.overlap = TRUE)) +
+  facet_wrap( ~ Plate_Number + RNA_Uniq_ID) 
+
+```
+
+Experiment 2 Pre and Early Exposure
+## this part need more cleaning
+
+```{r}
+plot_data_Exp2 <- Exp_2 %>% 
+  mutate(RNA_extracted = !is.na(RNA_Original_concentration)) %>% 
+  mutate(qPCR_worked = (Cq !='Undetermined')) %>% 
+  mutate(Pre_Early_Exposure = (Real_timepoint == 'Pre_Early_Exposure' )) %>%
+  filter(Pre_Early_Exposure !=(TRUE)) %>% 
+  group_by(Genotype)
+
+plot_data_Exp2_PE_EE<- plot_data_Exp2 %>% 
+  filter(grepl('Pre_Exposure|Early_Exposure', Real_timepoint )) %>% 
+  filter(Treatment !=('C')) %>% 
+  group_by(Genotype)
+plot_data_Exp2_PE_EE_1<- plot_data_Exp2_PE_EE[1:89,]
+plot_data_Exp2_PE_EE_2<- plot_data_Exp2_PE_EE[90:177,]
+
+plot_exp_2_PE_EE_1<- ggplot(plot_data_Exp2_PE_EE_1, aes(R_TP)) +
+  geom_bar(aes(fill = qPCR_worked, colour = RNA_extracted), position = "dodge") + scale_y_continuous(breaks = 0 : 1, guide = guide_axis(check.overlap = TRUE)) +
+  facet_wrap(Genotype ~ tube_number ) + ggtitle("Experiment 2 Samples from Pre and Early Exposure_1")
+
+plot_exp_2_PE_EE_2<- ggplot(plot_data_Exp2_PE_EE_2, aes(R_TP)) +
+  geom_bar(aes(fill = qPCR_worked, colour = RNA_extracted), position = "dodge") + scale_y_continuous(breaks = 0 : 1, guide = guide_axis(check.overlap = TRUE)) +
+  facet_wrap(Genotype ~ tube_number ) + ggtitle("Experiment 2 Samples from Pre and Early Exposure_2")
+```
+
+Experiment 3 Pre and Early Exposure
+## this part need more cleaning
+
+```{r}
+
+plot_data_Exp3 <- Exp_3 %>% 
+  mutate(RNA_extracted = !is.na(RNA_Original_concentration)) %>% 
+  mutate(qPCR_worked = (Cq !='Undetermined')) %>% 
+  mutate(Pre_Early_Exposure = (Real_timepoint == 'Pre_Early_Exposure' )) %>%
+  filter(Pre_Early_Exposure !=(TRUE)) %>% 
+  group_by(Genotype)
+
+plot_data_Exp3_PE_EE<- plot_data_Exp3 %>% 
+  filter(grepl('Pre_Exposure|Early_Exposure', Real_timepoint )) %>% 
+  filter(Treatment !=('C')) %>% 
+  group_by(Genotype)
+plot_data_Exp3_PE_EE_1<- plot_data_Exp3_PE_EE[1:83,]
+plot_data_Exp3_PE_EE_2<- plot_data_Exp3_PE_EE[84:166,]
+
+plot_exp_3_PE_EE_1<- ggplot(plot_data_Exp3_PE_EE_1, aes(R_TP)) +
+  geom_bar(aes(fill = qPCR_worked, colour = RNA_extracted), position = "dodge") + scale_y_continuous(breaks = 0 : 1, guide = guide_axis(check.overlap = TRUE)) +
+  facet_wrap(Genotype ~ tube_number ) + ggtitle("Experiment 3 Samples from Pre and Early Exposure_1")
+
+plot_exp_3_PE_EE_2<- ggplot(plot_data_Exp3_PE_EE_2, aes(R_TP)) +
+  geom_bar(aes(fill = qPCR_worked, colour = RNA_extracted), position = "dodge") + scale_y_continuous(breaks = 0 : 1, guide = guide_axis(check.overlap = TRUE)) +
+  facet_wrap(Genotype ~ tube_number ) + ggtitle("Experiment 3 Samples from Pre and Early Exposure_2")
+
+```
+
+Experiment 4 Pre and Early Exposure
+## this part need more cleaning
+
+```{r}
+
+plot_data_Exp4 <- Exp_4 %>% 
+  mutate(RNA_extracted = !is.na(RNA_Original_concentration)) %>% 
+  mutate(qPCR_worked = (Cq !='Undetermined')) %>% 
+  mutate(Pre_Early_Exposure = (Real_timepoint == 'Pre_Early_Exposure' )) %>%
+  filter(Pre_Early_Exposure !=(TRUE)) %>% 
+  group_by(Genotype)
+
+plot_data_Exp4_PE_EE<- plot_data_Exp4 %>% 
+  filter(grepl('Pre_Exposure|Early_Exposure', Real_timepoint )) %>% 
+  filter(Treatment !=('C')) %>% 
+  group_by(Genotype)
+plot_data_Exp4_PE_EE_1<- plot_data_Exp4_PE_EE[1:62,]
+plot_data_Exp4_PE_EE_2<- plot_data_Exp4_PE_EE[63:125,]
+
+plot_exp_4_PE_EE_1<- ggplot(plot_data_Exp4_PE_EE_1, aes(R_TP)) +
+  geom_bar(aes(fill = qPCR_worked, colour = RNA_extracted), position = "dodge") + scale_y_continuous(breaks = 0 : 1, guide = guide_axis(check.overlap = TRUE)) +
+  facet_wrap(Genotype ~ tube_number ) + ggtitle("Experiment 4 Samples from Pre and Early Exposure_1")
+
+plot_exp_4_PE_EE_2<- ggplot(plot_data_Exp4_PE_EE_2, aes(R_TP)) +
+  geom_bar(aes(fill = qPCR_worked, colour = RNA_extracted), position = "dodge") + scale_y_continuous(breaks = 0 : 1, guide = guide_axis(check.overlap = TRUE)) +
+  facet_wrap(Genotype ~ tube_number ) + ggtitle("Experiment 4 Samples from Pre and Early Exposure_2")
+
+``` 
+
+#Samples got a succesful RNA extraction
+## this part need more cleaning
+
+```{r}
+plot_data_RNA <- Exp_Lab_data %>% filter(!is.na(RNA_Original_concentration)) %>% mutate(RNA_Conc_Trans = log10(RNA_Original_concentration))
+
+#Does the concentration of RNA of the dilution influence the amount of cycles?
+plot_RNA<- ggplot(plot_data_RNA, aes( Cq,RNA_Dilution_concentration)) +
+  geom_point(aes(color= R_TP)) + facet_wrap(Plate_Number ~ .)
+
+ggplot(plot_data_RNA, aes( Cq,RNA_Dilution_concentration)) +
+  geom_point(aes(color= R_TP)) + facet_wrap(Plate_Number ~ .)
+
+RNA_samples<- Exp_Lab_data %>% group_by(RNA_Original_concentration) %>% mutate(RNA_extracted =!is.na(RNA_Original_concentration))
+
+NOT_RNA_samples<- Exp_Lab_data %>% group_by(RNA_Original_concentration) %>% mutate(RNA_NOT_extracted =is.na(RNA_Original_concentration)) %>% filter(!is.na(timepoint))
+
+plot_data_NOT_RNA<- NOT_RNA_samples %>% group_by(Experiment) %>% count(RNA_NOT_extracted)
+
+
+
+```
+
+
+#Check samples for each experiment have pairs and the degisned looks ok 
+## this part need more cleaning
+
+```{r}
+Sample_checks<- Exp_Lab_data %>% filter(D_PE_D_EE == TRUE)
+
+Sample_checks_full<- Exp_Lab_data %>% filter(D_PE_D_EE == TRUE & C_PE_C_EE == TRUE)
+
+Sample_checks_full_all_exp<- 
+
+Sample_checks_Exp2<- Exp_Lab_data %>% filter(D_PE_D_EE == TRUE) %>% filter(Experiment == 2)#211
+  
+Sample_checks_Exp3<- Exp_Lab_data %>% filter(D_PE_D_EE == TRUE) %>% filter(Experiment == 3)#186
+
+Sample_checks_Exp4<- Exp_Lab_data %>% filter(D_PE_D_EE == TRUE) %>% filter(Experiment == 4)#79
+
+
+Sample_checks$Experiment<- as.character(Sample_checks$Experiment)
+Sample_checks<- Sample_checks %>% filter(grepl('6|7', Plate_Number) )
+
+plot_plates<- ggplot(Sample_checks_Exp2, aes(R_TP)) +
+  geom_bar(aes(fill= ), position = "dodge") + scale_y_continuous(breaks = 0 : 1, guide = guide_axis(check.overlap = TRUE)) +
+  facet_wrap( Experiment ~ Genotype ) 
+
+plot_plates<- ggplot(Sample_checks_Exp2, aes(R_TP)) +
+  geom_bar(aes(fill= Treatment), position = "dodge") + scale_y_continuous(breaks = 0 : 1, guide = guide_axis(check.overlap = TRUE)) +
+  facet_wrap( .~ Genotype )
+```
+
+### Removing unecessary data
+```{r}
+rm(Plate1, Plate2, Plate3, Plate4,Plate5, Plate6, Plate7, Plate8, Lab_data_1_2,Lab_data_3_4,Lab_data_5_6,Lab_data_7_8, Lab_data_1_2_3_4, Lab_data_5_6_7_8, Experiment_RNA,)
+```
