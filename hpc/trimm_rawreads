@@ -32,3 +32,6 @@ trim_galore ${sample} \
 -o ${path}/trimmed_3/ ; \
 
 done
+cd "/scratch/projects/tct/lys/mote/trimmed_3"
+multiqc ${path}/trimmed_3/ \
+--outdir ${path}/trimmed_multi_3/

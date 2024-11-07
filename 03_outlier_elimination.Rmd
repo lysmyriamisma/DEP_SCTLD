@@ -1,0 +1,450 @@
+---
+title: "Outlier Elimination"
+output: pdf_document
+date: "2024-10-23"
+---
+##Load Libraries
+```{r}
+knitr::opts_chunk$set(echo = FALSE, results = "markup")
+
+library("tidyverse")
+library("tximport")
+library("DESeq2")
+install.packages("WGCNA")
+library("reshape2")
+library("dplyr")
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install(version = "3.18")
+library("BiocManager")
+BiocManager::install("WGCNA")
+library('mixOmics')
+library('ggplot2')
+library('corpcor')
+library('DESeq2')
+library('tidyr')
+BiocManager::install('mixOmics')
+library('sva')
+library(PCAtools)
+```
+
+##read in the pre and early data meta dataset and pre and early raw counts
+```{r}
+rawcountdata<-readRDS('/Volumes/mote/data/annotated_PE_EE_4M_45_rawcounts.rds')
+PE_EE_meta<-readRDS("/Volumes/mote/data/PE_EE_4M_45percent.rds")
+
+```
+
+##Eliminate outliers
+##### Step 2: Find any low count genes or outliers sample swith WGCNA pipeline
+```{r}
+#note: this function requires samples to be in rows and genes to be in columns so we need to transpose the data
+gsg_all<- WGCNA::goodSamplesGenes(t(rawcountdata))
+
+summary(gsg_all)
+
+gsg_all$allOK # check that all genes pass if true, if not find which ones
+
+table(gsg_all$goodGenes) # false indicated number of genes didn't pass
+
+table(gsg_all$goodSamples) # false indicated number of samples that didn't pass
+```
+If we have outliers genes or samples we need to remove them
+
+- Removing genes that are detected as outliers
+```{r}
+count_data <- rawcountdata[gsg_all$goodGenes == TRUE,]
+```
+
+### Detecting samples outliers- We are cleaning data before DESEQ
+
+```{r}
+# detect outlier samples - hierarchical clustering-method 1
+
+png("/Volumes/mote/data/htree_QC_all.png", width=30, height=8, units = "in", res = 300)
+htree_all <- hclust(dist(t(count_data)), method = "average")
+plot(htree_all)
+#dev.off()
+```
+
+
+```{r}
+# detect outlier samples -  pca-method 2
+png("/Volumes/mote/data/pca_QC_all.png", width=8, height=8, units = "in", res = 300)
+pca <- prcomp(t(count_data))
+pca.dat <- pca$x
+
+pca.var <- pca$sdev^2
+pca.var.percent <- round(pca.var/sum(pca.var)*100, digits = 2)
+
+pca.dat <- as.data.frame(pca.dat)
+
+ggplot(pca.dat, aes(PC1, PC2)) +
+  geom_point() +
+  geom_text(label = rownames(pca.dat)) +
+  labs(x = paste0('PC1: ', pca.var.percent[1], ' %'),
+       y = paste0('PC2: ', pca.var.percent[2], ' %'))
+#dev.off()
+```
+
+- Removing samples outliers, these are all experiments analyzed all together
+- Outliers from PCA , I made the determination that anything below Y axis -1.5e
+anything beyond 1e +6th  is out on the X axis :"3_375","3_357","3_81","
+Outliers from WGCNA dendogram: 3_60
+```{r}
+# based on PCA and hierarchical Clustering we take out 11 outliers
+samples.to.be.excluded_all <- c("3_375","3_357","3_81","3_60","3_399","4_122","3_38","3_206","2_170","3_422","4_172")
+
+count_data.subset_all <- count_data[,!(colnames(count_data) %in% samples.to.be.excluded_all)]
+```
+
+-Rerun dendrogram and pca without outliers
+
+```{r}
+#png("/Volumes/mote/data/htree_QC_nooutliers_all.png", width=30, height=8, units = "in", res = 300)
+htree_all <- hclust(dist(t(count_data.subset_all)), method = "average")
+par(cex = 0.6)
+par(mar = c(0,4,2,0))
+plot(htree_all, main = "Sample clustering to detect outliers", sub="", xlab="",labels = PE_EE_meta$Treatment, cex.lab = 1.5, cex.axis = 1.5, cex.main = 2)
+plot(htree_all)
+#dev.off()
+
+# pca-method 2
+png("/Volumes/mote/data/pca_QC_nooutliers_all.png", width=8, height=8, units = "in", res = 300)
+pca2 <- prcomp(t(count_data.subset_all))
+pca.dat2 <- pca2$x
+
+pca.var <- pca2$sdev^2
+pca.var.percent <- round(pca.var/sum(pca.var)*100, digits = 2)
+
+pca.dat2 <- as.data.frame(pca.dat2)
+
+ggplot(pca.dat2, aes(PC1, PC2)) +
+  geom_point() +
+  geom_text(label = rownames(pca.dat2)) +
+  labs(x = paste0('PC1: ', pca.var.percent[1], ' %'),
+       y = paste0('PC2: ', pca.var.percent[2], ' %'))
+#dev.off()
+```
+
+
+```{r}
+row.names(PE_EE_meta)
+```
+
+
+## Step 4: Normalization of the data
+- Creating a deseq2 dataset
+```{r}
+#make sample ID the meta data rownames and exclude outlier samples from sample data
+rownames(PE_EE_meta) = PE_EE_meta$Sample_ID
+```
+
+
+```{r}
+colData_all <- PE_EE_meta %>% filter(!row.names(.) %in% samples.to.be.excluded_all)
+```
+
+
+```{r}
+# making the rownames and column names identical
+all(rownames(colData_all) %in% colnames(count_data.subset_all))
+all(rownames(colData_all) == colnames(count_data.subset_all))
+```
+
+- filter low count. In this case we choose to keep all rowSums add to 1070 (number of samples-214* minimum 5 reads)
+```{r}
+data_counts_all<- count_data.subset_all
+```
+
+
+```{r}
+keep_all <- data_counts_all%>% mutate(keep_all = rowSums(data_counts_all) >= 1070)
+
+data_counts_all<- keep_all %>% filter(keep_all == TRUE)
+data_counts_all <- data_counts_all[c(1:214)]#this removes the keep all column at the end
+```
+
+
+```{r}
+samples_all<- colData_all
+gene<- unique(samples_all$Genotype_ID) #88
+### Result: we end up with 13421 genes and 214 samples with 88 unique genotypes
+
+```
+
+- Saving new counts and sample data 
+```{r}
+write_rds(data_counts_all,"/Volumes/mote/data/PE_EE_filtercounts_noout_1024.rds")
+write_rds(colData_all,"/Volumes/mote/data/samples_PE_EE_noout_1024.rds")
+```
+    
+    
+##Analyze the outliers by experiment
+##create meta and count data sets by experiment
+```{r}
+exp2<- PE_EE_meta%>%
+  subset(Experiment == "2")
+write.csv(exp2, "/Volumes/mote/data/PE_EE_exp2_4M_45percent.csv")
+write_rds(exp2, "/Volumes/mote/data/PE_EE_exp2_4M_45percent.rds")
+
+exp3<- PE_EE_meta%>%
+  subset(Experiment == "3")
+write.csv(exp3, "/Volumes/mote/data/PE_EE_exp3_4M_45percent.csv")
+write_rds(exp3, "/Volumes/mote/data/PE_EE_exp3_4M_45percent.rds")
+
+exp4<- PE_EE_meta%>%
+  subset(Experiment == "4")
+write.csv(exp4, "/Volumes/mote/data/PE_EE_exp4_4M_45percent.csv")
+write_rds(exp4, "/Volumes/mote/data/PE_EE_exp4_4M_45percent.rds")
+```
+
+
+```{r}
+### Setting up the DESeq model
+#With clean data set
+dds <- DESeqDataSetFromMatrix(countData = data_counts_all,
+                              colData = colData_all,
+                              design = ~ Experiment + Treatment) 
+```
+
+-Running the basic model
+```{r}
+  dds <- DESeq(dds, parallel = TRUE)
+  #write_rds(dds,"/Volumes/mote/data/dds_exp_treatment.rds")
+```
+
+```{r}
+## Checking for outliers for ~R_treat
+##cooks
+#Cook’s distance
+#png("/Volumes/mote/data/cookdistance_dds_exp_treatment.png", width=15, height=10, units = "in", res = 300)
+boxplot_dds<-boxplot(log10(assays(dds)[["cooks"]]), range=0,  las=0,main="Cook's distance  ~ Experiment + Treatment")
+#dev.off()
+```
+
+##dispersion
+
+```{r}
+#Dispersion Plot
+#png("/Volumes/mote/data/dispersion__dds_exp_treatment.png", width=15, height=10, units = "in", res = 300)
+plotDispEsts(dds, main="Dispersion plot ~ Experiment + Treatment")
+#dev.off()
+```
+-Transform data 
+```{r}
+vsd_dds<- vst(dds, blind=FALSE)
+```
+
+
+##PCA
+```{r}
+vsd_dds$Experiment<- as.character(vsd_dds$Experiment)
+#PCA DESeq2 plot 
+pcaData = plotPCA(vsd_dds, intgroup=c("R_TP","R_treat","R_final_state","Genotype_ID","Time_State","Experiment","Final_State","Treatment"), 
+returnData=TRUE)
+percentVar = round(100 * attr(pcaData, "percentVar"))
+
+#png("/Volumes/LaCie/MOTE_Code/all_ee/PCA_dds_treatment_exp_vst_0624.png", width=7, height=7, units = "in", res = 300)
+ggplot(pcaData, aes(PC1, PC2, colour = Final_State)) +
+  stat_ellipse() +
+geom_point(size = 2) + theme_bw() + 
+#geom_text_repel(aes(label = Genotype_ID), nudge_x = -1, nudge_y = 0.2, size = 3) +
+ggtitle("Principal Component Analysis of Pre and Early Exposure Samples", subtitle = "~ Experiment + Treatment  ") +
+xlab(paste0("PC1: ",percentVar[1],"% variance")) +
+ylab(paste0("PC2: ",percentVar[2],"% variance"))
+```
+
+###run contrast
+```{r}
+res_dds_all<- results(dds,contrast = c("Treatment","C","D"))
+
+res_all<- as.data.frame(res_dds_all[order(res_dds_all$padj),])
+                
+dds_res_all<-res_all %>%  mutate(ofav_gene = rownames(res_all)) %>% filter(padj<0.05)
+#write_rds(dds_res_all,"/Volumes/LaCie/MOTE_Code/all_ee/dds_treatment_exp_vst_genelist.rds")
+#write_csv(dds_res_all,"/Volumes/LaCie/MOTE_Code/all_ee/dds_treatment_exp_vst_genelist.csv")
+```
+
+-Normalized Counts
+```{r}
+W <- res_dds_all$stat
+maxCooks <- apply(assays(dds)[["cooks"]],1,max) 
+idx <- !is.na(W) 
+plot(rank(W[idx]), maxCooks[idx], xlab="rank of Wald statistic", ylab="maximum Cook's distance per gene", ylim=c(0,5), cex=.4, col=rgb(0,0,0,.3))
+m <- ncol(dds) 
+p <- 3 
+abline(h=qf(.99, p, m - p))
+
+```
+
+
+####MINT
+## Gene expression tuning data
+```{r}
+
+X<- t(assay(vsd_dds))
+Y<- vsd_dds$Treatment
+Experiment<- as.factor(colData_all$Experiment)
+```
+
+```{r}
+dim(X)
+summary(Y)
+table(Y,Experiment)
+```
+
+```{r}
+## "FIGURE 1:  Sample plot from the MINT PLS-DA performed on the `4M-10m` gene expression data or early exposure disease and control-No healthy. Samples are projected into the space spanned by the first two components. Samples are coloured by their treatment and symbols indicate the experiment membership."----
+basic.plsda.model_all <- mint.plsda(X, Y, study = Experiment, ncomp = 2) # generate basic MINT pls-da model
+
+#png("/Volumes/LaCie/MOTE_Code/all_ee/MINTPLSDA_dds_treatment_exp.png", width=7, height=7, units = "in", res = 300)
+
+plotIndiv(basic.plsda.model_all, legend = TRUE, ind.names = TRUE, title = 'MINT PLSDA plot ', subtitle = 'Early Exposure Control and Disease ', ellipse = TRUE) # plot the samples
+
+```
+
+```{r}
+basic.splsda.model_all <- mint.plsda(X, Y, study = Experiment, ncomp = 10)
+```
+
+
+```{r}
+##"FIGURE 2: Choosing the number of components in `mint.splsda` using `perf()` with LOGOCV in the `EE sample 4M-10m` data set. Classification error rates are represented on the y-axis with respect to the number of components on the x-axis for each prediction distance"----
+
+splsda.perf_all <- perf(basic.splsda.model_all, validation = "Mfold", 
+                          folds = 4, nrepeat = 75, # use repeated cross-validation
+                          progressBar = FALSE, auc = TRUE) # undergo performance optimisation
+plot(splsda.perf_all)
+```
+
+
+```{r}
+splsda.perf_all$choice.ncomp
+
+optimal.ncomp <- 2 
+```
+
+```{r}
+##  "FIGURE 3: Tuning keepX in MINT sPLS-DA performed on the `ee sample 4M-10mm` gene expression data. Each coloured line represents the balanced error rate (y-axis) per component across all tested keepX values (x-axis). The diamond indicates the optimal keepX value on a particular component which achieves the lowest classification error rate as determined with a one-sided t−test across the studies"----
+
+splsda.tune_all <- tune(X, Y, study = Experiment,  # tune the number of features
+                              ncomp = optimal.ncomp,# using optimal comp number
+                              test.keepX = seq(10, 100, 80), 
+                              method = 'mint.splsda', 
+                              measure = 'BER', # balanced error rate
+                              dist = "max.dist")
+
+plot(splsda.tune_all)
+ 
+optimal.keepX <- splsda.tune_all$choice.keepX # extract optimal values
+
+splsda.tune_all$choice.keepX
+```
+
+```{r}
+#generate optimal model using tuned parameters
+final.splsda.model_all <- mint.splsda(X, Y, study = Experiment, 
+                                  ncomp = optimal.ncomp, 
+                                  keepX = optimal.keepX)
+```
+
+```{r}
+## FIGURE 4: : Sample plots from the MINT sPLS-DA performed on the `All sample 4M` gene expression data. Samples are projected into the space spanned by the first two components. Samples are coloured by their treatment  and symbols indicate sample period membership. (a) Global components from the model with 95% ellipse confidence intervals around each sample class. (b) Partial components per study show a good agreement across studies"----
+
+png("/Volumes/LaCie/MOTE_Code/all_ee/MINTsPLSDA_dds_treatment_exp.png", width=7, height=7, units = "in", res = 300)
+
+plotIndiv(final.splsda.model_all, study = 'global', 
+          legend = TRUE,
+          title = '(a) treatment, MINT sPLS-DA',
+          subtitle = 'Global', ellipse = T)
+```
+
+
+```{r}
+png("/Volumes/LaCie/MOTE_Code/all_ee/MINTsPLSDA_dds_treatment_exp_each.png", width=7, height=7, units = "in", res = 300)
+
+plotIndiv(final.splsda.model_all, study = 'all.partial', 
+          legend = TRUE,
+          title = '(b) treatment, MINT sPLS-DA',
+          subtitle = paste("exp",2:4))
+```
+
+
+```{r}
+png("/Volumes/LaCie/MOTE_Code/all_ee/MINTsPLSDA_dds_treatment_exp_com1.png", width=7, height=7, units = "in", res = 300)
+
+plotLoadings(final.splsda.model_all,comp = 1, method = 'mean', contrib = 'max', study = 'all.partial', 
+          legend = TRUE,
+          title = '(b) treatment, MINT sPLS-DA , comp 1',
+          subtitle = paste("exp",2:4))
+```
+
+
+```{r}
+png("/Volumes/LaCie/MOTE_Code/all_ee/MINTsPLSDA_dds_treatment_exp_com2.png", width=7, height=7, units = "in", res = 300)
+
+plotLoadings(final.splsda.model_all,comp = 2, method = 'mean', contrib = 'max', study = 'all.partial', 
+          legend = TRUE,
+          title = '(b) treatment, MINT sPLS-DA , comp 2',
+          subtitle = paste("exp",2:4))  
+#plotLoadings(final.splsda.model,comp = 2, method = 'mean', contrib = 'mahalanobis', study = 'all.partial', 
+         # legend = TRUE,
+         # title = '(b) treatment, MINT sPLS-DA , comp 3',
+          #subtitle = paste("exp",2:4))  
+
+```
+
+```{r}
+## "FIGURE 5: Correlation circle plot representing the genes selected by MINT sPLS-DA performed on the `ee samples 4M-10m` gene expression data to examine the association of the genes selected on the first two components"----
+
+plotVar(final.splsda.model_all,
+        cutoff = 0.5)
+```
+
+```{r}
+exp_all_comp1_geneID<- as.data.frame( selectVar(final.splsda.model_all, comp = 1)$name) %>% dplyr::rename("ofav_gene"='selectVar(final.splsda.model_all, comp = 1)$name')
+
+exp_all_comp1_geneID_anno<- exp_all_comp1_geneID %>% inner_join(anno)
+```
+
+```{r}
+exp_all_comp2_geneID<- as.data.frame( selectVar(final.splsda.model_all, comp = 2)$name) %>% dplyr::rename("ofav_gene"='selectVar(final.splsda.model_all, comp = 2)$name')
+
+exp_all_comp2_geneID_anno<- exp_all_comp2_geneID %>% inner_join(anno)
+```
+
+
+
+```{r}
+#"FIGURE 6: Clustered Image Map of the genes selected by MINT sPLS-DA on the `EE sample 4M-10M` gene expression data for component 1 only. A hierarchical clustering based on the gene expression levels of the selected genes on component 1, with samples in rows coloured according to treatment"----
+legend_g_all=list(legend = levels(Y), # set of classes
+            col = unique(color.mixo(Y)), # set of colours
+            title = "Treatment", # legend title
+            cex = 0.7) # legend size
+png("/Volumes/LaCie/MOTE_code/all_ee/cim_all_MINT_treat_exp.png", 1000, 1000, pointsize=20)
+  
+cim(final.splsda.model_all, margins = c(5, 6), 
+    row.sideColors = color.mixo(as.numeric(Y)), 
+    row.names = FALSE, title = "MINT sPLS-DA, component 1")
+#dev.off()
+```
+
+```{r}
+#"FIGURE 7: Relevance network of the genes selected by MINT sPLS-DA performed on the `IMMUNE` gene expression data for component 1 only."
+
+legend_g_all=list(legend = levels(Y), # set of classes
+            col = unique(color.mixo(Y)), # set of colours
+            title = "Treatment", # legend title
+            cex = 0.7) # legend size 
+
+png("/Volumes/LaCie/MOTE_code/all_ee/network_MINT_all_treat_exp.png", 1000, 1000, pointsize=10)
+
+network(final.splsda.model_all, comp = 1, 
+        color.node = c(color.mixo(1), color.mixo(2)), 
+        shape.node = c("rectangle", "circle"))
+#dev.off()
+```
+
+
+

@@ -1,0 +1,49 @@
+#!/bin/bash
+#BSUB -J star_align
+#BSUB -q bigmem
+#BSUB -P tct
+#BSUB -n 16
+#BSUB -W 120:00
+#BSUB -R "rusage[mem=15000]"
+#BSUB -o star_align%J.out
+#BSUB -e star_align%J.err
+#BSUB -u l.isma@miami.edu
+#BSUB -N
+
+todata="/scratch/projects/tct/"
+
+
+cd "/nethome/l.isma/mote/5million"
+
+data=($(ls *.gz))
+
+for sample in ${data[@]} ;
+
+do \
+STAR \
+--runMode alignReads \
+--genomeDir ${todata}/Genomes/Ofav/Ofav_index \
+--sjdbGTFfeatureExon exon \
+--sjdbGTFtagExonParentTranscript Parent \
+--sjdbGTFfile  ${todata}/Genomes/Ofav/genomic.gtf \
+--twopassMode Basic \
+--outSAMtype BAM SortedByCoordinate \
+--runThreadN 16 \
+--readFilesCommand gunzip -c \
+--readFilesIn ${sample} \
+--outFilterMismatchNoverLmax 0.1 \
+--alignIntronMin 20 \
+--alignIntronMax 1000000 \
+--alignMatesGapMax 1000000 \
+--outReadsUnmapped Fastx \
+--outFileNamePrefix ${todata}/mote/star/${sample} ; \
+
+done
+
+multiqc ${todata}/mote/star/ \
+--outdir ${todata}/mote/star/
+
+
+
+
+

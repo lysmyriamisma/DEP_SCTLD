@@ -1,0 +1,114 @@
+---
+title: "02_readcounts_NAR"
+output: html_document
+date: "2024-10-21"
+---
+##Merge in read count per sample obtained with STAR 
+##Loading/installing libraries
+```{r}
+
+library(data.table)
+library(ggplot2)
+library(ggrepel)
+library(dplyr)
+library(tidyr)
+library(reshape2)
+library(tidyverse)
+
+```
+
+## Chosing samples to be use
+### Use file from multiqc (eliminate _trimmed in txt editor to obtain only sample name)
+
+```{r}
+reads_mapped<-read_csv("/Volumes/mote/MOTE_Code/csvs/allexp4m_full.csv")
+```
+###SELECT samples that have over 4 million reads and atleast 45% alignment
+```{r}
+samples_selected_4M<- reads_mapped %>% filter(million_uniq >= 4000000  & million_uniq < 10000000) 
+
+samples_selected_4M<- samples_selected_4M %>% filter(percent_uniq >= 45 & percent_uniq <= 80) #246 samples
+
+```
+
+### Plotting read counts. These histograms help visualize what the alignment threshold should be. I decided 45% from here.
+```{r}
+ggplot(reads_mapped, aes(million_uniq)) + geom_histogram()
+ggplot(reads_mapped, aes(percent_uniq)) + geom_histogram()
+```
+
+####this shows histograms with only the 45% alignment selected
+```{r}
+ggplot(samples_selected_4M, aes(million_uniq)) + geom_histogram()
+ggplot(samples_selected_4M, aes(percent_uniq)) + geom_histogram()
+
+```
+##this is the data set of all my metadata that is over 45% with 4 million reads
+```{r}
+write.csv(samples_selected_4M, "/Volumes/mote/data/allsamples_4M_45percent.csv")
+write_rds(samples_selected_4M, "/Volumes/mote/data/allsamples_4M_45percent.rds")
+```
+##this is the data set of all pre and early exposure samples that is over 45% with 4 million reads
+```{r}
+##PRE AND EARLY is 225 samples
+PE_EE<- samples_selected_4M%>%
+  subset(R_TP == "EE"|R_TP == "PE")
+write.csv(PE_EE, "/Volumes/mote/data/PE_EE_4M_45percent.csv")
+write_rds(PE_EE, "/Volumes/mote/data/PE_EE_4M_45percent.rds")
+```
+##this is the data set of all initial and final exposure samples that is over 45% with 4 million reads. This metadata is for an undergrad project
+```{r}
+##Initial AND Final is 21
+ID_FS<- samples_selected_4M%>%
+  subset(R_TP == "ID"|R_TP == "FS")
+write.csv(ID_FS, "/Volumes/mote/data/ID_FS_4M_45percent.csv")
+write_rds(ID_FS, "/Volumes/mote/data/ID_FS_4M_45percent.rds")
+```
+
+###Read in all count data
+```{r}
+count_data_raw<-readRDS("/Volumes/mote/csvs/annotated_raw_counts.rds") %>% mutate(ofav_gene = GeneID)
+```
+###This creates the count data for all the pre and early with 4million and 45%
+
+```{r}
+###gene count data for pre and early
+
+samples_to_keep_PE_EE<- PE_EE$Sample_ID
+count_data_PE_EE<-count_data_raw[,samples_to_keep_PE_EE]  #225
+write_rds(count_data_PE_EE,"/Volumes/mote/data/annotated_PE_EE_4M_45_rawcounts.rds")
+write_csv(count_data_PE_EE,"/Volumes/mote/data/annotated_PE_EE_4M_45_rawcounts.csv")
+```
+
+###This creates the count data for all the initial and final with 4million and 45%. undergrad project
+```{r}
+###gene count data for initial and final state
+samples_to_keep_ID_FS<- ID_FS$Sample_ID
+count_data_ID_FS<-count_data_raw[,samples_to_keep_ID_FS]  #21
+write_rds(count_data_ID_FS,"/Volumes/mote/data/annotated_ID_FS_4M_45_rawcounts.rds")
+write_csv(count_data_ID_FS,"/Volumes/mote/data/annotated_ID_FS_4M_45_rawcounts.csv")
+```
+
+####filter low count in pre and early data set. In this case we choose to keep rows that the row sum is at least 15 in at least the number of samples (PE_control)(15*9). 
+```{r}
+
+keep_EP <- rowSums(count_data_PE_EE >= 135)
+
+filtered_data_counts_4M_45 <- count_data_PE_EE[keep_EP,]# 16779 genes  225 samples
+
+write_rds(filtered_data_counts_4M_45,"/Volumes/mote/data/annotated_PE_EE_4M_45_filteredcounts.rds")
+write_csv(filtered_data_counts_4M_45,"/Volumes/mote/data/annotated_PE_EE_4M_45_filteredcounts.csv")
+```
+
+####filter low count in initial and final data set. In this case we choose to keep rows that the row sum is at least 15 in at least the number of samples (FS_disease)(2*9)
+```{r}
+
+keep_ID <- rowSums(count_data_ID_FS >= 18)
+
+filtered_data_counts_4M_45_fs <- count_data_ID_FS[keep_ID,]# 15715 genes  21 samples
+write_rds(filtered_data_counts_4M_45_fs,"/Volumes/mote/data/annotated_ID_FS_4M_45_filteredcounts.rds")
+write_csv(filtered_data_counts_4M_45_fs,"/Volumes/mote/data/annotated_ID_FS_4M_45_filteredcounts.csv")
+```
+
+
+
